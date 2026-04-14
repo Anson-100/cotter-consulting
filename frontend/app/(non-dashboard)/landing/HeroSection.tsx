@@ -27,7 +27,7 @@ const HeroSection = ({ setSelectedPage }: Props) => {
           </h1>
           <p className="mt-8 text-xl font-medium text-pretty text-gray-600 dark:text-gray-300 sm:text-3xl/10">
             Send professional, trackable bids as shareable links and make
-            itasdfasdf easier for customers to say asdfasdf
+            itasdfasdf easier for customers to say asdfasdfg
             <em className="not-italic font-medium">yes</em>
           </p>
           <div className="mt-12 flex-col sm:flex-row gap-y-4 flex items-center justify-center sm:gap-x-4">
