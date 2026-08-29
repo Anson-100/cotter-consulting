@@ -113,7 +113,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                     <span className="text-zinc-500 text-lg">&larr;</span>
                     <span>Home</span>
                   </button>
-                  <AuthButtons variant="desktop" />
+                  {/* <AuthButtons variant="desktop" /> */}
                   <DarkModeToggle />
                 </div>
               ) : (
@@ -122,7 +122,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   ref={navButtonsRef}
                   className="flex items-center justify-center gap-4"
                 >
-                  <AuthButtons variant="desktop" />
+                  {/* <AuthButtons variant="desktop" /> */}
                   <button
                     type="button"
                     onClick={handleBackOrHome}
@@ -186,7 +186,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   </Link>
                   {/* Sign in button */}
 
-                  <AuthButtons variant="desktop" />
+                  {/* <AuthButtons variant="desktop" /> */}
                   <DarkModeToggle className="" />
                 </div>
               </div>
@@ -195,7 +195,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                 ref={navButtonsRef}
                 className="flex items-center justify-center gap-4"
               >
-                <AuthButtons variant="desktop" />
+                {/* <AuthButtons variant="desktop" /> */}
 
                 <DarkModeToggle />
                 <button
@@ -290,7 +290,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                     <QuestionMarkCircleIcon className="size-6 mr-4" />
                     <p>FAQ</p>
                   </Link>
-                  <AuthButtons variant="mobile" />
+                  {/* <AuthButtons variant="mobile" /> */}
                 </div>
               </>
             </div>

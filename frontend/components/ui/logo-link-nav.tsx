@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { DocumentCurrencyDollarIcon } from "@heroicons/react/24/solid"
+import { ScaleIcon } from "@heroicons/react/24/solid"
 import { useCallback } from "react"
 import { cn } from "@/lib/utils"
 
@@ -35,16 +35,16 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
   }, [router])
 
   const Logo = (
-    <div className="flex items-center dark:text-gray-100">
-      <DocumentCurrencyDollarIcon className="h-4 sm:h-6 text-indigo-600 shrink-0" />
+    <div className="flex items-center dark:text-gray-100 gap-1">
+      <ScaleIcon className="h-5 sm:h-7 text-indigo-600 shrink-0" />
       <div
         className={cn(
           "text-pretty leading-none flex flex-row sm:items-center text-lg sm:text-2xl whitespace-nowrap",
           !isExpanded && "opacity-0",
         )}
       >
-        <h1 className="font-semibold m-0 leading-none">Pirate</h1>
-        <h1 className=" dark:text-gray-300 leading-none">Ship</h1>
+        <h1 className="font-semibold m-0 leading-none">Cotter</h1>
+        <h1 className=" dark:text-gray-300 leading-none">Consulting</h1>
       </div>
     </div>
   )
