@@ -56,7 +56,7 @@ export default function PriceTileOnboarding({
         }
         ${
           isSelected
-            ? "shadow-[0_0_20px_var(--color-indigo-500)] bg-sky-100 dark:bg-sky-950/40"
+            ? "shadow-[0_0_20px_var(--color-indigo-500)] bg-indigo-100 dark:bg-indigo-950/40"
             : "bg-white dark:bg-zinc-950"
         }
       `}

@@ -52,7 +52,7 @@ export default function FeaturesSection({ setSelectedPage }: Props) {
           title={
             <>
               Powerful yet{" "}
-              <span className="text-sky-600 dark:text-sky-500">simple</span>
+              <span className="text-indigo-600 dark:text-indigo-500">simple</span>
             </>
           }
           caption=""

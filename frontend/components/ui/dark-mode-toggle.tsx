@@ -43,7 +43,7 @@ export default function DarkModeToggle({
     >
       {isDark ? (
         justClicked ? (
-          <MoonIconSolid className="size-6 shrink-0 text-sky-300" />
+          <MoonIconSolid className="size-6 shrink-0 text-indigo-300" />
         ) : (
           <SunIcon className="size-6 shrink-0 text-gray-400" />
         )

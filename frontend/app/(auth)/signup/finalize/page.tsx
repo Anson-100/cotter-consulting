@@ -78,8 +78,8 @@ export default function Finalize() {
           <div
             className={`absolute left-0 h-full w-2 top-0 ${
               isDeferred
-                ? "bg-sky-600 dark:bg-sky-500"
-                : "bg-sky-600 dark:bg-sky-500"
+                ? "bg-indigo-600 dark:bg-indigo-500"
+                : "bg-indigo-600 dark:bg-indigo-500"
             }`}
           />
 

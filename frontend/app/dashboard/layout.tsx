@@ -513,7 +513,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="-mx-5 h-10 flex items-center">
               <button
                 onClick={() => setIsPinned(!isPinned)}
-                className="group flex flex-nowrap items-center p-2.5 w-full text-gray-800 dark:text-gray-200 hover:text-indigo-600 mx-auto dark:hover:text-indigo-500  bg-sky-950/30 gap-1"
+                className="group flex flex-nowrap items-center p-2.5 w-full text-gray-800 dark:text-gray-200 hover:text-indigo-600 mx-auto dark:hover:text-indigo-500  bg-indigo-950/30 gap-1"
                 title={isPinned ? "Unpin sidebar" : "Pin sidebar open"}
               >
                 {isPinned ? (

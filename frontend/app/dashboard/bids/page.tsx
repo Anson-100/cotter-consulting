@@ -266,7 +266,7 @@ function BidTileToolbar({
             type="button"
             onClick={handleSaveFromPrompt}
             disabled={isSaving}
-            className="p-1.5 rounded bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 disabled:opacity-50"
+            className="p-1.5 rounded bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 disabled:opacity-50"
           >
             {isSaving ? (
               <div className="size-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -291,7 +291,7 @@ function BidTileToolbar({
             type="button"
             onClick={handleSaveClick}
             disabled={isSaving}
-            className="p-1.5 rounded bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600 disabled:opacity-50"
+            className="p-1.5 rounded bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 disabled:opacity-50"
           >
             {isSaving ? (
               <div className="size-6 border-2 border-white border-t-transparent rounded-full animate-spin" />

@@ -36,8 +36,8 @@ const variantStyles: Record<BadgeVariant, string> = {
     "dark:bg-zinc-800 dark:text-zinc-300 dark:ring-zinc-400/30",
   ),
   label: cn(
-    "bg-zinc-950/80 text-white ring-sky-600/40",
-    "dark:bg-zinc-950/80 dark:text-white dark:ring-sky-500/40",
+    "bg-zinc-950/80 text-white ring-indigo-600/40",
+    "dark:bg-zinc-950/80 dark:text-white dark:ring-indigo-500/40",
   ),
 }
 

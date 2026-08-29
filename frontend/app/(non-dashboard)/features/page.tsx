@@ -45,7 +45,7 @@ export default function FeaturesPage() {
           title={
             <>
               Learn more about our{" "}
-              <span className="text-sky-600 dark:text-sky-500">platform</span>
+              <span className="text-indigo-600 dark:text-indigo-500">platform</span>
             </>
           }
           caption={<></>}
