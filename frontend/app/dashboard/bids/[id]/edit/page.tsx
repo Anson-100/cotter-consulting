@@ -24,7 +24,7 @@ export default function EditBidPage({ params }: PageProps) {
 
       <div
         className={cn(
-          "@container rounded-xl border-sky-600/20 dark:border-sky-500/20 border overflow-hidden shadow-xl shadow-zinc-700/50 dark:[box-shadow:0_4px_20px_rgb(14_165_233/0.4)]",
+          "@container rounded-xl border-indigo-600/20 dark:border-indigo-500/20 border overflow-hidden shadow-xl shadow-zinc-700/50 dark:[box-shadow:0_4px_20px_rgb(14_165_233/0.4)]",
           isMobileView && "max-w-[375px] mx-auto",
         )}
       >

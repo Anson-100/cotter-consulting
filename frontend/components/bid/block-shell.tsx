@@ -199,7 +199,7 @@ export default function BlockShell({
                 <button
                   type="button"
                   onClick={handleSaveClick}
-                  className="p-1.5 rounded bg-sky-600 hover:bg-sky-700 dark:bg-sky-500 dark:hover:bg-sky-600"
+                  className="p-1.5 rounded bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
                 >
                   <CheckIcon className="size-6 text-white" />
                 </button>

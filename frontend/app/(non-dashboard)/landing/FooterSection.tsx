@@ -88,7 +88,7 @@ export default function FooterSection({ setSelectedPage }: Props) {
           <LogoLinkFooter />
           <div className="flex">
             {/* <p className="font-semibold text-gray-300 mt-2 text-2xl ">
-              Win more <span className="text-sky-500">jobs</span>
+              Win more <span className="text-indigo-500">jobs</span>
             </p> */}
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function FooterSection({ setSelectedPage }: Props) {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-sky-500 hover:bg-zinc-800 dark:hover:bg-zinc-900 rounded-full p-2"
+                className="text-gray-300 hover:text-indigo-500 hover:bg-zinc-800 dark:hover:bg-zinc-900 rounded-full p-2"
               >
                 <span className="sr-only">{item.name}</span>
                 <Icon aria-hidden="true" className="size-7" />
@@ -117,7 +117,7 @@ export default function FooterSection({ setSelectedPage }: Props) {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-sky-500 hover:bg-zinc-800 dark:hover:bg-zinc-900 py-1.5 px-2.5 rounded-full"
+                  className="text-gray-300 hover:text-indigo-500 hover:bg-zinc-800 dark:hover:bg-zinc-900 py-1.5 px-2.5 rounded-full"
                 >
                   {item.name}
                 </a>
@@ -125,7 +125,7 @@ export default function FooterSection({ setSelectedPage }: Props) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-sky-500 hover:bg-zinc-800 dark:hover:bg-zinc-900 py-1.5 px-2.5 rounded-full"
+                  className="text-gray-300 hover:text-indigo-500 hover:bg-zinc-800 dark:hover:bg-zinc-900 py-1.5 px-2.5 rounded-full"
                 >
                   {item.name}
                 </Link>

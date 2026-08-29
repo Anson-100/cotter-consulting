@@ -218,7 +218,7 @@ export default function ChangePlanModal({
                   <div className="max-w-md mx-auto">
                     <Button
                       variant={hasChanges ? "primary" : "secondary"}
-                      className="w-full justify-center disabled:opacity-100 disabled:border-sky-600 dark:disabled:border-sky-500"
+                      className="w-full justify-center disabled:opacity-100 disabled:border-indigo-600 dark:disabled:border-indigo-500"
                       onClick={handleConfirm}
                       disabled={!hasChanges || isLoading}
                     >

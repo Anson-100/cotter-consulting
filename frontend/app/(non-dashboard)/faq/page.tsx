@@ -59,7 +59,7 @@ export default function FaqPage() {
           title={
             <>
               Answers to your most common{" "}
-              <span className="text-sky-600 dark:text-sky-500">questions</span>
+              <span className="text-indigo-600 dark:text-indigo-500">questions</span>
             </>
           }
           caption=""

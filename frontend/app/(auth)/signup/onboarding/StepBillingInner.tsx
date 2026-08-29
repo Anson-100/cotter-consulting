@@ -246,7 +246,7 @@ export default function StepBillingInner({
 
           <div className="max-w-2xl md:col-span-2 space-y-4">
             <div className="col-span-1 sm:col-span-6">
-              <h2 className=" font-semibold text-sky-600 dark:text-sky-500">
+              <h2 className=" font-semibold text-indigo-600 dark:text-indigo-500">
                 Card info
               </h2>
             </div>
@@ -322,7 +322,7 @@ export default function StepBillingInner({
                 <button
                   type="button"
                   onClick={() => setUseNewCard(true)}
-                  className="font-medium text-sky-600 dark:text-sky-500 hover:text-sky-700 dark:hover:text-sky-400"
+                  className="font-medium text-indigo-600 dark:text-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-400"
                 >
                   Use a different card
                 </button>
@@ -345,7 +345,7 @@ export default function StepBillingInner({
 
             {/* Billing Address */}
             <div className="col-span-1 sm:col-span-6 mt-12">
-              <h2 className="font-semibold text-sky-600 dark:text-sky-500">
+              <h2 className="font-semibold text-indigo-600 dark:text-indigo-500">
                 Billing address
               </h2>
             </div>

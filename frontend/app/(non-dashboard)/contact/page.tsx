@@ -67,7 +67,7 @@ export default function ContactSection() {
             title={
               <>
                 Let&apos;s{" "}
-                <span className="text-sky-600 dark:text-sky-500">talk</span>
+                <span className="text-indigo-600 dark:text-indigo-500">talk</span>
               </>
             }
             caption={<></>}

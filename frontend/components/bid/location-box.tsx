@@ -119,7 +119,7 @@ export default function LocationBox({
                 href={block.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-start hover:underline text-sky-500"
+                className="flex flex-col items-start hover:underline text-indigo-500"
               >
                 {addressLines.map((line, index) => (
                   <p key={index}>{line}</p>

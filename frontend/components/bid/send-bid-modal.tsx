@@ -265,8 +265,8 @@ export default function SendBidModal({
 
         {step === "success" && (
           <div className="flex flex-col items-center justify-center py-6 text-center">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 ring-2 ring-sky-200 dark:bg-sky-950/40 dark:ring-sky-900">
-              <CheckIconSolid className="size-7 text-sky-600 dark:text-sky-400" />
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-indigo-100 ring-2 ring-indigo-200 dark:bg-indigo-950/40 dark:ring-indigo-900">
+              <CheckIconSolid className="size-7 text-indigo-600 dark:text-indigo-400" />
             </div>
 
             <p className="mb-6 text-zinc-600 dark:text-zinc-300">

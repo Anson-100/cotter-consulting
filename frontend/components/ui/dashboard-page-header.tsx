@@ -19,7 +19,7 @@ const DashboardPageHeader: React.FC<DashboardPageHeaderProps> = ({
 }) => {
   return (
     <header className="flex flex-col gap-3 mb-12">
-      <div className="flex flex-col w-auto gap-2 p-3.5 rounded-lg border-2 dark:border-sky-500 border-sky-600 bg-sky-100 dark:bg-sky-950/40 w-fit">
+      <div className="flex flex-col w-auto gap-2 p-3.5 rounded-lg border-2 dark:border-indigo-500 border-indigo-600 bg-indigo-100 dark:bg-indigo-950/40 w-fit">
         <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
           {title}
         </h1>

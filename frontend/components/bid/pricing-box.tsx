@@ -553,7 +553,7 @@ export default function PricingBox({
           {!isEditing &&
             notes.map((note) => (
               <div key={note.id} className="flex gap-3">
-                <InformationCircleIcon className="size-6 text-sky-500 shrink-0 mt-0.5" />
+                <InformationCircleIcon className="size-6 text-indigo-500 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-gray-800 dark:text-gray-200">
                     {note.heading}
