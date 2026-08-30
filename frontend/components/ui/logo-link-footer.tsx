@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { DocumentCurrencyDollarIcon } from "@heroicons/react/24/solid"
+import { ScaleIcon } from "@heroicons/react/24/solid"
 
 const LogoLinkFooter: React.FC = () => {
   const pathname = usePathname()
@@ -16,22 +16,22 @@ const LogoLinkFooter: React.FC = () => {
   return isHomePage ? (
     <button
       onClick={scrollToTop}
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center font-serif"
     >
       <div className="flex items-center">
-        <DocumentCurrencyDollarIcon className="h-10 text-indigo-600" />
-        <div className="flex items-center text-white">
-          <h1 className="text-5xl font-semibold m-0">Pirate</h1>
-          <h1 className="text-5xl ml-1 text-gray-300">Ship</h1>
+        <ScaleIcon className="h-10 text-indigo-600 mr-2" />
+        <div className="flex items-center gap-1 text-white">
+          <h1 className="text-5xl  m-0">Cotter</h1>
+          <h1 className="text-5xl ml-1 text-gray-300">Consulting</h1>
         </div>
       </div>
     </button>
   ) : (
     <Link href="/" className="flex items-center">
-      <DocumentCurrencyDollarIcon className="h-10 text-indigo-600" />
-      <div className="flex items-center text-white">
-        <h1 className="text-5xl font-semibold m-0">Pirate</h1>
-        <h1 className="text-5xl ml-1 text-gray-300">Ship</h1>
+      <ScaleIcon className="h-10 text-indigo-600" />
+      <div className="flex items-center gap-1 text-white">
+        <h1 className="text-5xl  m-0">Cotter</h1>
+        <h1 className="text-5xl ml-1 text-gray-300">Consulting</h1>
       </div>
     </Link>
   )

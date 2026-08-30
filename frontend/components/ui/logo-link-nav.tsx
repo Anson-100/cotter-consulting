@@ -35,16 +35,18 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
   }, [router])
 
   const Logo = (
-    <div className="flex items-center dark:text-gray-100 gap-1">
-      <ScaleIcon className="h-5 sm:h-7 text-indigo-600 shrink-0" />
+    <div className="flex items-center dark:text-gray-100 gap-1 font-serif">
+      <ScaleIcon className="h-4 sm:h-6 text-indigo-600 shrink-0" />
       <div
         className={cn(
-          "text-pretty leading-none flex flex-row sm:items-center text-lg sm:text-2xl whitespace-nowrap",
+          "text-pretty leading-none flex flex-row sm:gap-1 sm:items-center text-lg sm:text-2xl whitespace-nowrap",
           !isExpanded && "opacity-0",
         )}
       >
-        <h1 className="font-semibold m-0 leading-none">Cotter</h1>
-        <h1 className=" dark:text-gray-300 leading-none">Consulting</h1>
+        <h1 className=" m-0 leading-none">Cotter</h1>
+        <h1 className=" dark:text-gray-300 text-gray-600 leading-none">
+          Consulting
+        </h1>
       </div>
     </div>
   )

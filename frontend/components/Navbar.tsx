@@ -90,7 +90,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
           ${navbarBackground} ${flexBetween}
           fixed bg-white dark:bg-zinc-950 top-0 z-30 w-full  h-[72px]
           shadow-[0_4px_6px_-2px_rgba(0,0,0,0.08)]
-          dark:shadow-none dark:border-b-2 border-b-zinc-800 px-6
+          dark:shadow-none dark:border-b border-b-zinc-800 px-6
         `}
       >
         <div
@@ -154,22 +154,22 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   />
                   <LinkDesktop
                     scrollTo={SelectedPage.About}
-                    displayText="How it works"
+                    displayText="Services"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                  <LinkDesktop
+                    scrollTo={SelectedPage.Features}
+                    displayText="About"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   {/* <LinkDesktop
-                    scrollTo={SelectedPage.Features}
-                    displayText="Features"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  /> */}
-                  <LinkDesktop
                     scrollTo={SelectedPage.Pricing}
                     displayText="Pricing"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
-                  />
+                  /> */}
 
                   <div className="h-6 w-0.5 mb-1 bg-zinc-200 dark:bg-zinc-800"></div>
                   <Link
@@ -244,7 +244,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                 />
                 <LinkMobile
                   scrollTo={SelectedPage.About}
-                  displayText="How it works"
+                  displayText="Services"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   toggleMenu={() => setIsMenuToggled(false)}
@@ -253,14 +253,14 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                 />
                 <LinkMobile
                   scrollTo={SelectedPage.Features}
-                  displayText="Features"
+                  displayText="About"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   toggleMenu={() => setIsMenuToggled(false)}
                   Icon={StarIcon}
                   IconSolid={StarIconSolid}
                 />
-                <LinkMobile
+                {/* <LinkMobile
                   scrollTo={SelectedPage.Pricing}
                   displayText="Pricing"
                   selectedPage={selectedPage}
@@ -268,7 +268,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   toggleMenu={() => setIsMenuToggled(false)}
                   Icon={InformationCircleIcon}
                   IconSolid={InformationCircleIconSolid}
-                />
+                /> */}
 
                 <div className="w-full px-2">
                   <div className="w-full h-0.5 bg-zinc-200 dark:bg-zinc-800 my-2" />

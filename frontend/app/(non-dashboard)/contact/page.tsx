@@ -67,7 +67,9 @@ export default function ContactSection() {
             title={
               <>
                 Let&apos;s{" "}
-                <span className="text-indigo-600 dark:text-indigo-500">talk</span>
+                <span className="text-indigo-600 dark:text-indigo-500">
+                  talk
+                </span>
               </>
             }
             caption={<></>}
@@ -172,7 +174,7 @@ export default function ContactSection() {
                   {...register("message", {
                     required: "Message is required",
                   })}
-                  className="block w-full rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:focus:outline-indigo-500"
+                  className="block w-full rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2 text-base text-zinc-800 outline-1 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-1 focus:-outline-offset-2 focus:outline-indigo-600 dark:focus:outline-indigo-500"
                 />
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-600">

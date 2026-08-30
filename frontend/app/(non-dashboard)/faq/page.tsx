@@ -14,27 +14,33 @@ interface FaqItem {
 const faqItems: FaqItem[] = [
   {
     id: "1",
-    question: "How do I create my first bid?",
+    question: "What does a legal nurse consultant do?",
     answer:
-      "Sign up, hit 'Create Bid' from your dashboard, add your line items and pricing, and send it as a link. Takes about two minutes.",
+      "We review medical records and translate them into something you can use: a dated chronology, an analysis of whether the care met accepted standards, and the clinical questions worth raising. This is consulting support for your case strategy, not expert testimony.",
   },
   {
     id: "2",
-    question: "Is there a free trial?",
+    question: "How is this different from hiring a medical expert witness?",
     answer:
-      "Yep! You get 2 free bid sends after adding a payment method. You won't be charged until you pick a plan.",
+      "An expert witness testifies to opinions in your case. We work as consultants, organizing the record, screening for merit, and helping you identify which specialty of expert you actually need before you spend money on one.",
   },
   {
     id: "3",
-    question: "What does my customer see?",
+    question: "How long does a record review take?",
     answer:
-      "They get a clean, professional page with your bid details and three buttons: Accept, Decline, or 'I have questions.' No app download, no account needed on their end.",
+      "It depends on volume and complexity. A focused merit screening on a few hundred pages moves quickly. A full chronology on several thousand takes longer. We provide a turnaround estimate before starting.",
   },
   {
     id: "4",
-    question: "Can I reuse bids for similar jobs?",
+    question: "How do you handle confidential records?",
     answer:
-      "Absolutely. You can save any bid as a template and pull it up next time so you're not starting from scratch every job.",
+      "Records are transferred and stored securely, handled in compliance with HIPAA, and never shared outside the engagement.",
+  },
+  {
+    id: "5",
+    question: "Do you work with plaintiff or defense firms?",
+    answer:
+      "Both. The analysis is the same either way: what the record actually documents.",
   },
 ]
 export default function FaqPage() {
@@ -59,7 +65,9 @@ export default function FaqPage() {
           title={
             <>
               Answers to your most common{" "}
-              <span className="text-indigo-600 dark:text-indigo-500">questions</span>
+              <span className="text-indigo-600 dark:text-indigo-500">
+                questions
+              </span>
             </>
           }
           caption=""

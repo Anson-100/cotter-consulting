@@ -10,13 +10,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "The Pirate Ship",
+  title: "Cotter Consulting",
   description: "Professional estimates, delivered instantly.",
   openGraph: {
-    title: "You've received an estimate",
-    description: "Tap to view your estimate and respond.",
+    title: "Legal Nurse Consulting",
+    description: "Clinical clarity, case confidence.",
     type: "website",
-    siteName: "The Pirate Ship",
+    siteName: "Cotter Consulting",
   },
   twitter: {
     card: "summary_large_image",
