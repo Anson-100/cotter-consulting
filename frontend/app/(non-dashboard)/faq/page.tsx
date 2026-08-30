@@ -74,7 +74,7 @@ export default function FaqPage() {
           className="text-center"
         />
 
-        <div className="w-full h-0.5 bg-zinc-200 dark:bg-zinc-800 mt-8 sm:mt-16  mx-auto" />
+        <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 mt-8 sm:mt-16  mx-auto" />
 
         {/* FAQ ITEMS */}
         <div className="w-full flex flex-col text-base md:text-lg mx-auto">
@@ -107,7 +107,7 @@ export default function FaqPage() {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <div className="w-full h-0.5 bg-zinc-200 dark:bg-zinc-800" />
+              <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800" />
             </div>
           ))}
         </div>
