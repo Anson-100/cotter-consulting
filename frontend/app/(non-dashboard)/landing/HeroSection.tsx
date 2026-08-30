@@ -14,7 +14,7 @@ const HeroSection = ({ setSelectedPage }: Props) => {
   const { openAuthModal } = useAuthModal()
 
   return (
-    <section id="home" className="relative isolate h-screen">
+    <section id="home" className="relative isolate min-h-screen">
       <motion.div
         className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
