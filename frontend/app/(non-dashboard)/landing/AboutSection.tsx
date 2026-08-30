@@ -197,7 +197,11 @@ export default function AboutSection({ setSelectedPage }: Props) {
   const isDesktop = useIsDesktop()
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 sm:py-32 h-screen">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="py-24 sm:py-32 min-h-screen"
+    >
       <motion.div
         className="mx-auto max-w-7xl px-6 lg:px-8"
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}

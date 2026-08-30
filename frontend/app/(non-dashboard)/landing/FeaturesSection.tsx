@@ -45,7 +45,7 @@ const credentials = [
 
 export default function FeaturesSection({ setSelectedPage }: Props) {
   return (
-    <div id="features" className=" py-24 sm:py-32 h-screen">
+    <div id="features" className=" py-24 sm:py-32 min-h-screen">
       <motion.div
         className="mx-auto max-w-7xl px-6 lg:px-8"
         onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
