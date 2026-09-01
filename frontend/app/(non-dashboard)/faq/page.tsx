@@ -77,14 +77,14 @@ export default function FaqPage() {
         <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 mt-8 sm:mt-16  mx-auto" />
 
         {/* FAQ ITEMS */}
-        <div className="w-full flex flex-col text-base md:text-lg mx-auto">
+        <div className="w-full flex flex-col text-base md:text-lg mx-auto font-serif">
           {faqItems.map((item) => (
             <div key={item.id} className="flex flex-col">
               <button
                 onClick={() => toggleOpen(item.id)}
                 className="flex items-center justify-between w-full text-left py-5 sm:py-6 px-2 cursor-pointer"
               >
-                <span className="text-gray-800 dark:text-gray-200 font-semibold">
+                <span className="text-gray-800 dark:text-gray-200 ">
                   {item.question}
                 </span>
                 {isOpen[item.id] ? (

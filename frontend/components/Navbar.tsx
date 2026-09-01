@@ -227,7 +227,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
         md:rounded-bl-lg overflow-hidden z-30 bg-white dark:bg-zinc-950
         shadow-[0_4px_6px_-2px_rgba(0,0,0,0.08)]
         dark:shadow-none
-        dark:border-b-2 dark:border-zinc-800
+        dark:border-b dark:border-zinc-800
         md:shadow-[-4px_0_6px_-2px_rgba(0,0,0,0.06),0_4px_6px_-2px_rgba(0,0,0,0.08)]
         md:dark:shadow-none md:dark:border-l-2`}
           >
@@ -271,7 +271,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                 /> */}
 
                 <div className="w-full px-2">
-                  <div className="w-full h-0.5 bg-zinc-200 dark:bg-zinc-800 my-2" />
+                  <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 my-2" />
                 </div>
                 <div className="w-full mb-4">
                   <Link
