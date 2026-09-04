@@ -1,21 +1,14 @@
 "use client"
 
-import { SelectedPage } from "@/types/index"
 import { motion } from "framer-motion"
-
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void
-}
 
 const placeholders = Array.from({ length: 4 }, (_, i) => `credential ${i + 1}`)
 
-const LogoCloudSection = ({ setSelectedPage }: Props) => {
+const LogoCloudSection = () => {
   return (
     <motion.section
       id="credentials"
-      className="relative isolate overflow-hidden bg-zinc-900 py-24"
-      onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
-      viewport={{ amount: 0.3 }}
+      className="relative isolate overflow-hidden bg-zinc-900 py-24 scroll-mt-[70px]"
     >
       <div className="mx-auto max-w-[88rem] px-6 lg:px-8">
         <div className="relative overflow-hidden">

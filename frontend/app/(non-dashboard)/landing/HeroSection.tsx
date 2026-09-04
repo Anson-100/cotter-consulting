@@ -1,25 +1,19 @@
 "use client"
 
-import { SelectedPage } from "@/types/index"
 import { motion } from "framer-motion"
 import Button from "@/components/ui/button"
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid"
 import { useAuthModal } from "@/hooks/useAuthModal"
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void
-}
-
-const HeroSection = ({ setSelectedPage }: Props) => {
+const HeroSection = () => {
   const { openAuthModal } = useAuthModal()
 
   return (
-    <section id="home" className="relative isolate min-h-screen">
-      <motion.div
-        className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
-        viewport={{ amount: 0.1 }}
-      >
+    <section
+      id="home"
+      className="relative isolate min-h-screen scroll-mt-[70px]"
+    >
+      <motion.div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
         <div className="px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-40 lg:pb-48 xl:col-span-6 min-h-screen">
           <div className="mx-auto max-w-lg lg:mx-0">
             <div className="hidden sm:mt-32 sm:flex lg:mt-16">
