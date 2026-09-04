@@ -6,19 +6,19 @@ import FeaturesSection from "./FeaturesSection"
 // import PricingSection from "./PricingSection"
 import AboutSection from "./AboutSection"
 import FooterSection from "./FooterSection"
-import { useSelectedPageStore } from "@/lib/useSelectedPageStore"
+import { useScrollSpy } from "@/hooks/useScrollSpy"
 
 export default function LandingPage() {
-  const { setSelectedPage } = useSelectedPageStore()
+  useScrollSpy()
 
   return (
     <div className="">
-      <HeroSection setSelectedPage={setSelectedPage} />
-      <LogoCloudSection setSelectedPage={setSelectedPage} />
-      <AboutSection setSelectedPage={setSelectedPage} />
-      <FeaturesSection setSelectedPage={setSelectedPage} />
-      {/* <PricingSection setSelectedPage={setSelectedPage} /> */}
-      <FooterSection setSelectedPage={setSelectedPage} />
+      <HeroSection />
+      <LogoCloudSection />
+      <AboutSection />
+      <FeaturesSection />
+      {/* <PricingSection /> */}
+      <FooterSection />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import { SelectedPage } from "@/types/index"
+import { beginProgrammaticScroll } from "@/hooks/useScrollSpy"
 
 type Props = {
   scrollTo: SelectedPage
@@ -28,6 +29,7 @@ const LinkMobile = ({
     e.preventDefault()
     const element = document.getElementById(scrollTo)
     if (element) {
+      beginProgrammaticScroll()
       element.scrollIntoView({ behavior: "smooth" })
     }
     setSelectedPage(scrollTo)

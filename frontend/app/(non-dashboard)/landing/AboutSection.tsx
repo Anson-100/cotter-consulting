@@ -1,12 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { useRef, useSyncExternalStore } from "react"
-import { SelectedPage } from "@/types"
 import SceneHeader from "@/components/ui/scene-header"
-
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void
-}
 
 const DESKTOP_QUERY = "(min-width: 1024px)"
 
@@ -192,7 +187,7 @@ function MobileBar({
 }
 
 // ABOUT SECTION — MAIN EXPORT ============================================
-export default function AboutSection({ setSelectedPage }: Props) {
+export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const isDesktop = useIsDesktop()
 
@@ -200,12 +195,9 @@ export default function AboutSection({ setSelectedPage }: Props) {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 sm:py-32 min-h-screen"
+      className="py-24 sm:py-32 min-h-screen scroll-mt-[70px]"
     >
-      <motion.div
-        className="mx-auto max-w-7xl px-6 lg:px-8"
-        onViewportEnter={() => setSelectedPage(SelectedPage.About)}
-      >
+      <motion.div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <SceneHeader
             eyebrow="How it works"

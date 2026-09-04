@@ -15,12 +15,7 @@ import {
   ScaleIcon,
 } from "@heroicons/react/20/solid"
 import { motion } from "framer-motion"
-import { SelectedPage } from "@/types"
 import SceneHeader from "@/components/ui/scene-header"
-
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void
-}
 
 const credentials = [
   {
@@ -43,13 +38,13 @@ const credentials = [
   },
 ]
 
-export default function FeaturesSection({ setSelectedPage }: Props) {
+export default function FeaturesSection() {
   return (
-    <div id="features" className=" py-24 sm:py-32 min-h-screen">
-      <motion.div
-        className="mx-auto max-w-7xl px-6 lg:px-8"
-        onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
-      >
+    <div
+      id="features"
+      className=" py-24 sm:py-32 min-h-screen scroll-mt-[70px]"
+    >
+      <motion.div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SceneHeader
           eyebrow="Features"
           title={

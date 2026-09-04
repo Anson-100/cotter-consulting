@@ -2,13 +2,8 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { SelectedPage } from "@/types"
 import LogoLinkFooter from "@/components/ui/logo-link-footer"
 import Link from "next/link"
-
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void
-}
 
 type NavLink = { name: string; href: string }
 type SocialLink = {
@@ -74,13 +69,12 @@ const navigation: { main: NavLink[]; social: SocialLink[] } = {
   ],
 }
 
-export default function FooterSection({ setSelectedPage }: Props) {
+export default function FooterSection() {
   const pathname = usePathname()
   const isLandingPage = pathname === "/"
 
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
-    setSelectedPage(SelectedPage.Home)
   }
 
   return (
