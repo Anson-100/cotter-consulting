@@ -59,7 +59,10 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="min-h-screen relative isolate">
+    <section
+      id="contact"
+      className="min-h-screen relative isolate scroll-mt-[70px]"
+    >
       <div className="px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <SceneHeader
