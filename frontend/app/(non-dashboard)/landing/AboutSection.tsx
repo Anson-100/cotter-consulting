@@ -195,7 +195,7 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 sm:py-32 min-h-screen scroll-mt-[70px]"
+      className="py-24 min-h-screen scroll-mt-[70px]"
     >
       <motion.div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
