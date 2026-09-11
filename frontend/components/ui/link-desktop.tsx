@@ -2,6 +2,7 @@
 
 import { SelectedPage } from "@/types/index"
 import { beginProgrammaticScroll } from "@/hooks/useScrollSpy"
+import { usePathname, useRouter } from "next/navigation"
 
 type Props = {
   scrollTo: SelectedPage
@@ -16,8 +17,18 @@ const LinkDesktop = ({
   selectedPage,
   setSelectedPage,
 }: Props) => {
+  const pathname = usePathname()
+  const router = useRouter()
+  const isHome = pathname === "/"
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
+
+    if (!isHome) {
+      router.push(`/#${scrollTo}`)
+      return
+    }
+
     const element = document.getElementById(scrollTo)
     if (element) {
       beginProgrammaticScroll()
@@ -28,7 +39,7 @@ const LinkDesktop = ({
 
   return (
     <a
-      href={`#${scrollTo}`}
+      href={isHome ? `#${scrollTo}` : `/#${scrollTo}`}
       onClick={handleClick}
       className={`mt-1 pb-1 px-1 mx-2 border-b-2 font-semibold ${
         selectedPage === scrollTo

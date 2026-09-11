@@ -170,14 +170,14 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   /> */}
+                  <LinkDesktop
+                    scrollTo={SelectedPage.Contact}
+                    displayText="Contact"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
 
                   <div className="h-6 w-0.5 mb-1 bg-zinc-200 dark:bg-zinc-800"></div>
-                  <Link
-                    href="/contact"
-                    className="flex items-center border-transparent hover:border-zinc-300 dark:hover:border-zinc-700 text-gray-800 dark:text-gray-200 justify-center mt-1 pb-1 px-1 mx-2 border-b-2 font-semibold"
-                  >
-                    Contact
-                  </Link>
                   <Link
                     href="/faq"
                     className="flex items-center border-transparent hover:border-zinc-300 dark:hover:border-zinc-700 text-gray-800 dark:text-gray-200 justify-center mt-1 pb-1 px-1 mx-2 border-b-2 font-semibold"
@@ -223,7 +223,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className={`fixed top-0 right-0 mt-[71px] dark:mt-[70px] w-full md:w-2/5 
+            className={`fixed top-0 right-0 mt-[71px] dark:mt-[70px] w-full md:w-2/5
         md:rounded-bl-lg overflow-hidden z-30 bg-white dark:bg-zinc-950
         shadow-[0_4px_6px_-2px_rgba(0,0,0,0.08)]
         dark:shadow-none
@@ -269,19 +269,19 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   Icon={InformationCircleIcon}
                   IconSolid={InformationCircleIconSolid}
                 /> */}
+                <LinkMobile
+                  scrollTo={SelectedPage.Contact}
+                  displayText="Contact"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                  toggleMenu={() => setIsMenuToggled(false)}
+                  Icon={PaperAirplaneIcon}
+                />
 
                 <div className="w-full px-2">
                   <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 my-2" />
                 </div>
                 <div className="w-full mb-4">
-                  <Link
-                    href="/contact"
-                    onClick={() => setIsMenuToggled(false)}
-                    className="font-semibold pt-4 pb-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-500 dark:text-gray-300"
-                  >
-                    <PaperAirplaneIcon className="size-6 mr-4" />
-                    <p>Contact</p>
-                  </Link>
                   <Link
                     href="/faq"
                     onClick={() => setIsMenuToggled(false)}

@@ -12,6 +12,7 @@ const SECTION_PAGES: ReadonlyArray<readonly [string, SelectedPage]> = [
   ["credentials", SelectedPage.Home],
   ["about", SelectedPage.About],
   ["features", SelectedPage.Features],
+  ["contact", SelectedPage.Contact],
 ]
 
 const FIRST_PAGE = SECTION_PAGES[0][1]
