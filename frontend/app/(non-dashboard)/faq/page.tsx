@@ -77,7 +77,7 @@ export default function FaqPage() {
         <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 mt-8 sm:mt-16  mx-auto" />
 
         {/* FAQ ITEMS */}
-        <div className="w-full flex flex-col text-base md:text-lg mx-auto font-serif">
+        <div className="w-full flex flex-col text-base md:text-lg mx-auto ">
           {faqItems.map((item) => (
             <div key={item.id} className="flex flex-col">
               <button
@@ -101,7 +101,7 @@ export default function FaqPage() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                   >
-                    <p className="pb-4 px-2 text-gray-600 dark:text-gray-300">
+                    <p className="pb-4 px-2 text-gray-600 dark:text-gray-300 font-serif">
                       {item.answer}
                     </p>
                   </motion.div>
