@@ -75,7 +75,12 @@ export default function ContactSection() {
                 </span>
               </>
             }
-            caption={<></>}
+            caption={
+              <>
+                Send a brief description of the case. You&apos;ll have a
+                response within one business day.
+              </>
+            }
           />
         </div>
 

@@ -55,7 +55,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto max-w-3xl py-32 text-center sm:py-48 lg:py-56"
         >
-          <h1 className="font-serif text-5xl tracking-tight text-balance text-white sm:text-7xl">
+          <h1 className="font-semibold text-5xl tracking-tight text-balance text-white sm:text-7xl">
             Clinical clarity.{" "}
             <span className="text-indigo-300">Case confidence.</span>
           </h1>
@@ -71,17 +71,15 @@ const HeroSection = () => {
               className="flex w-full items-center justify-center text-lg sm:w-56"
               onClick={() => openAuthModal("signup")}
             >
-              Schedule
+              Contact us
             </Button>
-            <button
-              type="button"
-              className="rounded-md px-3 py-2 text-lg font-semibold text-white hover:text-indigo-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              onClick={() => {
-                // TODO: Link to sample case chronology
-              }}
+            <Button
+              variant="secondary"
+              className="flex w-full items-center justify-center text-lg sm:w-56"
+              onClick={() => openAuthModal("signup")}
             >
-              Learn more <span aria-hidden="true">&rarr;</span>
-            </button>
+              About us
+            </Button>
           </div>
         </motion.div>
       </div>

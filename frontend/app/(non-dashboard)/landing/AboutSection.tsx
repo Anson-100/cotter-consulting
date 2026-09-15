@@ -1,203 +1,35 @@
-"use client"
-import { motion } from "framer-motion"
-import { useRef, useSyncExternalStore } from "react"
+import { CheckIcon } from "@heroicons/react/20/solid"
 import SceneHeader from "@/components/ui/scene-header"
 
-const DESKTOP_QUERY = "(min-width: 1024px)"
+const LOREM =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit aute id magna aliqua ad ad non deserunt sunt."
 
-function subscribeToDesktop(callback: () => void) {
-  const mq = window.matchMedia(DESKTOP_QUERY)
-  mq.addEventListener("change", callback)
-  return () => mq.removeEventListener("change", callback)
-}
-
-function useIsDesktop() {
-  return useSyncExternalStore(
-    subscribeToDesktop,
-    () => window.matchMedia(DESKTOP_QUERY).matches,
-    () => false,
-  )
-}
-
-// ANIMATION TIMING — TWEAK THESE TWO LINES ===============================
-const STAGGER = 0.12 // gap between each bar starting
-const DURATION = 0.45 // how long a bar takes to grow
-const TRIGGER = 0.05 // how much of the section must be visible to fire
-// ========================================================================
-
-const steps = [
-  {
-    number: "1",
-    title: "Send the records",
-    description:
-      "Upload the file through a secure portal — medical records, imaging, depositions, billing. Any format, any volume.",
-    bg: "bg-white dark:bg-zinc-800",
-    numberColor: "text-gray-900 dark:text-white",
-    titleColor: "text-gray-900 dark:text-white",
-    descColor: "text-gray-600 dark:text-gray-300",
-    maxHeight: 280,
-    widthPercent: "65%",
-    mobileHeight: 300,
-  },
-  {
-    number: "2",
-    title: "Clinical review",
-    description:
-      "A registered nurse reads every page. Timeline reconstruction, standard-of-care analysis, and identification of what the record does and doesn't support.",
-    bg: "bg-zinc-200 dark:bg-zinc-700",
-    numberColor: "text-gray-900 dark:text-white",
-    titleColor: "text-gray-900 dark:text-white",
-    descColor: "text-gray-600 dark:text-gray-300",
-    maxHeight: 360,
-    widthPercent: "85%",
-    mobileHeight: 300,
-  },
-  {
-    number: "3",
-    title: "Get your report",
-    description:
-      "A written chronology with cited page references, flagged deviations, and the clinical questions worth asking in deposition.",
-    bg: "bg-indigo-600",
-    numberColor: "text-white",
-    titleColor: "text-white",
-    descColor: "text-indigo-50",
-    maxHeight: 440,
-    widthPercent: "100%",
-    mobileHeight: 300,
-  },
+const stats = [
+  { metric: "00", title: "How you work", description: LOREM },
+  { metric: "00%", title: "How you work", description: LOREM },
+  { metric: "00 hrs", title: "How you work", description: LOREM },
 ]
 
-// DESKTOP BAR ============================================================
-// PLAYS ONCE WHEN THE SECTION ENTERS VIEW. THE BAR GROWS UPWARD FROM
-// THE BOTTOM, STAGGERED BY INDEX, THEN STAYS PUT. NO SCROLL COUPLING.
-// ========================================================================
-function DesktopBar({
-  step,
-  index,
-}: {
-  step: (typeof steps)[number]
-  index: number
-}) {
-  const barDelay = index * STAGGER
-  const textDelay = barDelay + DURATION * 0.5
+const features = [
+  { name: "Service name.", description: LOREM },
+  { name: "Service name.", description: LOREM },
+  { name: "Service name.", description: LOREM },
+  { name: "Service name.", description: LOREM },
+  { name: "Service name.", description: LOREM },
+  { name: "Service name.", description: LOREM },
+]
 
-  return (
-    // FIXED-HEIGHT TRANSPARENT PARENT — RESERVES SPACE, NEVER ANIMATES ===
-    <div className="relative flex-1" style={{ height: step.maxHeight }}>
-      {/* ANIMATED COLORED BAR — GROWS FROM BOTTOM UP ==================== */}
-      {/* THE STEP NUMBER RIDES INSIDE SO IT TRAVELS WITH THE TOP EDGE === */}
-      <motion.div
-        initial={{ height: 80, opacity: 0.4 }}
-        whileInView={{ height: step.maxHeight, opacity: 1 }}
-        viewport={{ once: true, amount: TRIGGER }}
-        transition={{
-          duration: DURATION,
-          delay: barDelay,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className={`absolute right-0 bottom-0 left-0 overflow-hidden rounded-t-2xl ${step.bg}`}
-      >
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: TRIGGER }}
-          transition={{ duration: 0.3, delay: barDelay + 0.05 }}
-          className={`p-8 font-serif text-5xl tracking-tight ${step.numberColor}`}
-        >
-          {step.number}
-        </motion.p>
-      </motion.div>
+// SANS — METRIC AND TITLE ARE STRUCTURAL
+const metricClass = "flex-none text-6xl font-semibold tracking-tight"
+const titleClass = "text-xl font-semibold tracking-tight"
 
-      {/* FIXED-POSITION TEXT LAYER — PINNED TO BOTTOM, NEVER MOVES ====== */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: TRIGGER }}
-        transition={{ duration: 0.35, delay: textDelay }}
-        className="pointer-events-none absolute right-0 bottom-0 left-0 p-8"
-      >
-        <p className={`font-serif text-xl  tracking-tight ${step.titleColor}`}>
-          {step.title}
-        </p>
-        <p className={`mt-2 font-serif text-lg ${step.descColor}`}>
-          {step.description}
-        </p>
-      </motion.div>
-    </div>
-  )
-}
+// SERIF — PROSE ONLY, SAME SIZE AS THE ABOUT PAGE
+const descClass = "mt-3 font-serif text-lg/8"
 
-// MOBILE BAR =============================================================
-// SAME BEHAVIOR, HORIZONTAL. GROWS IN WIDTH FROM THE LEFT, ONCE.
-// ========================================================================
-function MobileBar({
-  step,
-  index,
-}: {
-  step: (typeof steps)[number]
-  index: number
-}) {
-  const barDelay = index * STAGGER
-  const textDelay = barDelay + DURATION * 0.5
-
-  return (
-    <div className="relative w-full" style={{ height: step.mobileHeight }}>
-      {/* ANIMATED COLORED BAR — GROWS LEFT TO RIGHT ===================== */}
-      <motion.div
-        initial={{ width: "30%", opacity: 0.4 }}
-        whileInView={{ width: step.widthPercent, opacity: 1 }}
-        viewport={{ once: true, amount: TRIGGER }}
-        transition={{
-          duration: DURATION,
-          delay: barDelay,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        style={{ height: step.mobileHeight }}
-        className={`absolute top-0 bottom-0 left-0 overflow-hidden rounded-r-2xl ${step.bg}`}
-      >
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: TRIGGER }}
-          transition={{ duration: 0.3, delay: barDelay + 0.05 }}
-          className={`p-6 font-serif text-4xl tracking-tight ${step.numberColor}`}
-        >
-          {step.number}
-        </motion.p>
-      </motion.div>
-
-      {/* FIXED-POSITION TEXT LAYER — CONSTRAINED TO BAR'S FINAL WIDTH === */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: TRIGGER }}
-        transition={{ duration: 0.35, delay: textDelay }}
-        style={{ width: step.widthPercent }}
-        className="pointer-events-none absolute bottom-0 left-0 p-6"
-      >
-        <p className={`font-serif text-lg  tracking-tight ${step.titleColor}`}>
-          {step.title}
-        </p>
-        <p className={`mt-2 text-base/7 ${step.descColor}`}>
-          {step.description}
-        </p>
-      </motion.div>
-    </div>
-  )
-}
-
-// ABOUT SECTION — MAIN EXPORT ============================================
 export default function AboutSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const isDesktop = useIsDesktop()
-
   return (
-    <section
-      id="about"
-      ref={sectionRef}
-      className="py-24 min-h-screen scroll-mt-[70px]"
-    >
-      <motion.div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="about" className="py-24 scroll-mt-[70px]">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <SceneHeader
             eyebrow="How it works"
@@ -216,22 +48,62 @@ export default function AboutSection() {
           />
         </div>
 
-        {/* DESKTOP LAYOUT — BARS GROW VERTICALLY FROM BOTTOM ============ */}
-        {isDesktop ? (
-          <div className="mt-32 flex h-[440px] flex-row items-end gap-8">
-            {steps.map((step, i) => (
-              <DesktopBar key={step.number} step={step} index={i} />
-            ))}
+        {/* STAT CARDS ================================================== */}
+        <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+          {/* CARD 1 — LIGHT */}
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 ring-1 ring-gray-900/5 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start dark:bg-zinc-800/60 dark:ring-white/10">
+            <p className={`${metricClass} text-gray-900 dark:text-white`}>
+              {stats[0].metric}
+            </p>
+            <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+              <p className={`${titleClass} text-gray-900 dark:text-white`}>
+                {stats[0].title}
+              </p>
+              <p className={`${descClass} text-gray-700 dark:text-gray-300`}>
+                {stats[0].description}
+              </p>
+            </div>
           </div>
-        ) : (
-          /* MOBILE LAYOUT — BARS GROW HORIZONTALLY FROM LEFT ============ */
-          <div className="mt-16 flex flex-col gap-4">
-            {steps.map((step, i) => (
-              <MobileBar key={step.number} step={step} index={i} />
-            ))}
+
+          {/* CARD 2 — DARK */}
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 ring-1 ring-white/10 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 dark:bg-zinc-900">
+            <p className={`${metricClass} text-white`}>{stats[1].metric}</p>
+            <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+              <p className={`${titleClass} text-white`}>{stats[1].title}</p>
+              <p className={`${descClass} text-gray-300`}>
+                {stats[1].description}
+              </p>
+            </div>
           </div>
-        )}
-      </motion.div>
+
+          {/* CARD 3 — INDIGO */}
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-indigo-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+            <p className={`${metricClass} text-white`}>{stats[2].metric}</p>
+            <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+              <p className={`${titleClass} text-white`}>{stats[2].title}</p>
+              <p className={`${descClass} text-indigo-100`}>
+                {stats[2].description}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SERVICES — 3x2 CHECKLIST ==================================== */}
+        <dl className="mx-auto mt-24 grid max-w-2xl grid-cols-1 gap-8 font-serif text-lg/8 text-gray-700 sm:mt-28 sm:grid-cols-2 lg:mx-0 lg:mt-32 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:text-gray-300">
+          {features.map((feature, i) => (
+            <div key={i} className="relative pl-9">
+              <dt className="inline font-sans font-semibold text-gray-900 dark:text-white">
+                <CheckIcon
+                  aria-hidden="true"
+                  className="absolute top-2 left-1 size-5 text-indigo-600 dark:text-indigo-500"
+                />
+                {feature.name}
+              </dt>{" "}
+              <dd className="inline">{feature.description}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </section>
   )
 }

@@ -1,47 +1,22 @@
-"use client"
-
-import Link from "next/link"
-import Button from "@/components/ui/button"
-import {
-  LinkIcon,
-  ChartBarIcon,
-  ArchiveBoxIcon,
-  DevicePhoneMobileIcon,
-} from "@heroicons/react/24/outline"
-import { StarIcon } from "@heroicons/react/24/solid"
-import {
-  AcademicCapIcon,
-  ClipboardDocumentCheckIcon,
-  ScaleIcon,
-} from "@heroicons/react/20/solid"
-import { motion } from "framer-motion"
 import SceneHeader from "@/components/ui/scene-header"
 
-const credentials = [
-  {
-    name: "BSN, RN",
-    description:
-      "Bachelor of Science in Nursing and an active registered nurse license.",
-    icon: AcademicCapIcon,
-  },
-  {
-    name: "Critical care background",
-    description:
-      "Years at the bedside in intensive care, where charting is dense, timelines are tight, and small deviations carry real consequences. That is the same detail a case file demands.",
-    icon: ClipboardDocumentCheckIcon,
-  },
-  {
-    name: "Consulting for counsel",
-    description:
-      "Record review, chronologies, merit screening, and standard of care analysis for plaintiff and defense firms.",
-    icon: ScaleIcon,
-  },
+const stats = [
+  { label: "Credential", value: "BSN" },
+  { label: "License", value: "RN" },
+  { label: "Certification", value: "LNC" },
+  { label: "Experience", value: "12 yrs" },
 ]
+
+// ONE CLASS FOR ALL SERIF PROSE — SIZE AND COLOR LIVE HERE ONLY
+const prose = "font-serif text-lg/8 text-gray-700 dark:text-gray-300"
 
 export default function FeaturesSection() {
   return (
-    <div id="features" className=" py-24  min-h-screen scroll-mt-[70px]">
-      <motion.div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      id="features"
+      className="overflow-hidden py-24 min-h-screen scroll-mt-[70px]"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SceneHeader
           eyebrow="Features"
           title={
@@ -53,43 +28,72 @@ export default function FeaturesSection() {
           caption=""
         />
 
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 bg-white dark:bg-zinc-950 rounded-xl shadow-xl dark:shadow-none dark:border dark:border-indigo-600 overflow-hidden">
-          <div className="p-6">
-            <div className="lg:max-w-lg">
-              {" "}
-              <h2 className="font-serif text-4xl tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-gray-100">
-                RaeAnna Cotter
-              </h2>
-              <p className="font-serif text-lg/8 text-gray-700 dark:text-gray-300 mt-3">
-                spent her career in intensive care, reading the record as it was
-                written and watching how quickly a patient's course can turn on
-                a single missed detail.
+        <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          {/* PROSE + STATS — FIRST ON MOBILE, RIGHT COLUMN ON DESKTOP == */}
+          <div className="lg:order-2 lg:pl-4">
+            <h3 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">
+              Lorem ipsum
+            </h3>
+            <div className="max-w-xl">
+              <p className={`mt-6 ${prose}`}>
+                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
+                Id dolor praesent donec est. Odio penatibus risus viverra tellus
+                varius sit neque erat velit. Faucibus commodo massa rhoncus,
+                volutpat. Dignissim sed eget risus enim.
               </p>
-              <dl className="mt-10 max-w-xl space-y-8 font-serif text-base/7 text-gray-600 lg:max-w-none dark:text-gray-400">
-                {credentials.map((item) => (
-                  <div key={item.name} className="relative pl-9 flex flex-col">
-                    <dt className="inline text-xl text-gray-900 dark:text-gray-100">
-                      <item.icon
-                        aria-hidden="true"
-                        className="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-500"
-                      />
-
-                      {item.name}
-                    </dt>{" "}
-                    <dd className="inline">{item.description}</dd>
-                  </div>
-                ))}
-              </dl>
+              <p className={`mt-8 ${prose}`}>
+                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
+                odio id et. Id blandit molestie auctor fermentum dignissim.
+                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
+                et ultrices hac adipiscing egestas.
+              </p>
             </div>
+
+            {/* STATS — ALL SANS ======================================== */}
+            <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4 dark:border-white/10">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <dt className="text-sm/6 font-semibold text-gray-600 dark:text-gray-400">
+                    {stat.label}
+                  </dt>
+                  <dd className="mt-2 text-4xl/10 font-semibold tracking-tight text-gray-900 dark:text-white">
+                    {stat.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
-          <img
-            alt="Raeanna Cotter"
-            src="https://images.unsplash.com/photo-1706799191377-96a80beaee24?q=80&w=2577&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            className="aspect-[4/3] w-full rounded-b-xl lg:rounded-bl-none lg:rounded-r-xl object-cover  ring-1 ring-gray-400/10 grayscale lg:aspect-auto lg:h-full"
-          />
+          {/* PORTRAIT PANEL — SECOND ON MOBILE, LEFT COLUMN ON DESKTOP = */}
+          <div className="lg:order-1 lg:pr-4">
+            <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-72 pb-9 shadow-2xl sm:px-12 sm:pt-96 lg:max-w-lg lg:px-8 lg:pt-80 lg:pb-8 xl:px-10 xl:pb-10">
+              <img
+                alt="RaeAnna Cotter"
+                src="/images/about-image.png"
+                className="absolute inset-0 size-full rounded-3xl object-cover object-top grayscale"
+              />
+
+              {/* FADE — TRANSPARENT AT TOP, SOLID AT BOTTOM ============ */}
+              <div className="absolute inset-x-0 bottom-0 h-3/5 rounded-b-3xl bg-gradient-to-t from-black via-black/80 to-transparent" />
+
+              {/* QUOTE ================================================= */}
+              <figure className="relative isolate">
+                <blockquote className="font-serif text-xl/8 text-balance text-white">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                  eiusmod tempor.
+                </blockquote>
+                <figcaption className="mt-6 text-sm/6 text-gray-300">
+                  <strong className="font-semibold text-white">
+                    Name goes here,
+                  </strong>{" "}
+                  Credential goes here
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
