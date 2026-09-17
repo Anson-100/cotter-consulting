@@ -54,12 +54,13 @@ export default function FeaturesSection() {
             <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4 dark:border-white/10">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <dt className="text-sm/6 font-semibold text-gray-600 dark:text-gray-400">
-                    {stat.label}
-                  </dt>
+                  {" "}
                   <dd className="mt-2 text-4xl/10 font-semibold tracking-tight text-gray-900 dark:text-white">
                     {stat.value}
                   </dd>
+                  <dt className="text-sm/6 font-semibold text-gray-600 dark:text-gray-400">
+                    {stat.label}
+                  </dt>
                 </div>
               ))}
             </dl>

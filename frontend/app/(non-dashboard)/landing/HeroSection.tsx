@@ -17,82 +17,81 @@ const HeroSection = () => {
   const reduceMotion = useReducedMotion()
 
   return (
-    <section
-      id="home"
-      className="relative isolate min-h-screen scroll-mt-[70px] overflow-hidden"
-    >
-      {/* Background image */}
-      <Image
-        src={HERO_IMAGE}
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="-z-20 object-cover grayscale"
-      />
-
-      {/* Indigo overlay */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-linear-to-b from-indigo-950/90 via-indigo-900/80 to-indigo-950/95"
-      />
-
-      {/* Top blob */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      >
-        <div
-          style={{ clipPath: BLOB_CLIP }}
-          className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-indigo-400 to-sky-300 opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
+    <section id="home" className="scroll-mt-[70px] h-screen pb-4 px-4 pt-22">
+      <div className="relative isolate h-full overflow-hidden rounded-3xl">
+        {/* Background image */}
+        <Image
+          src={HERO_IMAGE}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="-z-20 object-cover grayscale"
         />
-      </div>
 
-      <div className="mx-auto flex min-h-screen max-w-7xl items-center px-6 lg:px-8">
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mx-auto max-w-3xl py-32 text-center sm:py-48 lg:py-56"
+        {/* Indigo overlay */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-linear-to-b from-indigo-950/90 via-indigo-900/80 to-indigo-950/95"
+        />
+
+        {/* Top blob */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         >
-          <h1 className="font-semibold text-5xl tracking-tight text-balance text-white sm:text-7xl">
-            Clinical clarity.{" "}
-            <span className="text-indigo-300">Case confidence.</span>
-          </h1>
+          <div
+            style={{ clipPath: BLOB_CLIP }}
+            className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-indigo-400 to-sky-300 opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
+          />
+        </div>
 
-          <p className="mx-auto mt-8 max-w-2xl font-serif text-lg font-medium text-balance text-indigo-100/90 sm:text-xl/8">
-            Clinical expertise that turns thousands of pages of medical records
-            into the clear, sourced facts your argument rests on.
-          </p>
+        <div className="mx-auto flex  max-w-7xl items-center px-6 lg:px-8">
+          <motion.div
+            initial={reduceMotion ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mx-auto max-w-3xl py-32 text-center sm:py-48 lg:py-56"
+          >
+            <h1 className="font-semibold text-5xl tracking-tight text-balance text-white sm:text-7xl">
+              Clinical clarity.{" "}
+              <span className="text-indigo-300">Case confidence.</span>
+            </h1>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-y-4 sm:flex-row sm:gap-x-6">
-            <Button
-              variant="primary"
-              className="flex w-full items-center justify-center text-lg sm:w-56"
-              onClick={() => openAuthModal("signup")}
-            >
-              Contact us
-            </Button>
-            <Button
-              variant="secondary"
-              className="flex w-full items-center justify-center text-lg sm:w-56"
-              onClick={() => openAuthModal("signup")}
-            >
-              About us
-            </Button>
-          </div>
-        </motion.div>
-      </div>
+            <p className="mx-auto mt-8 max-w-2xl font-serif text-lg font-medium text-balance text-indigo-100/90 sm:text-xl/8">
+              Clinical expertise that turns thousands of pages of medical
+              records into the clear, sourced facts your argument rests on.
+            </p>
 
-      {/* Bottom blob */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-      >
+            <div className="mt-10 flex flex-col items-center justify-center gap-y-4 sm:flex-row sm:gap-x-6">
+              <Button
+                variant="primary"
+                className="flex w-full items-center justify-center text-lg sm:w-56"
+                onClick={() => openAuthModal("signup")}
+              >
+                Contact us
+              </Button>
+              <Button
+                variant="secondary"
+                className="flex w-full items-center justify-center text-lg sm:w-56"
+                onClick={() => openAuthModal("signup")}
+              >
+                About us
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom blob */}
         <div
-          style={{ clipPath: BLOB_CLIP }}
-          className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-indigo-400 to-sky-300 opacity-20 sm:left-[calc(50%+36rem)] sm:w-288.75"
-        />
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        >
+          <div
+            style={{ clipPath: BLOB_CLIP }}
+            className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-indigo-400 to-sky-300 opacity-20 sm:left-[calc(50%+36rem)] sm:w-288.75"
+          />
+        </div>
       </div>
     </section>
   )
