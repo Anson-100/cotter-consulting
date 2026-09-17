@@ -26,7 +26,7 @@ const Greeting = () => {
   if (!greeting) return null
 
   return (
-    <p className="text-base font-semibold text-indigo-600 dark:text-indigo-500 tracking-tight">
+    <p className="text-base font-semibold text-succulent dark:text-succulent tracking-tight">
       {greeting}
     </p>
   )

@@ -36,7 +36,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
                 text-zinc-800 dark:text-gray-200
                 placeholder:text-gray-400 dark:placeholder:text-gray-500
                 border-b-2 border-dotted border-zinc-300 dark:border-zinc-600
-                focus:border-indigo-500 dark:focus:border-indigo-400
+                focus:border-succulent dark:focus:border-succulent
                 outline-none
                 ${className}
               `}
@@ -80,7 +80,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
               outline-1 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700
               placeholder:text-gray-400 dark:text-gray-200
               focus:outline-1
-              focus:outline-indigo-600 dark:focus:outline-indigo-500
+              focus:outline-succulent dark:focus:outline-succulent
               ${className}
             `}
           />

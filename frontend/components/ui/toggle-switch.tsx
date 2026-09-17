@@ -18,9 +18,9 @@ export default function ToggleSwitch({
   return (
     <div className="flex items-center gap-3">
       <div
-        className={`group relative inline-flex w-11 shrink-0 rounded-full p-0.5 outline-offset-2 outline-indigo-500 transition-colors duration-200 ease-in-out ${
+        className={`group relative inline-flex w-11 shrink-0 rounded-full p-0.5 outline-offset-2 outline-succulent transition-colors duration-200 ease-in-out ${
           checked
-            ? "bg-indigo-500"
+            ? "bg-succulent"
             : "bg-zinc-200 dark:bg-white/5 ring-1 ring-inset ring-zinc-300 dark:ring-white/10"
         } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
       >
@@ -35,7 +35,7 @@ export default function ToggleSwitch({
           onChange={(e) => onChange(e.target.checked)}
           disabled={disabled}
           aria-label={ariaLabel || label || "Toggle"}
-          className="absolute inset-0 size-full cursor-pointer appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 rounded-full disabled:cursor-not-allowed"
+          className="absolute inset-0 size-full cursor-pointer appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-succulent focus-visible:ring-offset-2 rounded-full disabled:cursor-not-allowed"
         />
       </div>
       {label && (

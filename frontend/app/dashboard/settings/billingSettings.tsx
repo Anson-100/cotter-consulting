@@ -393,7 +393,7 @@ const BillingSettings = () => {
                       <button
                         type="button"
                         onClick={() => setUseNewCard(true)}
-                        className="font-medium text-indigo-600 dark:text-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-400"
+                        className="font-medium text-succulent dark:text-succulent hover:text-succulent/90 dark:hover:text-succulent/90"
                       >
                         Use a different card
                       </button>
@@ -580,7 +580,7 @@ const BillingSettings = () => {
               <div className="md:col-span-2">
                 {/* Current Plan Card */}
                 <div className="relative overflow-hidden rounded-lg pl-6 p-4 bg-white dark:bg-zinc-950 ring-inset ring-2 ring-zinc-200 dark:ring-zinc-700 w-56">
-                  <div className="absolute left-0 h-full w-2 top-0 bg-indigo-600 dark:bg-indigo-500" />
+                  <div className="absolute left-0 h-full w-2 top-0 bg-succulent dark:bg-succulent" />
 
                   {currentPlan === "deferred" ? (
                     <>
@@ -680,7 +680,7 @@ const BillingSettings = () => {
                   }
                   disabled={planLoading}
                   type="button"
-                  className="w-56 justify-center disabled:opacity-100 disabled:border-indigo-600 dark:disabled:border-indigo-500"
+                  className="w-56 justify-center disabled:opacity-100 disabled:border-succulent dark:disabled:border-succulent"
                 >
                   {planLoading
                     ? "Updating..."

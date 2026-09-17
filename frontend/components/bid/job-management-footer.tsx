@@ -268,7 +268,7 @@ export default function JobManagementFooter({
                       >
                         {statusLabels[s]}
                         {status === s && (
-                          <CheckIcon className="size-5 text-indigo-600 dark:text-indigo-500" />
+                          <CheckIcon className="size-5 text-succulent dark:text-succulent" />
                         )}
                       </button>
                     </MenuItem>

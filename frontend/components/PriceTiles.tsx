@@ -33,7 +33,7 @@ export default function PriceTiles() {
                     damping: 0,
                     duration: 0.2,
                   }}
-                  className="absolute rounded-full bg-indigo-600"
+                  className="absolute rounded-full bg-succulent"
                   style={{
                     height: "calc(100% - 8px)",
                     top: "4px",
@@ -90,10 +90,10 @@ export default function PriceTiles() {
                   className={`
                     group/tier p-6 rounded-xl border-2 bg-white dark:bg-zinc-950
                     shadow-[0_0_20px_rgba(0,0,0,0)] transition-shadow duration-300
-                    hover:shadow-[0_0_20px_var(--color-indigo-500)]
+                    hover:shadow-[0_0_20px_var(--color-succulent)]
                     ${
                       tier.featured
-                        ? "border-indigo-600 dark:border-indigo-500"
+                        ? "border-succulent dark:border-succulent"
                         : "border-zinc-200 dark:border-zinc-700"
                     }
                   `}
@@ -104,13 +104,13 @@ export default function PriceTiles() {
                         id={`tier-${tier.id}`}
                         className={`
                           text-2xl/8 font-semibold text-gray-800 dark:text-gray-200
-                          group-data-featured/tier:text-indigo-600 dark:group-data-featured/tier:text-indigo-500
+                          group-data-featured/tier:text-succulent dark:group-data-featured/tier:text-succulent
                         `}
                       >
                         {tier.name}
                       </h3>
                       {tier.featured && (
-                        <p className="rounded-full bg-indigo-600/10 px-2.5 py-1 font-semibold text-indigo-600 dark:text-indigo-500">
+                        <p className="rounded-full bg-succulent/10 px-2.5 py-1 font-semibold text-succulent dark:text-succulent">
                           Most popular
                         </p>
                       )}
@@ -178,7 +178,7 @@ export default function PriceTiles() {
                     >
                       {tier.features.map((f) => (
                         <li key={f.text} className="flex gap-x-3">
-                          <f.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-500" />
+                          <f.icon className="h-6 w-6 text-succulent dark:text-succulent" />
                           {f.text}
                         </li>
                       ))}

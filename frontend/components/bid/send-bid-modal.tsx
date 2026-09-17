@@ -265,8 +265,8 @@ export default function SendBidModal({
 
         {step === "success" && (
           <div className="flex flex-col items-center justify-center py-6 text-center">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-indigo-100 ring-2 ring-indigo-200 dark:bg-indigo-950/40 dark:ring-indigo-900">
-              <CheckIconSolid className="size-7 text-indigo-600 dark:text-indigo-400" />
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-succulent ring-2 ring-succulent dark:bg-succulent/40 dark:ring-succulent">
+              <CheckIconSolid className="size-7 text-succulent dark:text-succulent" />
             </div>
 
             <p className="mb-6 text-zinc-600 dark:text-zinc-300">
@@ -291,7 +291,7 @@ export default function SendBidModal({
                   placeholder="Search contacts..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full rounded-lg border-2 border-zinc-200 bg-white py-2.5 pl-10 pr-4 text-gray-800 placeholder-gray-400 focus:border-indigo-500 focus:outline-none dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-200"
+                  className="w-full rounded-lg border-2 border-zinc-200 bg-white py-2.5 pl-10 pr-4 text-gray-800 placeholder-gray-400 focus:border-succulent focus:outline-none dark:border-zinc-700 dark:bg-zinc-950 dark:text-gray-200"
                 />
               </div>
             )}
@@ -306,10 +306,10 @@ export default function SendBidModal({
                       key={contact.id}
                       type="button"
                       onClick={() => handleSelectContact(contact)}
-                      className="w-full rounded-lg border-2 border-zinc-200 p-3 text-left hover:border-indigo-500 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:border-indigo-500 dark:hover:bg-zinc-900"
+                      className="w-full rounded-lg border-2 border-zinc-200 p-3 text-left hover:border-succulent hover:bg-zinc-50 dark:border-zinc-700 dark:hover:border-succulent dark:hover:bg-zinc-900"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="flex size-10 flex-none items-center justify-center rounded-full bg-indigo-100 font-semibold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400">
+                        <div className="flex size-10 flex-none items-center justify-center rounded-full bg-succulent font-semibold text-succulent dark:bg-succulent/50 dark:text-succulent">
                           {contact.name.charAt(0).toUpperCase()}
                         </div>
                         <div className="min-w-0 flex-1">
@@ -342,7 +342,7 @@ export default function SendBidModal({
             <button
               type="button"
               onClick={handleNewRecipient}
-              className="w-full rounded-lg border-2 border-dashed border-zinc-300 p-3 text-left hover:border-indigo-500 hover:bg-zinc-50 dark:border-zinc-600 dark:hover:border-indigo-500 dark:hover:bg-zinc-900"
+              className="w-full rounded-lg border-2 border-dashed border-zinc-300 p-3 text-left hover:border-succulent hover:bg-zinc-50 dark:border-zinc-600 dark:hover:border-succulent dark:hover:bg-zinc-900"
             >
               <div className="flex items-center gap-3">
                 <div className="flex size-10 flex-none items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800">
@@ -404,7 +404,7 @@ export default function SendBidModal({
                         type="checkbox"
                         checked={saveToContacts}
                         onChange={(e) => setSaveToContacts(e.target.checked)}
-                        className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 bg-white checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:border-zinc-700 dark:bg-zinc-950"
+                        className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 bg-white checked:border-succulent checked:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent dark:border-zinc-700 dark:bg-zinc-950"
                       />
                       <svg
                         fill="none"
@@ -434,11 +434,11 @@ export default function SendBidModal({
               <button
                 type="button"
                 onClick={handleCopyLink}
-                className="w-full rounded-lg border-2 border-zinc-200 p-4 text-left hover:border-indigo-500 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:border-indigo-500 dark:hover:bg-zinc-900"
+                className="w-full rounded-lg border-2 border-zinc-200 p-4 text-left hover:border-succulent hover:bg-zinc-50 dark:border-zinc-700 dark:hover:border-succulent dark:hover:bg-zinc-900"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex size-12 flex-none items-center justify-center rounded-lg bg-indigo-100 ring-2 ring-zinc-200 dark:bg-indigo-900/50 dark:ring-zinc-700">
-                    <ClipboardIcon className="size-6 text-indigo-600 dark:text-indigo-400" />
+                  <div className="flex size-12 flex-none items-center justify-center rounded-lg bg-succulent ring-2 ring-zinc-200 dark:bg-succulent/50 dark:ring-zinc-700">
+                    <ClipboardIcon className="size-6 text-succulent dark:text-succulent" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800 dark:text-gray-200">
@@ -483,7 +483,7 @@ export default function SendBidModal({
               }
               className={`w-full rounded-lg border-2 border-zinc-200 p-4 text-left dark:border-zinc-700 ${
                 enableEmail
-                  ? "hover:border-indigo-500 hover:bg-zinc-50 dark:hover:border-indigo-500 dark:hover:bg-zinc-900"
+                  ? "hover:border-succulent hover:bg-zinc-50 dark:hover:border-succulent dark:hover:bg-zinc-900"
                   : "cursor-not-allowed opacity-50"
               }`}
             >
@@ -491,14 +491,14 @@ export default function SendBidModal({
                 <div
                   className={`flex size-12 flex-none items-center justify-center rounded-lg ring-2 ring-zinc-200 dark:ring-zinc-700 ${
                     enableEmail
-                      ? "bg-indigo-100 dark:bg-indigo-900/50"
+                      ? "bg-succulent dark:bg-succulent/50"
                       : "bg-zinc-100 dark:bg-zinc-800"
                   }`}
                 >
                   <EnvelopeIcon
                     className={`size-6 ${
                       enableEmail
-                        ? "text-indigo-600 dark:text-indigo-400"
+                        ? "text-succulent dark:text-succulent"
                         : "text-gray-400 dark:text-gray-500"
                     }`}
                   />
@@ -526,7 +526,7 @@ export default function SendBidModal({
               }
               className={`w-full rounded-lg border-2 border-zinc-200 p-4 text-left dark:border-zinc-700 ${
                 enableText
-                  ? "hover:border-indigo-500 hover:bg-zinc-50 dark:hover:border-indigo-500 dark:hover:bg-zinc-900"
+                  ? "hover:border-succulent hover:bg-zinc-50 dark:hover:border-succulent dark:hover:bg-zinc-900"
                   : "cursor-not-allowed opacity-50"
               }`}
             >
@@ -534,14 +534,14 @@ export default function SendBidModal({
                 <div
                   className={`flex size-12 flex-none items-center justify-center rounded-lg ring-2 ring-zinc-200 dark:ring-zinc-700 ${
                     enableText
-                      ? "bg-indigo-100 dark:bg-indigo-900/50"
+                      ? "bg-succulent dark:bg-succulent/50"
                       : "bg-zinc-100 dark:bg-zinc-800"
                   }`}
                 >
                   <DevicePhoneMobileIcon
                     className={`size-6 ${
                       enableText
-                        ? "text-indigo-600 dark:text-indigo-400"
+                        ? "text-succulent dark:text-succulent"
                         : "text-gray-400 dark:text-gray-500"
                     }`}
                   />

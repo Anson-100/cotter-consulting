@@ -45,7 +45,7 @@ export default function FeaturesPage() {
           title={
             <>
               Learn more about our{" "}
-              <span className="text-indigo-600 dark:text-indigo-500">platform</span>
+              <span className="text-succulent dark:text-succulent">platform</span>
             </>
           }
           caption={<></>}
@@ -56,7 +56,7 @@ export default function FeaturesPage() {
           <section id="send-bids">
             <FeatureSectionHeader
               icon={
-                <LinkIcon className="h-14 w-14 text-indigo-600 dark:text-indigo-500" />
+                <LinkIcon className="h-14 w-14 text-succulent dark:text-succulent" />
               }
               title="Send bids as links"
               description="Share clean, professional bids via a simple link your clients can view anywhere."
@@ -92,7 +92,7 @@ export default function FeaturesPage() {
           <section id="track-progress">
             <FeatureSectionHeader
               icon={
-                <ChartBarIcon className="h-14 w-14 text-indigo-600 dark:text-indigo-500" />
+                <ChartBarIcon className="h-14 w-14 text-succulent dark:text-succulent" />
               }
               title="Track progress"
               description="See approvals, payments, and project updates in one clear dashboard."
@@ -128,7 +128,7 @@ export default function FeaturesPage() {
           <section id="keep-records">
             <FeatureSectionHeader
               icon={
-                <ArchiveBoxIcon className="h-14 w-14 text-indigo-600 dark:text-indigo-500" />
+                <ArchiveBoxIcon className="h-14 w-14 text-succulent dark:text-succulent" />
               }
               title="Keep records"
               description="All your bids, approvals, and changes are saved for quick access and reference."
@@ -163,7 +163,7 @@ export default function FeaturesPage() {
           <section id="mobile-friendly">
             <FeatureSectionHeader
               icon={
-                <DevicePhoneMobileIcon className="h-14 w-14 text-indigo-600 dark:text-indigo-500" />
+                <DevicePhoneMobileIcon className="h-14 w-14 text-succulent dark:text-succulent" />
               }
               title="Mobile friendly"
               description="Send, review, and approve bids from any device with a simple responsive design."

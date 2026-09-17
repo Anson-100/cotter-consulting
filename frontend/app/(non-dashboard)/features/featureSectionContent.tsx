@@ -36,7 +36,7 @@ export default function FeatureSectionContent({
         >
           <div className="px-6 lg:px-0 lg:pt-4 lg:pr-4">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              {/* <h2 className="text-base/7 font-semibold text-indigo-600">
+              {/* <h2 className="text-base/7 font-semibold text-succulent">
                 {title}
               </h2> */}
               <p className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-800 dark:text-gray-200 ">
@@ -49,7 +49,7 @@ export default function FeatureSectionContent({
                 {bullets.map((bullet) => (
                   <div key={bullet.name} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-600 dark:text-gray-300">
-                      <div className="absolute top-1 left-0 text-indigo-600">
+                      <div className="absolute top-1 left-0 text-succulent">
                         {bullet.icon}
                       </div>
                       {bullet.name}
@@ -61,10 +61,10 @@ export default function FeatureSectionContent({
             </div>
           </div>
           <div className="sm:px-6 lg:px-0 ">
-            <div className="relative  isolate overflow-hidden bg-indigo-500 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pt-4 sm:pr-0 sm:pl-4 lg:mx-0 lg:max-w-lg">
+            <div className="relative  isolate overflow-hidden bg-succulent px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pt-4 sm:pr-0 sm:pl-4 lg:mx-0 lg:max-w-lg">
               <div
                 aria-hidden="true"
-                className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-40 bg-indigo-100 opacity-20 ring-1 ring-white ring-inset"
+                className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-40 bg-succulent opacity-20 ring-1 ring-white ring-inset"
               />
               <div className="mx-auto max-w-2xl  sm:mx-0 sm:max-w-none">
                 <Image

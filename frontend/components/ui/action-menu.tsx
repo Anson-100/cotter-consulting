@@ -35,12 +35,12 @@ export default function ActionMenu({
           "flex items-center gap-x-3 rounded-md p-2",
           "text-gray-600 dark:text-gray-300",
           "hover:bg-zinc-100 dark:hover:bg-zinc-800",
-          "hover:text-indigo-600 dark:hover:text-indigo-500",
+          "hover:text-succulent dark:hover:text-succulent",
           "",
           buttonClassName
         )}
       >
-        <ButtonIcon className="size-6 shrink-0 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-500" />
+        <ButtonIcon className="size-6 shrink-0 text-gray-400 group-hover:text-succulent dark:group-hover:text-succulent" />
         <span>{label}</span>
       </MenuButton>
 
@@ -67,14 +67,14 @@ export default function ActionMenu({
                   "flex items-center gap-x-3 w-full text-left p-2",
                   "text-gray-600 dark:text-gray-300",
                   active &&
-                    "bg-zinc-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-500"
+                    "bg-zinc-100 dark:bg-zinc-800 text-succulent dark:text-succulent"
                 )}
               >
                 <option.icon
                   className={cn(
                     "size-6 shrink-0",
                     active
-                      ? "text-indigo-600 dark:text-indigo-500"
+                      ? "text-succulent dark:text-succulent"
                       : "text-gray-400"
                   )}
                 />

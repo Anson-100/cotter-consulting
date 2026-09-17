@@ -205,21 +205,21 @@ export default function ContentBox({
                   onClick={() => setEditedIcon(opt.key)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-md border-2 ${
                     isSelected
-                      ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-950"
+                      ? "border-succulent bg-succulent dark:bg-succulent"
                       : "border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600"
                   }`}
                 >
                   <Icon
                     className={`size-5 ${
                       isSelected
-                        ? "text-indigo-600"
+                        ? "text-succulent"
                         : "text-gray-400 dark:text-gray-500"
                     }`}
                   />
                   <span
                     className={`text-base ${
                       isSelected
-                        ? "text-indigo-600 font-medium"
+                        ? "text-succulent font-medium"
                         : "text-gray-500 dark:text-gray-400"
                     }`}
                   >
@@ -244,7 +244,7 @@ export default function ContentBox({
                   transition={{ duration: 0.2 }}
                   className="flex items-start gap-2"
                 >
-                  <IconComponent className="size-5 text-indigo-600 mt-[3px] shrink-0" />
+                  <IconComponent className="size-5 text-succulent mt-[3px] shrink-0" />
                   <div className="flex-1 flex flex-col gap-2">
                     <EditorField
                       value={item.title}
@@ -303,7 +303,7 @@ export default function ContentBox({
             <button
               type="button"
               onClick={addItem}
-              className="flex items-center gap-2 text-indigo-600 hover:text-indigo-500"
+              className="flex items-center gap-2 text-succulent hover:text-succulent/90"
             >
               <PlusIcon className="size-5" />
               <span>Add item</span>
@@ -312,7 +312,7 @@ export default function ContentBox({
         ) : (
           block.items.map((item, index) => (
             <div key={index} className="flex items-start gap-2">
-              <IconComponent className="size-5 text-indigo-600 mt-[3px] shrink-0" />
+              <IconComponent className="size-5 text-succulent mt-[3px] shrink-0" />
               <div>
                 <div className="text-gray-800 dark:text-gray-200 font-semibold">
                   {item.title}

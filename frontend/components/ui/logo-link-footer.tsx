@@ -15,7 +15,7 @@ const LogoLinkFooter: React.FC = () => {
 
   const content = (
     <div className="flex max-w-full flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-3">
-      <ScaleIcon className="h-10 shrink-0 text-indigo-600 sm:h-12" />
+      <ScaleIcon className="h-10 shrink-0 text-succulent sm:h-12" />
       <div className="flex flex-col items-center leading-[0.95] sm:flex-row sm:items-baseline sm:gap-2">
         <span className="text-5xl text-white sm:text-5xl lg:text-6xl">
           Cotter

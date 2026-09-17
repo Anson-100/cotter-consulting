@@ -120,7 +120,7 @@ export default function ResetPasswordPage() {
     <div className="min-h-screen flex flex-col space-y-12 items-center justify-center p-4 bg-zinc-200 dark:bg-zinc-950">
       <div className="flex flex-col items-center justify-center">
         <div className="flex items-center">
-          <DocumentCurrencyDollarIcon className="h-10 text-indigo-600" />
+          <DocumentCurrencyDollarIcon className="h-10 text-succulent" />
           <div className="flex items-center text-white">
             <h1 className="text-5xl font-semibold m-0">Pirate</h1>
             <h1 className="text-5xl ml-1 text-gray-300">Ship</h1>

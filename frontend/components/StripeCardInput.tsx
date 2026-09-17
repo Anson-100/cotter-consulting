@@ -63,7 +63,7 @@ function StripeInputWrapper({
          
           ${
             focused
-              ? "outline-2 -outline-offset-1 outline-indigo-600 dark:outline-indigo-500"
+              ? "outline-2 -outline-offset-1 outline-succulent dark:outline-succulent"
               : "outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700"
           }
         `}

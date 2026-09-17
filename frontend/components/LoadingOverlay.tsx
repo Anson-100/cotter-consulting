@@ -23,7 +23,7 @@ export default function LoadingOverlay({
       >
         <div className="flex flex-col items-center gap-4">
           {/* Spinner */}
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-zinc-700 border-t-indigo-500"></div>
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-zinc-700 border-t-succulent"></div>
 
           {/* Message */}
           <p className="text-lg font-semibold text-gray-100">{message}</p>

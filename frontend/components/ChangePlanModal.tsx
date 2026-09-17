@@ -103,7 +103,7 @@ export default function ChangePlanModal({
               onClick={(e) => e.stopPropagation()}
             >
               {/* Top accent bar */}
-              <div className="w-full h-3 bg-indigo-600 dark:bg-indigo-500 rounded-t-lg"></div>
+              <div className="w-full h-3 bg-succulent dark:bg-succulent rounded-t-lg"></div>
 
               {/* Header */}
               <div className="w-full px-6 lg:px-8 pb-4 pt-4 border-b-2 border-zinc-200 dark:border-zinc-800">
@@ -128,7 +128,7 @@ export default function ChangePlanModal({
                   <fieldset aria-label="Payment frequency">
                     <div className="relative flex items-center rounded-full bg-white dark:bg-zinc-950 ring-2 ring-zinc-300 dark:ring-zinc-700 ring-inset px-1 py-1 gap-2">
                       <div
-                        className="absolute rounded-full bg-indigo-600 transition-all duration-200"
+                        className="absolute rounded-full bg-succulent transition-all duration-200"
                         style={{
                           height: "calc(100% - 8px)",
                           top: "4px",
@@ -218,7 +218,7 @@ export default function ChangePlanModal({
                   <div className="max-w-md mx-auto">
                     <Button
                       variant={hasChanges ? "primary" : "secondary"}
-                      className="w-full justify-center disabled:opacity-100 disabled:border-indigo-600 dark:disabled:border-indigo-500"
+                      className="w-full justify-center disabled:opacity-100 disabled:border-succulent dark:disabled:border-succulent"
                       onClick={handleConfirm}
                       disabled={!hasChanges || isLoading}
                     >

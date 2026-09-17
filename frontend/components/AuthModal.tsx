@@ -198,7 +198,7 @@ export default function AuthModal() {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="w-full h-3 bg-indigo-600 dark:bg-indigo-500 rounded-t-xl"></div>
+              <div className="w-full h-3 bg-succulent dark:bg-succulent rounded-t-xl"></div>
               <div className="w-full px-6 lg:px-8 pb-4 pt-4 border-b-2 border-zinc-200 dark:border-zinc-800">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
@@ -222,8 +222,8 @@ export default function AuthModal() {
                     <div className="space-y-6">
                       {/* Icon and instructions */}
                       <div className="text-center space-y-4">
-                        <div className="mx-auto w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 ring-2 ring-indigo-400 dark:ring-indigo-700 rounded-full flex items-center justify-center">
-                          <EnvelopeIcon className="size-8 text-indigo-600 dark:text-indigo-400" />
+                        <div className="mx-auto w-12 h-12 bg-succulent dark:bg-succulent/30 ring-2 ring-succulent dark:ring-succulent rounded-full flex items-center justify-center">
+                          <EnvelopeIcon className="size-8 text-succulent dark:text-succulent" />
                         </div>
                         <p className="text-gray-600 dark:text-gray-300">
                           We sent an 8-digit code to{" "}
@@ -277,7 +277,7 @@ export default function AuthModal() {
                             <button
                               type="button"
                               onClick={handleResendCode}
-                              className="font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-500 dark:hover:text-indigo-400"
+                              className="font-semibold text-succulent hover:text-succulent/90 dark:text-succulent dark:hover:text-succulent/90"
                             >
                               Resend code
                             </button>
@@ -561,7 +561,7 @@ export default function AuthModal() {
                                   <input
                                     id="remember-me"
                                     type="checkbox"
-                                    className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-succulent checked:bg-succulent indeterminate:border-succulent indeterminate:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent"
                                     checked={!!field.value}
                                     onChange={(e) =>
                                       field.onChange(e.target.checked)
@@ -596,7 +596,7 @@ export default function AuthModal() {
                             <button
                               type="button"
                               onClick={() => switchMode("forgot")}
-                              className="font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-500 dark:hover:text-indigo-400"
+                              className="font-semibold text-succulent hover:text-succulent/90 dark:text-succulent dark:hover:text-succulent/90"
                             >
                               Forgot password?
                             </button>
@@ -634,7 +634,7 @@ export default function AuthModal() {
                         onClick={() =>
                           switchMode(isSignup ? "signin" : "signup")
                         }
-                        className="text-indigo-600 dark:text-indigo-500 hover:underline"
+                        className="text-succulent dark:text-succulent hover:underline"
                       >
                         {isSignup ? "Login here" : "Sign up here"}
                       </button>

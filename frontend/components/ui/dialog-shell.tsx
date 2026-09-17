@@ -60,8 +60,8 @@ export default function DialogShell({
               transition={{ duration: 0.2 }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Indigo top bar */}
-              <div className="w-full h-3 bg-indigo-600 dark:bg-indigo-500 rounded-t-xl shrink-0" />
+              {/* Succulent top bar */}
+              <div className="w-full h-3 bg-succulent dark:bg-succulent rounded-t-xl shrink-0" />
 
               {/* Header */}
               <div className="w-full px-6 pb-4 pt-4 border-b-2 border-zinc-200 dark:border-zinc-800 shrink-0">

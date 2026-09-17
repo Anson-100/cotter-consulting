@@ -18,7 +18,7 @@ export default function PriceFeatureComparison() {
         <button
           type="button"
           onClick={() => setShowComparison(!showComparison)}
-          className="text-lg flex items-center gap-2 text-indigo-600 dark:text-indigo-500 font-medium"
+          className="text-lg flex items-center gap-2 text-succulent dark:text-succulent font-medium"
         >
           <span>
             {showComparison
@@ -63,7 +63,7 @@ export default function PriceFeatureComparison() {
                         className={`
                               ${
                                 tier.featured
-                                  ? "border-indigo-600 dark:border-indigo-500"
+                                  ? "border-succulent dark:border-succulent"
                                   : "border-transparent"
                               }
                               -mt-px w-72 border-t-2 pt-10 md:w-80
@@ -73,7 +73,7 @@ export default function PriceFeatureComparison() {
                           className={`
                                 ${
                                   tier.featured
-                                    ? "text-indigo-600"
+                                    ? "text-succulent"
                                     : "text-gray-800 dark:text-gray-200"
                                 }
                                 text-2xl font-semibold
@@ -101,7 +101,7 @@ export default function PriceFeatureComparison() {
                                 className={`
                                       ${
                                         tier.featured
-                                          ? "ring-2 ring-indigo-600 dark:ring-indigo-500"
+                                          ? "ring-2 ring-succulent dark:ring-succulent"
                                           : "ring-1 ring-gray-900/10"
                                       }
                                       relative rounded-lg bg-white dark:bg-zinc-950 shadow-xs
@@ -124,7 +124,7 @@ export default function PriceFeatureComparison() {
                                           <span
                                             className={
                                               tier.featured
-                                                ? "font-semibold text-indigo-600 dark:text-indigo-500"
+                                                ? "font-semibold text-succulent dark:text-succulent"
                                                 : "text-gray-800 dark:text-gray-200"
                                             }
                                           >
@@ -141,7 +141,7 @@ export default function PriceFeatureComparison() {
                                             ] ? (
                                               <CheckCircleIcon
                                                 aria-hidden="true"
-                                                className="mx-auto size-6 text-indigo-600 dark:text-indigo-500"
+                                                className="mx-auto size-6 text-succulent dark:text-succulent"
                                               />
                                             ) : (
                                               <XMarkIcon
@@ -188,7 +188,7 @@ export default function PriceFeatureComparison() {
                         className={`
                               ${
                                 tier.featured
-                                  ? "border-indigo-600 dark:border-indigo-500"
+                                  ? "border-succulent dark:border-succulent"
                                   : "border-transparent"
                               }
                               border-t-2 pt-10
@@ -198,7 +198,7 @@ export default function PriceFeatureComparison() {
                           className={`
                                 ${
                                   tier.featured
-                                    ? "text-indigo-600 dark:text-indigo-500"
+                                    ? "text-succulent dark:text-succulent"
                                     : "text-gray-800 dark:text-gray-200"
                                 }
                                 font-semibold text-2xl
@@ -270,7 +270,7 @@ export default function PriceFeatureComparison() {
                                         <span
                                           className={
                                             tier.featured
-                                              ? "font-semibold text-indigo-600 dark:text-indigo-500"
+                                              ? "font-semibold text-succulent dark:text-succulent"
                                               : "text-gray-800 dark:text-gray-200"
                                           }
                                         >
@@ -287,7 +287,7 @@ export default function PriceFeatureComparison() {
                                           ] ? (
                                             <CheckCircleIcon
                                               aria-hidden="true"
-                                              className="mx-auto size-6 text-indigo-600 dark:text-indigo-500"
+                                              className="mx-auto size-6 text-succulent dark:text-succulent"
                                             />
                                           ) : (
                                             <XMarkIcon
@@ -322,7 +322,7 @@ export default function PriceFeatureComparison() {
                               className={`
                                     ${
                                       tier.featured
-                                        ? "ring-2 ring-indigo-600 dark:ring-indigo-500"
+                                        ? "ring-2 ring-succulent dark:ring-succulent"
                                         : "ring-2 ring-zinc-200 dark:ring-zinc-700"
                                     }
                                     rounded-lg

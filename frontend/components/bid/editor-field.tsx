@@ -39,7 +39,7 @@ const sharedStyles = `
   rounded
   bg-zinc-100 dark:bg-zinc-800
   hover:bg-zinc-200 dark:hover:bg-zinc-700
-  focus:bg-indigo-100 dark:focus:bg-indigo-950
+  focus:bg-succulent dark:focus:bg-succulent
   transition-colors duration-100
 `
 

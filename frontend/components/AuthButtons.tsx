@@ -80,7 +80,7 @@ export default function AuthButtons({ variant = "desktop" }: Props) {
       <div className="w-full mb-4">
         {/* <button
           onClick={() => router.push(destination)}
-          className="hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-500 dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md"
+          className="hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-succulent dark:hover:text-succulent dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md"
         >
           <ButtonIcon className="size-6 mr-4" />
           <p>
@@ -89,7 +89,7 @@ export default function AuthButtons({ variant = "desktop" }: Props) {
         </button> */}
         <button
           onClick={handleLogout}
-          className="hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-500 dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md"
+          className="hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-succulent dark:hover:text-succulent dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md"
         >
           <ArrowLeftStartOnRectangleIcon className="size-6 mr-4" />
           <p>Logout</p>
@@ -127,7 +127,7 @@ export default function AuthButtons({ variant = "desktop" }: Props) {
     <div className="w-full mb-4">
       <button
         onClick={() => openAuthModal("signin")}
-        className="sm:hidden hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-500 dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md"
+        className="sm:hidden hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-succulent dark:hover:text-succulent dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md"
       >
         <UserCircleIcon className="size-6 mr-4" />
         <p>
@@ -136,7 +136,7 @@ export default function AuthButtons({ variant = "desktop" }: Props) {
       </button>
       {/* <button
         onClick={() => openAuthModal("signup")}
-        className="sm:hidden hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-500 dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md ring-2 ring-indigo-600 dark:ring-indigo-500"
+        className="sm:hidden hover:cursor-pointer font-semibold mt-2 py-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-succulent dark:hover:text-succulent dark:text-gray-300 bg-zinc-100 dark:bg-zinc-900 rounded-md ring-2 ring-succulent dark:ring-succulent"
       >
         <UserPlusIcon className="size-6 mr-4" />
         <p>

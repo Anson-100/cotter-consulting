@@ -19,7 +19,7 @@ const DashboardPageHeader: React.FC<DashboardPageHeaderProps> = ({
 }) => {
   return (
     <header className="flex flex-col gap-3 mb-12">
-      <div className="flex flex-col w-auto gap-2 p-3.5 rounded-lg border-2 dark:border-indigo-500 border-indigo-600 bg-indigo-100 dark:bg-indigo-950/40 w-fit">
+      <div className="flex flex-col w-auto gap-2 p-3.5 rounded-lg border-2 dark:border-succulent border-succulent bg-succulent dark:bg-succulent/40 w-fit">
         <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
           {title}
         </h1>
@@ -32,7 +32,7 @@ const DashboardPageHeader: React.FC<DashboardPageHeaderProps> = ({
       {backHref && (
         <Link
           href={backHref}
-          className="inline-flex items-center gap-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-500 w-fit"
+          className="inline-flex items-center gap-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-succulent dark:hover:text-succulent w-fit"
         >
           <ArrowLeftIcon className="size-4" />
           {backLabel}

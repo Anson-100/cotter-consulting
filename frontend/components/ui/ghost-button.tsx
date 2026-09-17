@@ -33,7 +33,7 @@ export default function GhostButton(props: GhostButtonProps) {
   const baseStyles = cn(
     "flex items-center gap-2 px-4 py-2.5 rounded-md font-semibold",
     "text-gray-600 dark:text-gray-300",
-    "hover:text-indigo-600 dark:hover:text-indigo-500",
+    "hover:text-succulent dark:hover:text-succulent",
     "hover:bg-zinc-100 dark:hover:bg-zinc-800",
     "disabled:opacity-50 disabled:pointer-events-none",
     className

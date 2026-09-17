@@ -66,7 +66,7 @@ export default function TermsModal({
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="font-semibold hover:underline text-indigo-600 dark:text-indigo-500 hover:cursor-pointer"
+          className="font-semibold hover:underline text-succulent dark:text-succulent hover:cursor-pointer"
         >
           terms and conditions
         </button>
@@ -101,7 +101,7 @@ export default function TermsModal({
             Questions? Reach out at{" "}
             <a
               href="mailto:support@thepirateship.co"
-              className="font-semibold text-indigo-600 dark:text-indigo-500 hover:underline"
+              className="font-semibold text-succulent dark:text-succulent hover:underline"
             >
               support@thepirateship.co
             </a>

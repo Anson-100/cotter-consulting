@@ -182,7 +182,7 @@ export default function EditorToolbar({
               className={cn(
                 "hidden lg:flex",
                 isMobileView &&
-                  "text-indigo-600 dark:text-indigo-500 bg-indigo-50 dark:bg-indigo-950/50",
+                  "text-succulent dark:text-succulent bg-succulent dark:bg-succulent/50",
               )}
             >
               {isMobileView ? (
@@ -231,7 +231,7 @@ export default function EditorToolbar({
 
           {/* === MOBILE: Menu dropdown (sm and below) === */}
           <Menu as="div" className="relative sm:hidden">
-            <MenuButton className="flex items-center gap-2 px-4 py-2.5 rounded-md font-semibold text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 hover:bg-zinc-100 dark:hover:bg-zinc-800">
+            <MenuButton className="flex items-center gap-2 px-4 py-2.5 rounded-md font-semibold text-gray-600 dark:text-gray-300 hover:text-succulent dark:hover:text-succulent hover:bg-zinc-100 dark:hover:bg-zinc-800">
               <span>Menu</span>
               <ChevronDownIcon className="size-4" />
             </MenuButton>
@@ -255,14 +255,14 @@ export default function EditorToolbar({
                         "flex items-center gap-3 w-full px-4 py-2.5 text-left",
                         "text-gray-600 dark:text-gray-300",
                         focus &&
-                          "bg-zinc-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-500",
+                          "bg-zinc-100 dark:bg-zinc-800 text-succulent dark:text-succulent",
                       )}
                     >
                       <EyeIcon
                         className={cn(
                           "size-5",
                           focus
-                            ? "text-indigo-600 dark:text-indigo-500"
+                            ? "text-succulent dark:text-succulent"
                             : "text-gray-400",
                         )}
                       />
@@ -283,14 +283,14 @@ export default function EditorToolbar({
                         "flex items-center gap-3 w-full px-4 py-2.5 text-left",
                         "text-gray-600 dark:text-gray-300",
                         focus &&
-                          "bg-zinc-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-500",
+                          "bg-zinc-100 dark:bg-zinc-800 text-succulent dark:text-succulent",
                       )}
                     >
                       <ArrowTopRightOnSquareIcon
                         className={cn(
                           "size-5",
                           focus
-                            ? "text-indigo-600 dark:text-indigo-500"
+                            ? "text-succulent dark:text-succulent"
                             : "text-gray-400",
                         )}
                       />
@@ -314,14 +314,14 @@ export default function EditorToolbar({
                         "flex items-center gap-3 w-full px-4 py-2.5 text-left",
                         "text-gray-600 dark:text-gray-300",
                         focus &&
-                          "bg-zinc-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-500",
+                          "bg-zinc-100 dark:bg-zinc-800 text-succulent dark:text-succulent",
                       )}
                     >
                       <DocumentArrowDownIcon
                         className={cn(
                           "size-5",
                           focus
-                            ? "text-indigo-600 dark:text-indigo-500"
+                            ? "text-succulent dark:text-succulent"
                             : "text-gray-400",
                         )}
                       />
@@ -343,8 +343,8 @@ export default function EditorToolbar({
 
           {/* Add block menu - always visible */}
           <Menu as="div" className="relative">
-            <MenuButton className="flex items-center gap-2 px-4 py-2.5 rounded-md font-semibold text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              <PlusIcon className="size-5 rounded-full p-0.5 ring-2 ring-indigo-600 text-white bg-indigo-500 dark:ring-indigo-500 dark:bg-indigo-600/90" />
+            <MenuButton className="flex items-center gap-2 px-4 py-2.5 rounded-md font-semibold text-gray-600 dark:text-gray-300 hover:text-succulent dark:hover:text-succulent hover:bg-zinc-100 dark:hover:bg-zinc-800">
+              <PlusIcon className="size-5 rounded-full p-0.5 ring-2 ring-succulent text-white bg-succulent dark:ring-succulent dark:bg-succulent/90" />
               <span className="hidden sm:inline">Add block</span>
               <span className="sm:hidden">Add</span>
             </MenuButton>
@@ -368,14 +368,14 @@ export default function EditorToolbar({
                         "flex items-center gap-3 w-full px-4 py-2.5 text-left",
                         "text-gray-600 dark:text-gray-300",
                         focus &&
-                          "bg-zinc-100 dark:bg-zinc-800 text-indigo-600 dark:text-indigo-500",
+                          "bg-zinc-100 dark:bg-zinc-800 text-succulent dark:text-succulent",
                       )}
                     >
                       <option.icon
                         className={cn(
                           "size-5",
                           focus
-                            ? "text-indigo-600 dark:text-indigo-500"
+                            ? "text-succulent dark:text-succulent"
                             : "text-gray-400",
                         )}
                       />

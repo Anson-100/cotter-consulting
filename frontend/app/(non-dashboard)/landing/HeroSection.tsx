@@ -29,10 +29,10 @@ const HeroSection = () => {
           className="-z-20 object-cover grayscale"
         />
 
-        {/* Indigo overlay */}
+        {/* Succulent overlay */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-linear-to-b from-indigo-950/90 via-indigo-900/80 to-indigo-950/95"
+          className="absolute inset-0 -z-10 bg-linear-to-b from-succulent/90 via-succulent/80 to-succulent/95"
         />
 
         {/* Top blob */}
@@ -42,7 +42,7 @@ const HeroSection = () => {
         >
           <div
             style={{ clipPath: BLOB_CLIP }}
-            className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-indigo-400 to-sky-300 opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
+            className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-succulent to-sky-300 opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
           />
         </div>
 
@@ -55,10 +55,10 @@ const HeroSection = () => {
           >
             <h1 className="font-semibold text-5xl tracking-tight text-balance text-white sm:text-7xl">
               Clinical clarity.{" "}
-              <span className="text-indigo-300">Case confidence.</span>
+              <span className="text-succulent">Case confidence.</span>
             </h1>
 
-            <p className="mx-auto mt-8 max-w-2xl font-serif text-lg font-medium text-balance text-indigo-100/90 sm:text-xl/8">
+            <p className="mx-auto mt-8 max-w-2xl font-serif text-lg font-medium text-balance text-succulent/90 sm:text-xl/8">
               Clinical expertise that turns thousands of pages of medical
               records into the clear, sourced facts your argument rests on.
             </p>
@@ -89,7 +89,7 @@ const HeroSection = () => {
         >
           <div
             style={{ clipPath: BLOB_CLIP }}
-            className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-indigo-400 to-sky-300 opacity-20 sm:left-[calc(50%+36rem)] sm:w-288.75"
+            className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-succulent to-sky-300 opacity-20 sm:left-[calc(50%+36rem)] sm:w-288.75"
           />
         </div>
       </div>

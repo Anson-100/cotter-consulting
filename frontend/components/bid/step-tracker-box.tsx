@@ -277,7 +277,7 @@ export default function StepTrackerBox({
                           <button
                             type="button"
                             onClick={() => addSubstep(stepIdx)}
-                            className="flex items-center gap-1  text-indigo-600 hover:text-indigo-500"
+                            className="flex items-center gap-1  text-succulent hover:text-succulent/90"
                           >
                             <PlusIcon className="size-4" />
                             <span>Add substep</span>
@@ -318,9 +318,9 @@ export default function StepTrackerBox({
                           className={classNames(
                             "flex size-10 items-center justify-center rounded-full",
                             step.status === "complete"
-                              ? "bg-indigo-600"
+                              ? "bg-succulent"
                               : step.status === "current"
-                                ? "border border-indigo-600"
+                                ? "border border-succulent"
                                 : "border border-zinc-200 dark:border-zinc-700",
                           )}
                         >
@@ -334,7 +334,7 @@ export default function StepTrackerBox({
                               className={classNames(
                                 "font-semibold",
                                 step.status === "current"
-                                  ? "text-indigo-600"
+                                  ? "text-succulent"
                                   : "text-gray-600 dark:text-gray-300",
                               )}
                             >
@@ -350,9 +350,9 @@ export default function StepTrackerBox({
                           className={classNames(
                             "text-base font-semibold",
                             step.status === "current"
-                              ? "text-indigo-600"
+                              ? "text-succulent"
                               : step.status === "complete"
-                                ? "text-indigo-600"
+                                ? "text-succulent"
                                 : "text-gray-600 dark:text-gray-300",
                           )}
                         >
@@ -398,16 +398,16 @@ export default function StepTrackerBox({
                                 className="flex items-center gap-2 font-semibold"
                               >
                                 {sub.status === "complete" ? (
-                                  <CheckIcon className="w-5 text-indigo-500 p-0.5 border shrink-0 border-indigo-500 rounded-full" />
+                                  <CheckIcon className="w-5 text-succulent p-0.5 border shrink-0 border-succulent rounded-full" />
                                 ) : sub.status === "current" ? (
-                                  <div className="w-2 h-2 rounded-full bg-indigo-500 shrink-0" />
+                                  <div className="w-2 h-2 rounded-full bg-succulent shrink-0" />
                                 ) : (
                                   <div className="w-2 h-2 rounded-full bg-gray-500 shrink-0" />
                                 )}
                                 <span
                                   className={classNames(
                                     sub.status === "current"
-                                      ? "text-indigo-600"
+                                      ? "text-succulent"
                                       : sub.status === "complete"
                                         ? "text-gray-700"
                                         : "text-gray-600 dark:text-gray-300",
@@ -455,7 +455,7 @@ export default function StepTrackerBox({
           <button
             type="button"
             onClick={addStep}
-            className="flex items-center gap-2 text-indigo-600 hover:text-indigo-500 font-semibold"
+            className="flex items-center gap-2 text-succulent hover:text-succulent/90 font-semibold"
           >
             <PlusIcon className="size-6" />
             <span>Add step</span>

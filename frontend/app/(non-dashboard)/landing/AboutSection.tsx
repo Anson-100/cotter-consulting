@@ -35,11 +35,11 @@ export default function AboutSection() {
             eyebrow="How it works"
             title={
               <>
-                <span className="text-indigo-600 dark:text-indigo-500">
+                <span className="text-succulent dark:text-succulent">
                   Expertise
                 </span>{" "}
                 &{" "}
-                <span className="text-indigo-600 dark:text-indigo-500">
+                <span className="text-succulent dark:text-succulent">
                   transparency
                 </span>{" "}
               </>
@@ -76,12 +76,12 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* CARD 3 — INDIGO */}
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-indigo-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+          {/* CARD 3 — SUCCULENT */}
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-succulent p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
             <p className={`${metricClass} text-white`}>{stats[2].metric}</p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className={`${titleClass} text-white`}>{stats[2].title}</p>
-              <p className={`${descClass} text-indigo-100`}>
+              <p className={`${descClass} text-succulent`}>
                 {stats[2].description}
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function AboutSection() {
               <dt className="inline font-sans font-semibold text-gray-900 dark:text-white">
                 <CheckIcon
                   aria-hidden="true"
-                  className="absolute top-2 left-1 size-5 text-indigo-600 dark:text-indigo-500"
+                  className="absolute top-2 left-1 size-5 text-succulent dark:text-succulent"
                 />
                 {feature.name}
               </dt>{" "}

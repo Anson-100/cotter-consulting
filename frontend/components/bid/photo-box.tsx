@@ -315,7 +315,7 @@ export default function PhotoBox({
       {photos.map((photo, index) => (
         <li key={photo.id} className="relative">
           <div
-            className={`group overflow-hidden rounded bg-zinc-200 dark:bg-zinc-800 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 ${
+            className={`group overflow-hidden rounded bg-zinc-200 dark:bg-zinc-800 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-succulent ${
               !isEditing ? "cursor-pointer" : ""
             }`}
             onClick={() =>
@@ -385,10 +385,10 @@ export default function PhotoBox({
             type="button"
             onClick={() => triggerUpload(target)}
             disabled={isUploading}
-            className="aspect-10/7 w-full rounded-lg border-2 border-dashed border-zinc-300 dark:border-zinc-600 hover:border-indigo-500 dark:hover:border-indigo-500 flex flex-col items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="aspect-10/7 w-full rounded-lg border-2 border-dashed border-zinc-300 dark:border-zinc-600 hover:border-succulent dark:hover:border-succulent flex flex-col items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isUploading && uploadTarget === target ? (
-              <div className="size-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+              <div className="size-8 border-2 border-succulent border-t-transparent rounded-full animate-spin" />
             ) : (
               <>
                 <PlusIcon className="size-8 text-zinc-400" />
@@ -451,9 +451,9 @@ export default function PhotoBox({
         {isEditing && (
           <div className="flex items-center gap-3 mb-6">
             <div
-              className={`group relative inline-flex w-11 shrink-0 rounded-full p-0.5 outline-offset-2 outline-indigo-500 transition-colors duration-200 ease-in-out ${
+              className={`group relative inline-flex w-11 shrink-0 rounded-full p-0.5 outline-offset-2 outline-succulent transition-colors duration-200 ease-in-out ${
                 editedIsBeforeAfter
-                  ? "bg-indigo-500"
+                  ? "bg-succulent"
                   : "bg-zinc-200 dark:bg-white/5 ring-1 ring-inset ring-zinc-300 dark:ring-white/10"
               }`}
             >
@@ -467,7 +467,7 @@ export default function PhotoBox({
                 checked={editedIsBeforeAfter}
                 onChange={(e) => setEditedIsBeforeAfter(e.target.checked)}
                 aria-label="Enable before/after mode"
-                className="absolute inset-0 size-full cursor-pointer appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 rounded-full"
+                className="absolute inset-0 size-full cursor-pointer appearance-none focus:outline-none focus-visible:ring-2 focus-visible:ring-succulent focus-visible:ring-offset-2 rounded-full"
               />
             </div>
             <span className="text-base font-medium text-gray-700 dark:text-gray-300">

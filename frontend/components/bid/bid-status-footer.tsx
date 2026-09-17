@@ -117,7 +117,7 @@ export default function BidStatusFooter({
               <Button
                 variant="ghost"
                 onClick={onChangedMind}
-                className="flex-none text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300"
+                className="flex-none text-succulent dark:text-succulent hover:text-succulent/90 dark:hover:text-succulent/90"
               >
                 Changed mind?
               </Button>

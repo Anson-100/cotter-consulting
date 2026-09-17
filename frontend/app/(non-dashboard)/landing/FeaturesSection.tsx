@@ -22,7 +22,7 @@ export default function FeaturesSection() {
           title={
             <>
               About
-              <span className="text-indigo-600 dark:text-indigo-500 "></span>
+              <span className="text-succulent dark:text-succulent "></span>
             </>
           }
           caption=""

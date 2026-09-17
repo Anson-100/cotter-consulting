@@ -36,7 +36,7 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
 
   const Logo = (
     <div className="flex items-center dark:text-gray-100 gap-1 font-serif">
-      <ScaleIcon className="h-4 sm:h-6 text-indigo-600 shrink-0" />
+      <ScaleIcon className="h-4 sm:h-6 text-succulent shrink-0" />
       <div
         className={cn(
           "text-pretty leading-none flex flex-row sm:gap-1 sm:items-center text-lg sm:text-2xl whitespace-nowrap",

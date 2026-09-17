@@ -246,7 +246,7 @@ export default function StepBillingInner({
 
           <div className="max-w-2xl md:col-span-2 space-y-4">
             <div className="col-span-1 sm:col-span-6">
-              <h2 className=" font-semibold text-indigo-600 dark:text-indigo-500">
+              <h2 className=" font-semibold text-succulent dark:text-succulent">
                 Card info
               </h2>
             </div>
@@ -322,7 +322,7 @@ export default function StepBillingInner({
                 <button
                   type="button"
                   onClick={() => setUseNewCard(true)}
-                  className="font-medium text-indigo-600 dark:text-indigo-500 hover:text-indigo-700 dark:hover:text-indigo-400"
+                  className="font-medium text-succulent dark:text-succulent hover:text-succulent/90 dark:hover:text-succulent/90"
                 >
                   Use a different card
                 </button>
@@ -345,7 +345,7 @@ export default function StepBillingInner({
 
             {/* Billing Address */}
             <div className="col-span-1 sm:col-span-6 mt-12">
-              <h2 className="font-semibold text-indigo-600 dark:text-indigo-500">
+              <h2 className="font-semibold text-succulent dark:text-succulent">
                 Billing address
               </h2>
             </div>
@@ -373,7 +373,7 @@ export default function StepBillingInner({
                             onChange={field.onChange}
                           >
                             <div className="relative">
-                              <ListboxButton className="flex justify-between items-center w-full rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:focus:outline-indigo-500">
+                              <ListboxButton className="flex justify-between items-center w-full rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-2 focus:-outline-offset-2 focus:outline-succulent dark:focus:outline-succulent">
                                 {field.value}
                                 <ChevronDownIcon className="-mr-1 size-5 text-gray-400" />
                               </ListboxButton>
@@ -395,7 +395,7 @@ export default function StepBillingInner({
                                       <span className="flex justify-between items-center">
                                         {opt}
                                         {selected && (
-                                          <CheckIcon className="h-5 w-5 text-indigo-600 dark:text-indigo-500" />
+                                          <CheckIcon className="h-5 w-5 text-succulent dark:text-succulent" />
                                         )}
                                       </span>
                                     )}

@@ -46,13 +46,13 @@ export default function FilterSearchBar({
           placeholder={searchPlaceholder}
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="relative block w-50 rounded-t-md sm:rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-600 dark:placeholder:text-gray-300 dark:text-gray-200 focus:z-10 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-600 dark:focus:outline-indigo-500 sm:rounded-r-none -mb-px sm:mb-0 sm:-mr-px"
+          className="relative block w-50 rounded-t-md sm:rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-600 dark:placeholder:text-gray-300 dark:text-gray-200 focus:z-10 focus:outline-2 focus:-outline-offset-1 focus:outline-succulent dark:focus:outline-succulent sm:rounded-r-none -mb-px sm:mb-0 sm:-mr-px"
         />
       </div>
 
       {/* Combined filter + sort dropdown */}
       <Menu as="div" className="relative">
-        <MenuButton className="relative flex flex-row-reverse justify-between w-50 items-center gap-x-1.5 sm:rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-gray-600 dark:text-gray-300 sm:rounded-l-none rounded-b-md ring-inset focus:z-10 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-600 dark:focus:outline-indigo-500 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700">
+        <MenuButton className="relative flex flex-row-reverse justify-between w-50 items-center gap-x-1.5 sm:rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-gray-600 dark:text-gray-300 sm:rounded-l-none rounded-b-md ring-inset focus:z-10 focus:outline-2 focus:-outline-offset-1 focus:outline-succulent dark:focus:outline-succulent outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700">
           <ChevronDownIcon className="-mr-1 size-5 text-gray-400" />
           {selectedStatus}
         </MenuButton>
@@ -68,7 +68,7 @@ export default function FilterSearchBar({
               >
                 <span>{status}</span>
                 {selectedStatus === status && (
-                  <CheckIcon className="h-5 w-5 text-indigo-600 dark:text-indigo-500" />
+                  <CheckIcon className="h-5 w-5 text-succulent dark:text-succulent" />
                 )}
               </button>
             </MenuItem>
@@ -92,7 +92,7 @@ export default function FilterSearchBar({
               >
                 <span>{sortLabels[sort]}</span>
                 {sortBy === sort && (
-                  <CheckIcon className="h-5 w-5 text-indigo-600 dark:text-indigo-500" />
+                  <CheckIcon className="h-5 w-5 text-succulent dark:text-succulent" />
                 )}
               </button>
             </MenuItem>

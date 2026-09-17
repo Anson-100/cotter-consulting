@@ -85,7 +85,7 @@ export default function Home() {
           </h2>
           <Link
             href="/dashboard/projects"
-            className="text-indigo-600 dark:text-indigo-500 hover:underline"
+            className="text-succulent dark:text-succulent hover:underline"
           >
             <span className="sm:hidden">
               Jobs <span aria-hidden="true">→</span>

@@ -285,7 +285,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   <Link
                     href="/faq"
                     onClick={() => setIsMenuToggled(false)}
-                    className="font-semibold pt-4 pb-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-indigo-600 dark:hover:text-indigo-500 dark:text-gray-300"
+                    className="font-semibold pt-4 pb-2 w-full px-4 mx-auto flex items-center text-gray-600 hover:text-succulent dark:hover:text-succulent dark:text-gray-300"
                   >
                     <QuestionMarkCircleIcon className="size-6 mr-4" />
                     <p>FAQ</p>

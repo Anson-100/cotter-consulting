@@ -481,7 +481,7 @@ export default function SignatureBox({
         <button
           type="button"
           onClick={addSigner}
-          className="mt-4 flex items-center gap-2 text-indigo-600 hover:text-indigo-500 font-medium"
+          className="mt-4 flex items-center gap-2 text-succulent hover:text-succulent/90 font-medium"
         >
           <PlusIcon className="size-5" />
           <span>Add signature</span>

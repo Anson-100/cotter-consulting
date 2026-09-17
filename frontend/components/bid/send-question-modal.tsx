@@ -79,8 +79,8 @@ export default function SendQuestionModal({
         {step === "compose" && (
           <div className="space-y-4">
             <div className="text-center mb-6">
-              <div className="mx-auto w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 ring-2 ring-indigo-400 dark:ring-indigo-700 rounded-full flex items-center justify-center">
-                <ChatBubbleLeftRightIcon className="size-6 text-indigo-600 dark:text-indigo-400" />
+              <div className="mx-auto w-12 h-12 bg-succulent dark:bg-succulent/30 ring-2 ring-succulent dark:ring-succulent rounded-full flex items-center justify-center">
+                <ChatBubbleLeftRightIcon className="size-6 text-succulent dark:text-succulent" />
               </div>
             </div>
 
@@ -98,7 +98,7 @@ export default function SendQuestionModal({
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="What questions do you have about this bid?"
-                className="w-full px-3 py-2 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-500 resize-none"
+                className="w-full px-3 py-2 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:border-succulent dark:focus:border-succulent resize-none"
                 autoFocus
               />
             </div>

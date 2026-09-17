@@ -99,13 +99,13 @@ export default function NewBidModal({
           type="button"
           onClick={handleStartFromScratch}
           disabled={loading}
-          className="w-full flex items-center gap-4 p-4 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 hover:bg-zinc-50 dark:hover:bg-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed text-left"
+          className="w-full flex items-center gap-4 p-4 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 hover:border-succulent dark:hover:border-succulent hover:bg-zinc-50 dark:hover:bg-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed text-left"
         >
-          <div className="size-12 flex-none rounded-lg bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center ring-2 ring-zinc-200 dark:ring-zinc-700">
+          <div className="size-12 flex-none rounded-lg bg-succulent dark:bg-succulent/50 flex items-center justify-center ring-2 ring-zinc-200 dark:ring-zinc-700">
             {loading ? (
-              <div className="size-5 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+              <div className="size-5 border-2 border-succulent border-t-transparent rounded-full animate-spin" />
             ) : (
-              <DocumentIcon className="size-6 text-indigo-600 dark:text-indigo-400" />
+              <DocumentIcon className="size-6 text-succulent dark:text-succulent" />
             )}
           </div>
           <div>
@@ -123,10 +123,10 @@ export default function NewBidModal({
           type="button"
           onClick={handleStartFromTemplate}
           disabled={loading}
-          className="w-full flex items-center gap-4 p-4 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 hover:bg-zinc-50 dark:hover:bg-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed text-left"
+          className="w-full flex items-center gap-4 p-4 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 hover:border-succulent dark:hover:border-succulent hover:bg-zinc-50 dark:hover:bg-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed text-left"
         >
-          <div className="size-12 flex-none rounded-lg bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center ring-2 ring-zinc-200 dark:ring-zinc-700">
-            <DocumentTextIcon className="size-6 text-indigo-600 dark:text-indigo-400" />
+          <div className="size-12 flex-none rounded-lg bg-succulent dark:bg-succulent/50 flex items-center justify-center ring-2 ring-zinc-200 dark:ring-zinc-700">
+            <DocumentTextIcon className="size-6 text-succulent dark:text-succulent" />
           </div>
           <div>
             <p className="font-semibold text-gray-800 dark:text-gray-200">

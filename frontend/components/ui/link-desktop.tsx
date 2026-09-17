@@ -43,7 +43,7 @@ const LinkDesktop = ({
       onClick={handleClick}
       className={`mt-1 pb-1 px-1 mx-2 border-b-2 font-semibold ${
         selectedPage === scrollTo
-          ? "border-indigo-500 dark:border-indigo-500 text-gray-800 dark:text-gray-200"
+          ? "border-succulent dark:border-succulent text-gray-800 dark:text-gray-200"
           : "border-transparent hover:border-zinc-200 dark:hover:border-zinc-800 text-gray-800 dark:text-gray-200"
       }`}
     >

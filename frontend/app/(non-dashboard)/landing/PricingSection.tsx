@@ -22,7 +22,7 @@ export default function PricingSection({ setSelectedPage }: Props) {
           title={
             <>
               Choose a{" "}
-              <span className="text-indigo-600 dark:text-indigo-500">plan</span>
+              <span className="text-succulent dark:text-succulent">plan</span>
             </>
           }
           caption={<>Upgrade or cancel anytime.</>}

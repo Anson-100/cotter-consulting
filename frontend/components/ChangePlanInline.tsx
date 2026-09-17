@@ -73,7 +73,7 @@ export default function ChangePlanInline({
               <fieldset aria-label="Payment frequency">
                 <div className="relative flex items-center rounded-full bg-white dark:bg-zinc-950 ring-2 ring-zinc-300 dark:ring-zinc-700 ring-inset px-1 py-1 gap-2">
                   <div
-                    className="absolute rounded-full bg-indigo-600 transition-all duration-200"
+                    className="absolute rounded-full bg-succulent transition-all duration-200"
                     style={{
                       height: "calc(100% - 8px)",
                       top: "4px",

@@ -91,7 +91,7 @@ export default function FooterSection() {
           <LogoLinkFooter />
           <div className="flex">
             {/* <p className="font-semibold text-gray-300 mt-2 text-2xl ">
-              Win more <span className="text-indigo-500">jobs</span>
+              Win more <span className="text-succulent">jobs</span>
             </p> */}
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function FooterSection() {
               <a
                 key={item.name}
                 href={item.href}
-                className="rounded-full p-2 text-gray-300 hover:bg-zinc-800 hover:text-indigo-500 dark:hover:bg-zinc-900"
+                className="rounded-full p-2 text-gray-300 hover:bg-zinc-800 hover:text-succulent dark:hover:bg-zinc-900"
               >
                 <span className="sr-only">{item.name}</span>
                 <Icon aria-hidden="true" className="size-7" />
@@ -120,7 +120,7 @@ export default function FooterSection() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="rounded-full px-2.5 py-1.5 text-gray-300 hover:bg-zinc-800 hover:text-indigo-500 dark:hover:bg-zinc-900"
+                  className="rounded-full px-2.5 py-1.5 text-gray-300 hover:bg-zinc-800 hover:text-succulent dark:hover:bg-zinc-900"
                 >
                   {item.name}
                 </a>
@@ -128,7 +128,7 @@ export default function FooterSection() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="rounded-full px-2.5 py-1.5 text-gray-300 hover:bg-zinc-800 hover:text-indigo-500 dark:hover:bg-zinc-900"
+                  className="rounded-full px-2.5 py-1.5 text-gray-300 hover:bg-zinc-800 hover:text-succulent dark:hover:bg-zinc-900"
                 >
                   {item.name}
                 </Link>

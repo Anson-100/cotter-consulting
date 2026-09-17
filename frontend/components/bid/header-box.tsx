@@ -197,10 +197,10 @@ export default function HeaderBox({
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
                   disabled={isUploading}
-                  className="size-12 rounded-lg border-2 border-dashed border-zinc-300 dark:border-zinc-600 hover:border-indigo-500 dark:hover:border-indigo-500 flex items-center justify-center disabled:opacity-50"
+                  className="size-12 rounded-lg border-2 border-dashed border-zinc-300 dark:border-zinc-600 hover:border-succulent dark:hover:border-succulent flex items-center justify-center disabled:opacity-50"
                 >
                   {isUploading ? (
-                    <div className="size-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+                    <div className="size-5 border-2 border-succulent border-t-transparent rounded-full animate-spin" />
                   ) : (
                     <PhotoIcon className="size-6 text-zinc-400" />
                   )}
@@ -216,7 +216,7 @@ export default function HeaderBox({
               className="size-14 rounded-md object-cover ring-1 ring-black/10 dark:ring-white/10"
             />
           ) : (
-            <CubeIcon className="size-6 text-indigo-600 dark:text-indigo-500" />
+            <CubeIcon className="size-6 text-succulent dark:text-succulent" />
           )}
 
           {/* Company Name & Tagline */}
@@ -279,7 +279,7 @@ export default function HeaderBox({
             {block.phone && (
               <a
                 href={`tel:${formatPhoneLink(block.phone)}`}
-                className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="flex items-center gap-1.5 hover:text-succulent dark:hover:text-succulent transition-colors"
               >
                 <PhoneIcon className="size-5" />
                 <span className="text-base font-medium">{block.phone}</span>
@@ -288,7 +288,7 @@ export default function HeaderBox({
             {block.email && (
               <a
                 href={`mailto:${block.email}`}
-                className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="flex items-center gap-1.5 hover:text-succulent dark:hover:text-succulent transition-colors"
               >
                 <EnvelopeIcon className="size-5" />
                 <span className="text-base font-medium">{block.email}</span>

@@ -193,8 +193,8 @@ export default function ContactDetailsModal({
               data-enter:duration-300 data-enter:ease-out 
               data-leave:duration-200 data-leave:ease-in"
           >
-            {/* Indigo top bar */}
-            <div className="w-full h-3 bg-indigo-600 dark:bg-indigo-500 rounded-t-lg" />
+            {/* Succulent top bar */}
+            <div className="w-full h-3 bg-succulent dark:bg-succulent rounded-t-lg" />
 
             {/* Header */}
             <div className="w-full px-6 pb-4 pt-4 border-b-2 border-zinc-200 dark:border-zinc-800">
@@ -309,7 +309,7 @@ export default function ContactDetailsModal({
                         rows={3}
                         value={form.notes}
                         onChange={handleChange}
-                        className="block w-full rounded bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-2 focus:outline-indigo-600 dark:focus:outline-indigo-500 resize-none"
+                        className="block w-full rounded bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-2 focus:outline-succulent dark:focus:outline-succulent resize-none"
                         placeholder="Any additional info..."
                       />
                     </div>

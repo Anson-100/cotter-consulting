@@ -266,7 +266,7 @@ function BidTileToolbar({
             type="button"
             onClick={handleSaveFromPrompt}
             disabled={isSaving}
-            className="p-1.5 rounded bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 disabled:opacity-50"
+            className="p-1.5 rounded bg-succulent hover:bg-succulent/90 dark:bg-succulent dark:hover:bg-succulent/90 disabled:opacity-50"
           >
             {isSaving ? (
               <div className="size-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -291,7 +291,7 @@ function BidTileToolbar({
             type="button"
             onClick={handleSaveClick}
             disabled={isSaving}
-            className="p-1.5 rounded bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 disabled:opacity-50"
+            className="p-1.5 rounded bg-succulent hover:bg-succulent/90 dark:bg-succulent dark:hover:bg-succulent/90 disabled:opacity-50"
           >
             {isSaving ? (
               <div className="size-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -679,8 +679,8 @@ export default function BidsPage() {
                     ref={isEditing ? editHeaderRef : undefined}
                     className="group relative flex items-center gap-x-4 border-b-2 border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 p-6 pb-8"
                   >
-                    <div className="size-12 flex-none rounded-lg bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center ring-2 ring-zinc-200 dark:ring-zinc-700">
-                      <DocumentTextIcon className="size-6 text-indigo-600 dark:text-indigo-400" />
+                    <div className="size-12 flex-none rounded-lg bg-succulent dark:bg-succulent/50 flex items-center justify-center ring-2 ring-zinc-200 dark:ring-zinc-700">
+                      <DocumentTextIcon className="size-6 text-succulent dark:text-succulent" />
                     </div>
 
                     {/* Title OR inline input */}

@@ -66,7 +66,7 @@ export default function Contacts() {
                   name="search"
                   type="text"
                   placeholder="Search contacts..."
-                  className="block w-50 rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-600 dark:placeholder:text-gray-300 dark:text-gray-200 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-600 dark:focus:outline-indigo-500"
+                  className="block w-50 rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2.5 text-base text-zinc-800 outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-600 dark:placeholder:text-gray-300 dark:text-gray-200 focus:outline-2 focus:-outline-offset-1 focus:outline-succulent dark:focus:outline-succulent"
                 />
               </div>
             </div>

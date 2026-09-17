@@ -36,20 +36,20 @@ export default function SidebarNavItem({
   // Style classes based on active state and variant
   const styleClasses = cn(
     isNewProject
-      ? "bg-white dark:bg-zinc-950 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-indigo-600 dark:hover:text-indigo-500 text-gray-600 dark:text-gray-300"
+      ? "bg-white dark:bg-zinc-950 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-succulent dark:hover:text-succulent text-gray-600 dark:text-gray-300"
       : isActive
-      ? "bg-white text-indigo-600 dark:bg-zinc-950 dark:text-indigo-500 dark:hover:bg-zinc-900"
-      : "text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-indigo-600 dark:hover:text-indigo-500"
+      ? "bg-white text-succulent dark:bg-zinc-950 dark:text-succulent dark:hover:bg-zinc-900"
+      : "text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-succulent dark:hover:text-succulent"
   )
 
   // Icon classes based on variant and active state
   const iconClasses = cn(
     "size-6 shrink-0",
     isNewProject
-      ? "rounded-full ring-3 ring-indigo-600 text-white bg-indigo-500 hover:bg-indigo-500/90 active:bg-indigo-500/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] dark:text-white dark:ring-indigo-500 dark:bg-indigo-600/90 dark:hover:bg-indigo-600"
+      ? "rounded-full ring-3 ring-succulent text-white bg-succulent hover:bg-succulent/90 active:bg-succulent/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] dark:text-white dark:ring-succulent dark:bg-succulent/90 dark:hover:bg-succulent"
       : isActive
-      ? "text-indigo-600 dark:text-indigo-500"
-      : "text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-500"
+      ? "text-succulent dark:text-succulent"
+      : "text-gray-400 group-hover:text-succulent dark:group-hover:text-succulent"
   )
 
   // Content - icon ALWAYS in same position, text just gets clipped by outer container

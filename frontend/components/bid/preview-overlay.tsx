@@ -168,7 +168,7 @@ export default function PreviewOverlay({
 
         {/* Preview label + Test toggle */}
         <div className="fixed top-5 left-4 z-50 flex items-center gap-3">
-          <div className="px-3 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 ring-2 ring-indigo-200 dark:ring-indigo-800 text-base font-medium">
+          <div className="px-3 py-1.5 rounded-full bg-succulent dark:bg-succulent/40 text-succulent dark:text-succulent ring-2 ring-succulent dark:ring-succulent text-base font-medium">
             Preview Mode
           </div>
 

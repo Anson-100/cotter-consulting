@@ -42,13 +42,13 @@ export default function Button<T extends ElementType = "button">({
 
   const variants: Record<Variant, string> = {
     primary:
-      "border border-indigo-600 text-white bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 dark:text-white dark:border-indigo-500 dark:bg-indigo-600 dark:hover:bg-indigo-500 dark:active:bg-indigo-700 focus-visible:ring-indigo-500",
+      "border border-succulent text-white bg-succulent hover:bg-succulent/90 active:bg-succulent/80 dark:text-white dark:border-succulent dark:bg-succulent dark:hover:bg-succulent/90 dark:active:bg-succulent/80 focus-visible:ring-succulent",
     secondary:
-      "border border-zinc-300 text-gray-900 bg-zinc-200 hover:bg-zinc-300 dark:text-gray-100 dark:border-zinc-700 dark:bg-zinc-950 dark:hover:bg-zinc-900 focus-visible:ring-indigo-500",
+      "border border-zinc-300 text-gray-900 bg-zinc-200 hover:bg-zinc-300 dark:text-gray-100 dark:border-zinc-700 dark:bg-zinc-950 dark:hover:bg-zinc-900 focus-visible:ring-succulent",
     success:
       "border border-emerald-600 text-white bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 dark:text-white dark:border-emerald-500 dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:active:bg-emerald-700 focus-visible:ring-emerald-500",
     ghost:
-      "border border-transparent text-gray-500 bg-transparent hover:text-gray-700 hover:bg-zinc-100 dark:text-gray-400 dark:hover:text-gray-300 dark:hover:bg-zinc-800 focus-visible:ring-indigo-500 disabled:bg-transparent disabled:border-transparent aria-disabled:bg-transparent aria-disabled:border-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
+      "border border-transparent text-gray-500 bg-transparent hover:text-gray-700 hover:bg-zinc-100 dark:text-gray-400 dark:hover:text-gray-300 dark:hover:bg-zinc-800 focus-visible:ring-succulent disabled:bg-transparent disabled:border-transparent aria-disabled:bg-transparent aria-disabled:border-transparent dark:disabled:bg-transparent dark:aria-disabled:bg-transparent",
   }
 
   const linkDisabledProps =

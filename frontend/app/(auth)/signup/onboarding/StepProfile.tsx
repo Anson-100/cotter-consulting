@@ -192,7 +192,7 @@ export default function StepProfile({
                     {...register("tosAccepted", {
                       required: "You must accept the terms to continue",
                     })}
-                    className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
+                    className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-succulent checked:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent "
                   />
                   <svg
                     viewBox="0 0 20 20"
@@ -225,7 +225,7 @@ export default function StepProfile({
                   <input
                     type="checkbox"
                     {...register("marketingOk")}
-                    className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
+                    className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-succulent checked:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent "
                   />
                   <svg
                     viewBox="0 0 20 20"

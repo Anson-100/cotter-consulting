@@ -121,8 +121,8 @@ export default function ConfirmAcceptModal({
         {step === "email" && (
           <div className="space-y-6">
             <div className="text-center space-y-4">
-              <div className="mx-auto w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 ring-2 ring-indigo-400 dark:ring-indigo-700 rounded-full flex items-center justify-center">
-                <EnvelopeIcon className="size-8 text-indigo-600 dark:text-indigo-400" />
+              <div className="mx-auto w-12 h-12 bg-succulent dark:bg-succulent/30 ring-2 ring-succulent dark:ring-succulent rounded-full flex items-center justify-center">
+                <EnvelopeIcon className="size-8 text-succulent dark:text-succulent" />
               </div>
               <p className="text-gray-600 dark:text-gray-300">
                 Enter your email to receive a confirmation for your records.

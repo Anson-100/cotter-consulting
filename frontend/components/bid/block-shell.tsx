@@ -173,7 +173,7 @@ export default function BlockShell({
         variant === "flush" ? "overflow-visible" : ""
       } ${
         canClickToEdit
-          ? "cursor-pointer hover:border-indigo-300 dark:hover:border-indigo-700 "
+          ? "cursor-pointer hover:border-succulent dark:hover:border-succulent "
           : ""
       }`}
       onClick={handleContainerClick}
@@ -199,7 +199,7 @@ export default function BlockShell({
                 <button
                   type="button"
                   onClick={handleSaveClick}
-                  className="p-1.5 rounded bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+                  className="p-1.5 rounded bg-succulent hover:bg-succulent/90 dark:bg-succulent dark:hover:bg-succulent/90"
                 >
                   <CheckIcon className="size-6 text-white" />
                 </button>

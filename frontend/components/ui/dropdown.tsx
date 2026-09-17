@@ -39,7 +39,7 @@ export default function Dropdown<T extends string>({
             "bg-white dark:bg-zinc-950",
             "text-gray-600 dark:text-gray-300",
             "ring-inset outline-2 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700",
-            "focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 dark:focus:outline-indigo-500",
+            "focus:outline-2 focus:-outline-offset-2 focus:outline-succulent dark:focus:outline-succulent",
             "w-full",
             buttonClassName
           )}
@@ -75,7 +75,7 @@ export default function Dropdown<T extends string>({
                 <span className="flex justify-between items-center gap-2">
                   <span className="truncate">{option}</span>
                   {selected && (
-                    <CheckIcon className="h-5 w-5 shrink-0 text-indigo-600 dark:text-indigo-500" />
+                    <CheckIcon className="h-5 w-5 shrink-0 text-succulent dark:text-succulent" />
                   )}
                 </span>
               )}

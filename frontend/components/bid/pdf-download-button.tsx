@@ -54,7 +54,7 @@ export default function PdfDownloadButton({
       <button
         onClick={handleClick}
         disabled={loading}
-        className={`text-indigo-600 dark:text-indigo-500 hover:underline font-medium disabled:opacity-50 ${className}`}
+        className={`text-succulent dark:text-succulent hover:underline font-medium disabled:opacity-50 ${className}`}
       >
         {buttonText}
       </button>

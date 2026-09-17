@@ -33,11 +33,11 @@ const variants = {
     iconColor: "text-amber-500 dark:text-amber-400",
   },
   info: {
-    bg: "bg-indigo-50 dark:bg-indigo-900/20",
-    text: "text-indigo-800 dark:text-indigo-200",
-    border: "border-indigo-300 dark:border-indigo-700",
+    bg: "bg-succulent dark:bg-succulent/20",
+    text: "text-succulent dark:text-succulent",
+    border: "border-succulent dark:border-succulent",
     icon: InformationCircleIcon,
-    iconColor: "text-indigo-500 dark:text-indigo-400",
+    iconColor: "text-succulent dark:text-succulent",
   },
 } as const
 

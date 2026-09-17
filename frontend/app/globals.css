@@ -14,6 +14,8 @@
   --breakpoint-xl: 80rem; /* 1280px */
   --breakpoint-2xl: 96rem; /* 1536px */
   --breakpoint-3xl: 1620px; /* Custom */
+
+  --color-succulent: #616c64;
 }
 
 html,
@@ -26,70 +28,6 @@ body,
   color: oklch(0.21 0.006 285.885);
   @apply bg-zinc-100 dark:bg-zinc-950;
 }
-
-/* EMERALD THEME-------------------------- */
-/* @theme {
-  --color-indigo-100: #d1fae5;
-
-  --color-indigo-200: #a7f3d0;
-
-  --color-indigo-300: #6ee7b7;
-  --color-indigo-400: #34d399;
-
-  --color-indigo-500: #10b981;
-  --color-indigo-600: #059669;
-  --color-indigo-700: #047857;
-  --color-indigo-800: #065f46;
-} */
-
-/* SKY THEME================= */
-/* @theme {
-  --color-indigo-50: #f0f9ff;
-  --color-indigo-100: #e0f2fe;
-
-  --color-indigo-200: #bae6fd;
-
-  --color-indigo-300: #7dd3fc;
-  --color-indigo-400: #38bdf8;
-
-  --color-indigo-500: #0ea5e9;
-  --color-indigo-600: #0284c7;
-  --color-indigo-700: #0369a1;
-  --color-indigo-800: #075985;
-  --color-indigo-900: #0c4a6e;
-  --color-indigo-950: #082f49;
-} */
-
-/* ZINC / GRAYSCALE THEME================= */
-@theme {
-  --color-indigo-50: #fafafa;
-  --color-indigo-100: #f4f4f5;
-
-  --color-indigo-200: #e4e4e7;
-
-  --color-indigo-300: #d4d4d8;
-  --color-indigo-400: #a1a1aa;
-
-  --color-indigo-500: #71717a;
-  --color-indigo-600: #52525b;
-  --color-indigo-700: #3f3f46;
-  --color-indigo-800: #27272a;
-  --color-indigo-900: #18181b;
-  --color-indigo-950: #09090b;
-}
-
-/* AMBER THEME============= */
-/* @theme {
-  --color-indigo-200: #fde68a;
-
-  --color-indigo-300: #fcd34d;
-  --color-indigo-400: #fbbf24;
-
-  --color-indigo-500: #f59e0b;
-  --color-indigo-600: #d97706;
-  --color-indigo-700: #b45309;
-  --color-indigo-800: #92400e;
-} */
 
 .dark-mode-animate * {
   transition-property: background-color, border-color, color, fill, stroke;

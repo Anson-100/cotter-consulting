@@ -121,7 +121,7 @@ export default function TemplatePickerDrawer({
         {/* Loading state */}
         {isLoading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="size-8 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+            <div className="size-8 border-2 border-succulent border-t-transparent rounded-full animate-spin" />
           </div>
         ) : templates.length === 0 ? (
           /* Empty state */
@@ -143,13 +143,13 @@ export default function TemplatePickerDrawer({
                 key={template.id}
                 onClick={() => handleSelectTemplate(template)}
                 disabled={!!creating}
-                className="text-left p-4 rounded-xl border-2 border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 bg-white dark:bg-zinc-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed group"
+                className="text-left p-4 rounded-xl border-2 border-zinc-200 dark:border-zinc-700 hover:border-succulent dark:hover:border-succulent bg-white dark:bg-zinc-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed group"
               >
                 {/* Template preview */}
                 <div className="aspect-4/3 rounded-lg bg-zinc-100 dark:bg-zinc-800 mb-3 p-3 overflow-hidden">
                   {creating === template.id ? (
                     <div className="h-full flex items-center justify-center">
-                      <div className="size-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+                      <div className="size-6 border-2 border-succulent border-t-transparent rounded-full animate-spin" />
                     </div>
                   ) : (
                     <div className="space-y-2">
@@ -172,7 +172,7 @@ export default function TemplatePickerDrawer({
                 </div>
 
                 {/* Template info */}
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-succulent dark:group-hover:text-succulent transition-colors">
                   {template.name}
                 </h3>
                 {template.description && (

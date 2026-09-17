@@ -364,7 +364,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         />
                         <DarkModeToggle
                           isExpanded={true}
-                          className="group flex w-full rounded-md p-2 font-semibold text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-indigo-600 dark:hover:text-indigo-500"
+                          className="group flex w-full rounded-md p-2 font-semibold text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-succulent dark:hover:text-succulent"
                         >
                           Theme
                         </DarkModeToggle>
@@ -496,7 +496,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     />
                     <DarkModeToggle
                       isExpanded={isExpanded}
-                      className="group flex w-full rounded-md p-2 font-semibold text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-indigo-600 dark:hover:text-indigo-500"
+                      className="group flex w-full rounded-md p-2 font-semibold text-gray-600 dark:text-gray-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 hover:text-succulent dark:hover:text-succulent"
                     >
                       Theme
                     </DarkModeToggle>
@@ -513,7 +513,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="-mx-5 h-10 flex items-center">
               <button
                 onClick={() => setIsPinned(!isPinned)}
-                className="group flex flex-nowrap items-center p-2.5 w-full text-gray-800 dark:text-gray-200 hover:text-indigo-600 mx-auto dark:hover:text-indigo-500  bg-indigo-950/30 gap-1"
+                className="group flex flex-nowrap items-center p-2.5 w-full text-gray-800 dark:text-gray-200 hover:text-succulent mx-auto dark:hover:text-succulent  bg-succulent/30 gap-1"
                 title={isPinned ? "Unpin sidebar" : "Pin sidebar open"}
               >
                 {isPinned ? (
@@ -551,7 +551,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     height={32}
                   />
                 ) : (
-                  <div className="size-8 rounded-full bg-indigo-600 dark:bg-indigo-500 flex items-center justify-center text-white  font-semibold shrink-0">
+                  <div className="size-8 rounded-full bg-succulent dark:bg-succulent flex items-center justify-center text-white  font-semibold shrink-0">
                     {profileData?.firstName?.charAt(0) || "?"}
                   </div>
                 )}
@@ -588,7 +588,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 height={40}
               />
             ) : (
-              <div className="size-10 rounded-full bg-indigo-600 dark:bg-indigo-500 flex items-center justify-center text-white font-semibold">
+              <div className="size-10 rounded-full bg-succulent dark:bg-succulent flex items-center justify-center text-white font-semibold">
                 {profileData?.firstName?.charAt(0) || "?"}
               </div>
             )}

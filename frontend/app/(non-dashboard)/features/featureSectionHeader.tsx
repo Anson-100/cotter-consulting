@@ -16,9 +16,9 @@ const FeatureSectionHeader = ({
   return (
     <div className=" max-w-xl text-center mx-auto mt-32">
       <div className="flex items-center gap-2  mx-auto justify-center mb-6 px-4">
-        <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-indigo-200 dark:via-indigo-500 to-indigo-300 dark:to-indigo-800" />
+        <div className="flex-1 h-[2px] bg-gradient-to-r from-transparent via-succulent dark:via-succulent to-succulent dark:to-succulent" />
         <div className="shrink-0 h-14 w-14">{icon}</div>
-        <div className="flex-1 h-[2px] bg-gradient-to-l from-transparent via-indigo-200 dark:via-indigo-500 to-indigo-300 dark:to-indigo-800" />
+        <div className="flex-1 h-[2px] bg-gradient-to-l from-transparent via-succulent dark:via-succulent to-succulent dark:to-succulent" />
       </div>
       <h3 className="text-3xl sm:text-4xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
         {title}

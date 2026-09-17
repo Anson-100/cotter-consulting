@@ -342,7 +342,7 @@ export default function PricingBox({
               <button
                 type="button"
                 onClick={addItem}
-                className="flex items-center gap-2 text-indigo-600 hover:text-indigo-500"
+                className="flex items-center gap-2 text-succulent hover:text-succulent/90"
               >
                 <PlusIcon className="size-5" />
                 <span>Add line item</span>
@@ -466,7 +466,7 @@ export default function PricingBox({
               <button
                 type="button"
                 onClick={addHourEntry}
-                className="flex items-center gap-2 text-indigo-600 hover:text-indigo-500"
+                className="flex items-center gap-2 text-succulent hover:text-succulent/90"
               >
                 <PlusIcon className="size-5" />
                 <span>Add hour entry</span>
@@ -553,7 +553,7 @@ export default function PricingBox({
           {!isEditing &&
             notes.map((note) => (
               <div key={note.id} className="flex gap-3">
-                <InformationCircleIcon className="size-6 text-indigo-500 shrink-0 mt-0.5" />
+                <InformationCircleIcon className="size-6 text-succulent shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-gray-800 dark:text-gray-200">
                     {note.heading}
@@ -606,7 +606,7 @@ export default function PricingBox({
               <button
                 type="button"
                 onClick={addNote}
-                className="flex items-center gap-2 text-indigo-600 hover:text-indigo-500"
+                className="flex items-center gap-2 text-succulent hover:text-succulent/90"
               >
                 <PlusIcon className="size-5" />
                 <span>Add note</span>

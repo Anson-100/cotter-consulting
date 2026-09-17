@@ -483,7 +483,7 @@ const UserSettings = () => {
                           name="candidates"
                           type="checkbox"
                           aria-describedby="candidates-description"
-                          className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                          className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-succulent checked:bg-succulent indeterminate:border-succulent indeterminate:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                         />
                         <svg
                           fill="none"
@@ -530,7 +530,7 @@ const UserSettings = () => {
                           name="candidates"
                           type="checkbox"
                           aria-describedby="candidates-description"
-                          className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                          className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-succulent checked:bg-succulent indeterminate:border-succulent indeterminate:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                         />
                         <svg
                           fill="none"
@@ -577,7 +577,7 @@ const UserSettings = () => {
                           name="candidates"
                           type="checkbox"
                           aria-describedby="candidates-description"
-                          className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                          className="col-start-1 row-start-1 appearance-none rounded-sm border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 checked:border-succulent checked:bg-succulent indeterminate:border-succulent indeterminate:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                         />
                         <svg
                           fill="none"
@@ -641,7 +641,7 @@ const UserSettings = () => {
                         id="push-everything"
                         name="push-notifications"
                         type="radio"
-                        className="relative size-5 appearance-none rounded-full border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 before:absolute before:inset-1 before:rounded-full before:bg-white dark:before:bg-zinc-950 not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                        className="relative size-5 appearance-none rounded-full border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 before:absolute before:inset-1 before:rounded-full before:bg-white dark:before:bg-zinc-950 not-checked:before:hidden checked:border-succulent checked:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
                       />
                       <label
                         htmlFor="push-everything"
@@ -655,7 +655,7 @@ const UserSettings = () => {
                         id="push-email"
                         name="push-notifications"
                         type="radio"
-                        className="relative size-5 appearance-none rounded-full border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 before:absolute before:inset-1 before:rounded-full before:bg-white dark:before:bg-zinc-950 not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                        className="relative size-5 appearance-none rounded-full border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 before:absolute before:inset-1 before:rounded-full before:bg-white dark:before:bg-zinc-950 not-checked:before:hidden checked:border-succulent checked:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
                       />
                       <label
                         htmlFor="push-email"
@@ -669,7 +669,7 @@ const UserSettings = () => {
                         id="push-nothing"
                         name="push-notifications"
                         type="radio"
-                        className="relative size-5 appearance-none rounded-full border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 before:absolute before:inset-1 before:rounded-full before:bg-white dark:before:bg-zinc-950 not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                        className="relative size-5 appearance-none rounded-full border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-950 before:absolute before:inset-1 before:rounded-full before:bg-white dark:before:bg-zinc-950 not-checked:before:hidden checked:border-succulent checked:bg-succulent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-succulent disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
                       />
                       <label
                         htmlFor="push-nothing"

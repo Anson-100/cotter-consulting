@@ -48,22 +48,22 @@ export default function PriceTileOnboarding({
       className={`
         relative group/tier rounded-xl p-6 border-2 cursor-pointer
         shadow-[0_0_20px_rgba(0,0,0,0)] transition-shadow duration-300
-        hover:shadow-[0_0_20px_var(--color-indigo-500)]
+        hover:shadow-[0_0_20px_var(--color-succulent)]
         ${
           featured
-            ? "border-indigo-600 dark:border-indigo-500"
+            ? "border-succulent dark:border-succulent"
             : "border-zinc-200 dark:border-zinc-700"
         }
         ${
           isSelected
-            ? "shadow-[0_0_20px_var(--color-indigo-500)] bg-indigo-100 dark:bg-indigo-950/40"
+            ? "shadow-[0_0_20px_var(--color-succulent)] bg-succulent dark:bg-succulent/40"
             : "bg-white dark:bg-zinc-950"
         }
       `}
     >
       {isSelected && (
-        <div className="absolute bottom-4 right-4 rounded-full ring-indigo-600/80 dark:ring-indigo-500/80 ring-2 bg-indigo-500/20 w-12 h-12 flex items-center justify-center">
-          <CheckIcon className="size-8 text-indigo-600 dark:text-indigo-500" />
+        <div className="absolute bottom-4 right-4 rounded-full ring-succulent/80 dark:ring-succulent/80 ring-2 bg-succulent/20 w-12 h-12 flex items-center justify-center">
+          <CheckIcon className="size-8 text-succulent dark:text-succulent" />
         </div>
       )}
 
@@ -72,13 +72,13 @@ export default function PriceTileOnboarding({
           <h3
             className={`
               text-2xl/8 font-semibold text-gray-800 dark:text-gray-200
-              ${featured ? "text-indigo-600 dark:text-indigo-500" : ""}
+              ${featured ? "text-succulent dark:text-succulent" : ""}
             `}
           >
             {name}
           </h3>
           {featured && (
-            <p className="rounded-full bg-indigo-600/10 px-2.5 py-1 font-semibold text-indigo-600 dark:text-indigo-500">
+            <p className="rounded-full bg-succulent/10 px-2.5 py-1 font-semibold text-succulent dark:text-succulent">
               Most popular
             </p>
           )}
@@ -89,7 +89,7 @@ export default function PriceTileOnboarding({
         {/* Price display */}
         {isDeferred ? (
           <p className="mt-6 flex items-baseline gap-x-1">
-            <span className="text-4xl font-semibold tracking-tight text-indigo-600 dark:text-indigo-500">
+            <span className="text-4xl font-semibold tracking-tight text-succulent dark:text-succulent">
               $0
             </span>
             <span className="font-semibold text-gray-600 dark:text-gray-300">
@@ -140,7 +140,7 @@ export default function PriceTileOnboarding({
         >
           {features.map((f) => (
             <li key={f.text} className="flex gap-x-3">
-              <f.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-500" />
+              <f.icon className="h-6 w-6 text-succulent dark:text-succulent" />
               {f.text}
             </li>
           ))}
