@@ -62,20 +62,20 @@ body,
 
 /* ZINC / GRAYSCALE THEME================= */
 @theme {
-  --color-indigo-50: #fafafa;
-  --color-indigo-100: #f4f4f5;
+  --color-succulent: #616c64;
+  --color-gold: #c49832;
 
-  --color-indigo-200: #e4e4e7;
-
-  --color-indigo-300: #d4d4d8;
-  --color-indigo-400: #a1a1aa;
-
-  --color-indigo-500: #71717a;
-  --color-indigo-600: #52525b;
-  --color-indigo-700: #3f3f46;
-  --color-indigo-800: #27272a;
-  --color-indigo-900: #18181b;
-  --color-indigo-950: #09090b;
+  --color-indigo-50: #616c64;
+  --color-indigo-100: #616c64;
+  --color-indigo-200: #616c64;
+  --color-indigo-300: #616c64;
+  --color-indigo-400: #616c64;
+  --color-indigo-500: #616c64;
+  --color-indigo-600: #616c64;
+  --color-indigo-700: #616c64;
+  --color-indigo-800: #616c64;
+  --color-indigo-900: #616c64;
+  --color-indigo-950: #616c64;
 }
 
 /* AMBER THEME============= */

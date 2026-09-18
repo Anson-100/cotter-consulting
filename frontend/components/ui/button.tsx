@@ -42,9 +42,9 @@ export default function Button<T extends ElementType = "button">({
 
   const variants: Record<Variant, string> = {
     primary:
-      "border border-indigo-600 text-white bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 dark:text-white dark:border-indigo-500 dark:bg-indigo-600 dark:hover:bg-indigo-500 dark:active:bg-indigo-700 focus-visible:ring-indigo-500",
+      "border border-gold bg-gold text-white hover:brightness-90 active:brightness-75 focus-visible:ring-gold",
     secondary:
-      "border border-zinc-300 text-gray-900 bg-zinc-200 hover:bg-zinc-300 dark:text-gray-100 dark:border-zinc-700 dark:bg-zinc-950 dark:hover:bg-zinc-900 focus-visible:ring-indigo-500",
+      "border border-zinc-300 bg-zinc-300 text-gray-900 hover:brightness-90 active:brightness-75 dark:border-zinc-700 dark:bg-zinc-700 dark:text-gray-100 focus-visible:ring-gold",
     success:
       "border border-emerald-600 text-white bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 dark:text-white dark:border-emerald-500 dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:active:bg-emerald-700 focus-visible:ring-emerald-500",
     ghost:
