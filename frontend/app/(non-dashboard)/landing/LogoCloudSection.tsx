@@ -34,12 +34,13 @@ const LogoCloudSection = () => {
   return (
     <motion.section
       id="credentials"
-      className="relative isolate overflow-hidden bg-zinc-300 py-24 scroll-mt-[70px]"
+      className="relative isolate overflow-hidden bg-zinc-300 dark:bg-zinc-900 py-24 scroll-mt-[70px]"
     >
       <div className="mx-auto max-w-[88rem] px-6 lg:px-8">
         <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-14 bg-linear-to-r from-zinc-300 via-zinc-300/70 to-transparent sm:w-20" />
-          <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-14 bg-linear-to-l from-zinc-300 via-zinc-300/70 to-transparent sm:w-20" />
+          <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-14 bg-linear-to-r from-zinc-300 via-zinc-300/70 dark:from-zinc-900 dark:via-zinc-900/70 to-transparent sm:w-20" />
+
+          <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-14 bg-linear-to-l from-zinc-300 via-zinc-300/70 dark:from-zinc-900 dark:via-zinc-900/70 to-transparent sm:w-20" />
 
           <div className="animate-scroll flex w-max">
             {[0, 1, 2, 3].map((dup) => (
@@ -57,7 +58,7 @@ const LogoCloudSection = () => {
                       alt={dup === 0 ? logo.alt : ""}
                       width={logo.width}
                       height={144}
-                      className={`${logo.className} w-auto object-contain`}
+                      className={`${logo.className} w-auto object-contain dark:invert`}
                     />
                   </div>
                 ))}

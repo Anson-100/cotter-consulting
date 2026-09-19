@@ -1,7 +1,15 @@
 "use client"
 
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react"
-import { twMerge } from "tailwind-merge"
+import { extendTailwindMerge } from "tailwind-merge"
+
+const twMerge = extendTailwindMerge({
+  extend: {
+    theme: {
+      color: ["sand", "succulent", "gold"],
+    },
+  },
+})
 
 type Variant = "primary" | "secondary" | "success" | "ghost"
 type Size = "md" | "lg"
@@ -42,9 +50,9 @@ export default function Button<T extends ElementType = "button">({
 
   const variants: Record<Variant, string> = {
     primary:
-      "border border-gold bg-gold text-white hover:brightness-90 active:brightness-75 focus-visible:ring-gold",
+      "border border-sand bg-succulent text-white hover:brightness-90 active:brightness-75 focus-visible:ring-succulent",
     secondary:
-      "border border-zinc-300 bg-zinc-300 text-gray-900 hover:brightness-90 active:brightness-75 dark:border-zinc-700 dark:bg-zinc-700 dark:text-gray-100 focus-visible:ring-gold",
+      "border border-stone-300 bg-transparent text-stone-300 hover:brightness-90 active:brightness-75 dark:border-sand dark:bg-transparent dark:text-sand focus-visible:ring-sand",
     success:
       "border border-emerald-600 text-white bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 dark:text-white dark:border-emerald-500 dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:active:bg-emerald-700 focus-visible:ring-emerald-500",
     ghost:

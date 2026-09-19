@@ -48,6 +48,7 @@ export default function ContactSection() {
       )
 
       const resData = await res.json()
+
       console.log("Form submitted successfully:", resData.message)
 
       setSubmissionStatus("success")
@@ -142,11 +143,14 @@ export default function ContactSection() {
               }) => {
                 const formatPhoneNumber = (input: string) => {
                   const digits = input.replace(/\D/g, "").slice(0, 10)
+
                   const a = digits.slice(0, 3)
                   const b = digits.slice(3, 6)
                   const c = digits.slice(6, 10)
+
                   if (digits.length > 6) return `${a}-${b}-${c}`
                   if (digits.length > 3) return `${a}-${b}`
+
                   return a
                 }
 
@@ -168,6 +172,7 @@ export default function ContactSection() {
               }}
             />
 
+            {/* Message textarea */}
             <div className="sm:col-span-2">
               <label
                 htmlFor="message"
@@ -175,15 +180,34 @@ export default function ContactSection() {
               >
                 Message
               </label>
+
               <div className="mt-2.5">
-                <textarea
-                  id="message"
-                  rows={4}
-                  {...register("message", {
-                    required: "Message is required",
-                  })}
-                  className="block w-full rounded-md bg-white dark:bg-zinc-950 px-3.5 py-2 text-base text-zinc-800 outline-1 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700 placeholder:text-gray-400 dark:text-gray-200 focus:outline-1 focus:-outline-offset-2 focus:outline-indigo-600 dark:focus:outline-indigo-500"
-                />
+                <div className="relative group">
+                  <textarea
+                    id="message"
+                    rows={4}
+                    {...register("message", {
+                      required: "Message is required",
+                    })}
+                    className="
+                      block w-full rounded-md
+                      bg-white dark:bg-zinc-950
+                      px-3.5 py-2 text-base
+                      text-zinc-800 dark:text-gray-200
+                      outline-1 -outline-offset-1
+                      outline-zinc-200 dark:outline-zinc-700
+                      placeholder:text-gray-400 dark:placeholder:text-gray-500
+                      focus:outline-1 focus:outline-succulent
+                    "
+                  />
+
+                  {/* Left accent bar — matches FormInput */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-px top-px bottom-px w-1 rounded-l bg-succulent opacity-0 transition-opacity duration-200 group-focus-within:opacity-100"
+                  />
+                </div>
+
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-600">
                     {errors.message.message}
@@ -199,6 +223,7 @@ export default function ContactSection() {
                 Message sent!
               </p>
             )}
+
             {submissionStatus === "error" && (
               <p className="text-sm text-red-600 font-medium">
                 Error sending message. Please try again.

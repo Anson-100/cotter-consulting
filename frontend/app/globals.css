@@ -62,6 +62,7 @@ body,
 
 /* ZINC / GRAYSCALE THEME================= */
 @theme {
+  --color-sand: #edece7;
   --color-succulent: #616c64;
   --color-gold: #c49832;
 

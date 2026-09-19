@@ -58,6 +58,8 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
     }
 
     // ── Default variant: original boxed input ─────────────────────
+    // ── Default variant: boxed input with focus accent ───────────
+    // ── Default variant: boxed input with focus accent ───────────
     return (
       <div className="w-full">
         {label && (
@@ -69,20 +71,25 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           </label>
         )}
 
-        <div className="mt-2 relative">
+        <div className="mt-2 relative group">
           <input
             ref={ref}
             {...props}
             className={`
-              block w-full rounded
-              bg-white dark:bg-zinc-950
-              px-3.5 py-2.5 text-base text-zinc-800
-              outline-1 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700
-              placeholder:text-gray-400 dark:text-gray-200
-              focus:outline-1
-              focus:outline-indigo-600 dark:focus:outline-indigo-500
-              ${className}
-            `}
+          block w-full rounded
+          bg-white dark:bg-zinc-950
+          px-3.5 py-2.5 text-base text-zinc-800 dark:text-gray-200
+          outline-1 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700
+          placeholder:text-gray-400 dark:placeholder:text-gray-500
+          focus:outline-1 focus:outline-succulent overflow-hidden
+          ${className}
+        `}
+          />
+
+          {/* Left accent bar — inset to align with outline */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-px top-px bottom-px w-1  bg-succulent opacity-0 transition-opacity duration-200 group-focus-within:opacity-100"
           />
 
           {rightElement && (
