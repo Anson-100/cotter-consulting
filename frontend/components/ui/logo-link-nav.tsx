@@ -20,6 +20,7 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
     (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault()
       const section = document.getElementById(lowerCasePage)
+
       if (section) {
         section.scrollIntoView({ behavior: "smooth" })
       } else {
@@ -35,18 +36,20 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
   }, [router])
 
   const Logo = (
-    <div className="flex items-center dark:text-gray-100 gap-1 font-serif">
-      <ScaleIcon className="h-4 sm:h-6 text-indigo-600 shrink-0" />
+    <div className="flex items-center gap-1 font-serif dark:text-gray-100">
+      <ScaleIcon className="h-4 shrink-0 text-indigo-600 sm:h-6" />
+
       <div
         className={cn(
-          "text-pretty leading-none flex flex-row sm:gap-1 sm:items-center text-lg sm:text-2xl whitespace-nowrap",
+          "flex flex-col items-start whitespace-nowrap text-lg sm:text-2xl",
           !isExpanded && "opacity-0",
         )}
       >
-        <h1 className=" m-0 leading-none">Cotter</h1>
-        <h1 className=" dark:text-gray-300 text-gray-600 leading-none">
-          Consulting
+        <h1 className="m-0 leading-none text-succulent brightness-200">
+          Cotter
         </h1>
+
+        <h1 className="-mt-1.5 leading-none text-gold">Consulting</h1>
       </div>
     </div>
   )
