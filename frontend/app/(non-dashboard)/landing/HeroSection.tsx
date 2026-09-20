@@ -96,12 +96,12 @@ const HeroSection = () => {
           style={{ backgroundImage: TEXT_SCRIM }}
         />
 
-        <div className="mx-auto flex max-w-7xl items-center px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center px-4 lg:px-8">
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mx-auto max-w-3xl py-32 text-center sm:py-48 lg:py-56"
+            className="mx-auto max-w-3xl py-20 text-center sm:py-48 lg:py-56"
           >
             <h1 className="font-semibold text-5xl tracking-tight text-balance text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-7xl">
               Clinical clarity.{" "}

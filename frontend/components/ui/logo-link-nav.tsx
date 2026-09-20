@@ -45,11 +45,13 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
           !isExpanded && "opacity-0",
         )}
       >
-        <h1 className="m-0 leading-none text-succulent brightness-200">
+        <h1 className="m-0 leading-none text-succulent dark:brightness-200">
           Cotter
         </h1>
 
-        <h1 className="-mt-1.5 leading-none text-gold">Consulting</h1>
+        <h1 className="-mt-1.5 leading-none text-gold brightness-75">
+          Consulting
+        </h1>
       </div>
     </div>
   )

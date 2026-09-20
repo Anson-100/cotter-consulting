@@ -14,7 +14,7 @@ export default function FeaturesSection() {
   return (
     <div
       id="features"
-      className="overflow-hidden py-24 min-h-screen scroll-mt-[70px]"
+      className="overflow-hidden py-20 min-h-screen scroll-mt-[70px]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SceneHeader

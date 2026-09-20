@@ -28,7 +28,7 @@ const descClass = "mt-3 font-serif text-lg/8"
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 scroll-mt-[70px]">
+    <section id="about" className="py-20 scroll-mt-[70px]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <SceneHeader
