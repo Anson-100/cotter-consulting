@@ -38,7 +38,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className="scroll-mt-[70px] h-screen pb-2 px-2 pt-20">
+    <section id="home" className="scroll-mt-[70px] h-screen pb-2 px-4 pt-20">
       <div
         className="relative isolate h-full overflow-hidden rounded-3xl"
         style={{ backgroundColor: CYBERSPACE }}
@@ -103,12 +103,12 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mx-auto max-w-3xl py-20 text-center sm:py-48 lg:py-56"
           >
-            <h1 className="font-semibold text-5xl tracking-tight text-balance text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-7xl">
+            <h1 className="font-semibold text-4xl tracking-tight text-balance text-white sm:text-7xl">
               Clinical clarity.{" "}
-              <span style={{ color: "#D4AC58" }}>Case confidence.</span>
+              <span className="text-gold">Case confidence.</span>
             </h1>
 
-            <p className="mx-auto mt-8 max-w-2xl font-serif text-lg font-medium text-balance text-white/90 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] sm:text-xl/8">
+            <p className="mx-auto mt-8 max-w-2xl font-serif text-xl/8 font-medium text-balance text-white/90 drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] sm:text-2xl/8">
               Clinical expertise that turns thousands of pages of medical
               records into the clear, sourced facts your argument rests on.
             </p>
