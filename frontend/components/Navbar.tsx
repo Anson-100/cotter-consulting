@@ -123,7 +123,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
           ${navbarBackground} ${flexBetween}
           fixed bg-white dark:bg-zinc-950 top-0 z-30 w-full h-[72px]
           shadow-[0_4px_6px_-2px_rgba(0,0,0,0.08)]
-          dark:shadow-none dark:border-b border-b-zinc-800 px-6
+          dark:shadow-none dark:border-b border-b-zinc-800 px-2 sm:px-6
         `}
       >
         <div
