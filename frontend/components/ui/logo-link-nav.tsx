@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
-import { ScaleIcon } from "@heroicons/react/24/solid"
 import { useCallback } from "react"
 import { cn } from "@/lib/utils"
 
@@ -37,11 +37,18 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
 
   const Logo = (
     <div className="flex items-center gap-1 font-serif dark:text-gray-100">
-      <ScaleIcon className="h-4 shrink-0 text-indigo-600 sm:h-6" />
+      <Image
+        src="/images/cc-logo.png"
+        alt=""
+        width={64}
+        height={64}
+        priority
+        className="h-8 w-auto shrink-0 sm:h-10 brightness-75 dark:brightness-100"
+      />
 
       <div
         className={cn(
-          "flex flex-col items-start whitespace-nowrap text-lg sm:text-2xl",
+          "flex flex-col items-start whitespace-nowrap text-xl sm:text-2xl",
           !isExpanded && "opacity-0",
         )}
       >
@@ -49,7 +56,7 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
           Cotter
         </h1>
 
-        <h1 className="-mt-1.5 leading-none text-gold brightness-75">
+        <h1 className="-mt-1 sm:-mt-1.5 leading-none text-gold brightness-75 dark:brightness-100">
           Consulting
         </h1>
       </div>

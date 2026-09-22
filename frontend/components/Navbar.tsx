@@ -112,7 +112,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
       size="md"
       onClick={handleContactClick}
     >
-      Contact us
+      Contact <span className="hidden sm:inline">us</span>
     </Button>
   )
 
