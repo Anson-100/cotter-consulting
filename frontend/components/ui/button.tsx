@@ -38,7 +38,7 @@ export default function Button<T extends ElementType = "button">({
   const isLink = Component === "a"
 
   const base =
-    "inline-flex font-sans items-center justify-center gap-2 rounded-full font-semibold tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900 active:translate-y-[1px] hover:cursor-pointer " +
+    "inline-flex font-sans items-center justify-center gap-2 rounded-full font-semibold tracking-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900 active:translate-y-[1px] hover:cursor-pointer" +
     // Solid disabled state (no opacity). aria-disabled covers the <a> case.
     "disabled:cursor-not-allowed disabled:pointer-events-none disabled:border-zinc-300 disabled:bg-zinc-200 disabled:text-zinc-400 dark:disabled:border-zinc-700 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-500 " +
     "aria-disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:border-zinc-300 aria-disabled:bg-zinc-200 aria-disabled:text-zinc-400 dark:aria-disabled:border-zinc-700 dark:aria-disabled:bg-zinc-800 dark:aria-disabled:text-zinc-500"
@@ -50,7 +50,7 @@ export default function Button<T extends ElementType = "button">({
 
   const variants: Record<Variant, string> = {
     primary:
-      "border border-sand bg-succulent text-white hover:brightness-90 active:brightness-75 focus-visible:ring-succulent",
+      "border shadow-xl hover:cursor-pointer border-sand bg-succulent text-white hover:brightness-90 active:brightness-75 focus-visible:ring-succulent",
     secondary:
       "border border-stone-300 bg-transparent text-stone-300 hover:brightness-90 active:brightness-75 dark:border-sand dark:bg-transparent dark:text-sand focus-visible:ring-sand",
     success:

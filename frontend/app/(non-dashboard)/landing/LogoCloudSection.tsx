@@ -23,10 +23,10 @@ const logos = [
     className: "h-24 sm:h-32",
   },
   {
-    src: "/images/logo-rn.svg",
-    alt: "Registered Nurse",
+    src: "/images/logo-aalnc.png",
+    alt: "American Association of Legal Nurse Consultants",
     width: 150,
-    className: "h-24 sm:h-36",
+    className: "h-24 sm:h-24",
   },
 ]
 
