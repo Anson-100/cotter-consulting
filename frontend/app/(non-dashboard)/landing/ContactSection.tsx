@@ -64,18 +64,13 @@ export default function ContactSection() {
       id="contact"
       className="min-h-screen relative isolate scroll-mt-[70px]"
     >
-      <div className="px-6 py-20  lg:px-8">
+      <div className="px-6 pt-16 pb-32 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <SceneHeader
-            eyebrow=""
-            title={
-              <>
-                Let&apos;s{" "}
-                <span className="text-indigo-600 dark:text-indigo-500">
-                  talk
-                </span>
-              </>
-            }
+            className="text-center"
+            icon="paperAirplane"
+            eyebrow="Contact"
+            title={<>Let's talk</>}
             caption={
               <>
                 Send a brief description of the case. You&apos;ll have a

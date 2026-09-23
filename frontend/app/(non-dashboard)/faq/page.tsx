@@ -61,7 +61,8 @@ export default function FaqPage() {
       <div className="max-w-7xl mx-auto flex flex-col items-center ">
         {/* HEADER */}
         <SceneHeader
-          eyebrow=""
+          icon="listBullet"
+          eyebrow="FAQ"
           title={
             <>
               Answers to your most common{" "}

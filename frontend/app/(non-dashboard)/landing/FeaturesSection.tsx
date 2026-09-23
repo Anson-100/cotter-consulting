@@ -14,24 +14,20 @@ export default function FeaturesSection() {
   return (
     <div
       id="features"
-      className="overflow-hidden py-20 min-h-screen scroll-mt-[70px]"
+      className="overflow-hidden pt-16 pb-32 min-h-screen scroll-mt-[70px]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SceneHeader
-          eyebrow="Features"
-          title={
-            <>
-              About
-              <span className="text-indigo-600 dark:text-indigo-500 "></span>
-            </>
-          }
+          icon="informationCircle"
+          eyebrow="About"
+          title={<>We're here to help</>}
           caption=""
         />
 
         <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {/* PROSE + STATS — FIRST ON MOBILE, RIGHT COLUMN ON DESKTOP == */}
           <div className="lg:order-2 lg:pl-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-white">
+            <h3 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-gray-100">
               Lorem ipsum
             </h3>
             <div className="max-w-xl">

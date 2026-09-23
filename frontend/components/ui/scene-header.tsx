@@ -1,7 +1,25 @@
 import { ReactNode } from "react"
+import {
+  PaperAirplaneIcon,
+  BriefcaseIcon,
+  ListBulletIcon,
+  QuestionMarkCircleIcon,
+  InformationCircleIcon,
+} from "@heroicons/react/24/outline"
+
+const ICONS = {
+  paperAirplane: PaperAirplaneIcon,
+  briefcase: BriefcaseIcon,
+  listBullet: ListBulletIcon,
+  questionMarkCircle: QuestionMarkCircleIcon,
+  informationCircle: InformationCircleIcon,
+} as const
+
+export type SceneHeaderIcon = keyof typeof ICONS
 
 type SceneHeaderProps = {
   eyebrow: string
+  icon?: SceneHeaderIcon
   title: ReactNode
   caption: ReactNode
   className?: string
@@ -9,19 +27,23 @@ type SceneHeaderProps = {
 
 export default function SceneHeader({
   eyebrow,
+  icon,
   title,
   caption,
   className = "",
 }: SceneHeaderProps) {
+  const Icon = icon ? ICONS[icon] : null
+
   return (
-    <div className={`mx-auto lg:mx-0 ${className}`}>
-      <h1 className="text-base/7 font-semibold text-indigo-600 dark:text-indigo-500 mb-2 hidden">
-        {eyebrow}
-      </h1>
+    <div className={`mx-auto lg:mx-0  ${className}`}>
+      <div className="mb-2 inline-flex items-center gap-1 text-succulent dark:brightness-150">
+        {Icon && <Icon aria-hidden="true" className="size-5 shrink-0 hidden" />}
+        <h1 className="text-lg/7 font-serif">{eyebrow}</h1>
+      </div>
       <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-gray-100 sm:text-5xl">
         {title}
       </h2>
-      <p className="mt-6 text-xl  text-pretty font-serif text-gray-600 dark:text-gray-300">
+      <p className="mt-6 text-xl text-pretty font-serif text-gray-600 dark:text-gray-300">
         {caption}
       </p>
     </div>

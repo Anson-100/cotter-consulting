@@ -50,7 +50,7 @@ export default function Button<T extends ElementType = "button">({
 
   const variants: Record<Variant, string> = {
     primary:
-      "border shadow-xl hover:cursor-pointer border-sand bg-succulent text-white hover:brightness-90 active:brightness-75 focus-visible:ring-succulent",
+      "border hover:cursor-pointer border-sand bg-succulent text-white hover:brightness-90 active:brightness-75 focus-visible:ring-succulent",
     secondary:
       "border border-stone-300 bg-transparent text-stone-300 hover:brightness-90 active:brightness-75 dark:border-sand dark:bg-transparent dark:text-sand focus-visible:ring-sand",
     success:

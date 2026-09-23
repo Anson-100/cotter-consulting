@@ -120,11 +120,11 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
     <nav>
       <div
         className={`
-          ${navbarBackground} ${flexBetween}
-          fixed bg-white dark:bg-zinc-950 top-0 z-30 w-full h-[72px]
-          shadow-[0_4px_6px_-2px_rgba(0,0,0,0.08)]
-          dark:shadow-none dark:border-b border-b-zinc-800 px-2 sm:px-6
-        `}
+    ${navbarBackground} ${flexBetween}
+    fixed bg-white dark:bg-zinc-950 top-0 z-30 w-full  h-[72px]
+    shadow-md
+    dark:shadow-none dark:border-b border-b-zinc-800 px-6
+  `}
       >
         <div
           className={`${flexBetween} mx-auto w-full sm:px-0 max-w-7xl 2xl:max-w-5/6`}
@@ -259,12 +259,12 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             className={`fixed top-0 right-0 mt-[71px] dark:mt-[70px] w-full md:w-2/5
-              md:rounded-bl-lg overflow-hidden z-30 bg-white dark:bg-zinc-950
-              shadow-[0_4px_6px_-2px_rgba(0,0,0,0.08)]
-              dark:shadow-none
-              dark:border-b dark:border-zinc-800
-              md:shadow-[-4px_0_6px_-2px_rgba(0,0,0,0.06),0_4px_6px_-2px_rgba(0,0,0,0.08)]
-              md:dark:shadow-none md:dark:border-l-2`}
+  md:rounded-bl-lg overflow-hidden z-30 bg-white dark:bg-zinc-950
+  shadow-md
+  dark:shadow-none
+  dark:border-b dark:border-zinc-800
+  md:shadow-[-4px_0_6px_-1px_rgb(0_0_0/0.1),0_4px_6px_-1px_rgb(0_0_0/0.1),0_2px_4px_-2px_rgb(0_0_0/0.1)]
+  md:dark:shadow-none md:dark:border-l-2`}
           >
             <div className="mt-2 flex flex-col items-center text-lg z-50 mx-2 sm:mx-4">
               <>
