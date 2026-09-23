@@ -10,6 +10,12 @@ const stats = [
 // ONE CLASS FOR ALL SERIF PROSE — SIZE AND COLOR LIVE HERE ONLY
 const prose = "font-serif text-lg/8 text-gray-700 dark:text-gray-300"
 
+// SAME TINT AS THE HERO
+const HUE = "#243F5B"
+
+// FAST FADE — SOLID AT THE BOTTOM, GONE BY A THIRD OF THE WAY UP
+const PANEL_FADE = `linear-gradient(to top, ${HUE} 0%, ${HUE}d9 12%, ${HUE}73 24%, ${HUE}00 34%)`
+
 export default function FeaturesSection() {
   return (
     <div
@@ -20,29 +26,31 @@ export default function FeaturesSection() {
         <SceneHeader
           icon="informationCircle"
           eyebrow="About"
-          title={<>We're here to help</>}
+          title={<>Clinical authority</>}
           caption=""
         />
 
         <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {/* PROSE + STATS — FIRST ON MOBILE, RIGHT COLUMN ON DESKTOP == */}
           <div className="lg:order-2 lg:pl-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-gray-100">
-              Lorem ipsum
+            <h3 className="text-3xl font-semibold tracking-tight text-pretty text-gray-800 dark:text-gray-200">
+              A nurse on your side of the table
             </h3>
             <div className="max-w-xl">
               <p className={`mt-6 ${prose}`}>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim.
+                Twelve years at the bedside in intensive care and emergency
+                medicine. We know how a chart gets built, who writes what, and
+                which gaps in a record actually matter.
               </p>
               <p className={`mt-8 ${prose}`}>
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis
-                odio id et. Id blandit molestie auctor fermentum dignissim.
-                Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate
-                et ultrices hac adipiscing egestas.
+                That experience goes straight into your case file. Every finding
+                is tied to a page and a date, written plainly enough to hand to
+                a judge, a jury, or opposing counsel.
+              </p>
+              <p className={`mt-8 ${prose}`}>
+                We work with plaintiff and defense firms across Florida, and we
+                will tell you early and honestly when the records do not support
+                the claim.
               </p>
             </div>
 
@@ -50,11 +58,10 @@ export default function FeaturesSection() {
             <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4 dark:border-white/10">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  {" "}
-                  <dd className="mt-2 text-4xl/10 font-semibold tracking-tight text-gray-900 dark:text-white">
+                  <dd className="mt-2 text-4xl/10 font-semibold tracking-tight text-gray-800 dark:text-gray-200">
                     {stat.value}
                   </dd>
-                  <dt className="text-sm/6 font-semibold text-gray-600 dark:text-gray-400">
+                  <dt className="text-sm/6 font-semibold text-gray-700 dark:text-gray-300">
                     {stat.label}
                   </dt>
                 </div>
@@ -64,29 +71,27 @@ export default function FeaturesSection() {
 
           {/* PORTRAIT PANEL — SECOND ON MOBILE, LEFT COLUMN ON DESKTOP = */}
           <div className="lg:order-1 lg:pr-4">
-            <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-72 pb-9 shadow-2xl sm:px-12 sm:pt-96 lg:max-w-lg lg:px-8 lg:pt-80 lg:pb-8 xl:px-10 xl:pb-10">
+            <div
+              style={{ backgroundColor: HUE }}
+              className="relative overflow-hidden -outline-offset-1 outline-black/10 rounded-3xl px-6 pt-72 pb-9 shadow-xl sm:px-12 sm:pt-96 lg:max-w-lg lg:px-8 lg:pt-80 lg:pb-8 xl:px-10 xl:pb-10"
+            >
               <img
                 alt="RaeAnna Cotter"
-                src="/images/about-image.png"
-                className="absolute inset-0 size-full rounded-3xl object-cover object-top grayscale"
+                src="https://unsplash.com/photos/7n2suA0AmjY/download?w=1600"
+                className="absolute inset-0 size-full rounded-3xl object-cover object-top"
               />
 
-              {/* FADE — TRANSPARENT AT TOP, SOLID AT BOTTOM ============ */}
-              <div className="absolute inset-x-0 bottom-0 h-3/5 rounded-b-3xl bg-gradient-to-t from-black via-black/80 to-transparent" />
+              {/* FADE — SOLID AT BOTTOM, CLEAR BY A THIRD UP =========== */}
+              <div
+                style={{ backgroundImage: PANEL_FADE }}
+                className="absolute inset-0 rounded-3xl"
+              />
 
-              {/* QUOTE ================================================= */}
-              <figure className="relative isolate">
-                <blockquote className="font-serif text-xl/8 text-balance text-white">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                  eiusmod tempor.
-                </blockquote>
-                <figcaption className="mt-6 text-sm/6 text-gray-300">
-                  <strong className="font-semibold text-white">
-                    Name goes here,
-                  </strong>{" "}
-                  Credential goes here
-                </figcaption>
-              </figure>
+              {/* NAME + CREDENTIALS ==================================== */}
+              <figcaption className="relative isolate">
+                <p className="font-semibold text-gray-100">RaeAnna Cotter</p>
+                <p className="mt-1 text-sm/6 text-gray-300">BSN, RN, LNC</p>
+              </figcaption>
             </div>
           </div>
         </div>

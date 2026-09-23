@@ -2,8 +2,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { ScaleIcon } from "@heroicons/react/24/solid"
 
 const LogoLinkFooter: React.FC = () => {
   const pathname = usePathname()
@@ -14,14 +14,21 @@ const LogoLinkFooter: React.FC = () => {
   }
 
   const content = (
-    <div className="flex max-w-full flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-3">
-      <ScaleIcon className="h-10 shrink-0 text-indigo-600 sm:h-12" />
-      <div className="flex flex-col items-center leading-[0.95] sm:flex-row sm:items-baseline sm:gap-2">
-        <span className="text-5xl text-white sm:text-5xl lg:text-6xl">
-          Cotter
+    <div className="flex flex-col items-center gap-2 font-serif">
+      <Image
+        src="/images/cc-logo.png"
+        alt=""
+        width={128}
+        height={128}
+        className="h-16 w-auto shrink-0 sm:h-20"
+      />
+
+      <div className="flex flex-col items-center whitespace-nowrap">
+        <span className="text-4xl leading-none font-bold tracking-wider text-gold sm:text-5xl">
+          COTTER
         </span>
-        <span className="text-5xl text-gray-300 sm:text-5xl lg:text-6xl">
-          Consulting
+        <span className="-mt-0.5 -mr-[0.155em] text-[1.42rem] leading-none tracking-[0.155em] text-gold sm:text-[1.78rem]">
+          CONSULTING
         </span>
       </div>
     </div>
@@ -30,12 +37,12 @@ const LogoLinkFooter: React.FC = () => {
   return isHomePage ? (
     <button
       onClick={scrollToTop}
-      className="flex max-w-full items-center justify-center font-serif"
+      className="flex max-w-full items-center justify-center"
     >
       {content}
     </button>
   ) : (
-    <Link href="/" className="flex max-w-full items-center font-serif">
+    <Link href="/" className="flex max-w-full items-center justify-center">
       {content}
     </Link>
   )

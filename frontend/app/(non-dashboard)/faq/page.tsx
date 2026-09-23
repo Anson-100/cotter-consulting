@@ -63,14 +63,7 @@ export default function FaqPage() {
         <SceneHeader
           icon="listBullet"
           eyebrow="FAQ"
-          title={
-            <>
-              Answers to your most common{" "}
-              <span className="text-indigo-600 dark:text-indigo-500">
-                questions
-              </span>
-            </>
-          }
+          title={<>Answers to your most common questions</>}
           caption=""
           className="text-center"
         />
@@ -85,7 +78,13 @@ export default function FaqPage() {
                 onClick={() => toggleOpen(item.id)}
                 className="flex items-center justify-between w-full text-left py-5 sm:py-6 px-2 cursor-pointer"
               >
-                <span className="text-gray-800 dark:text-gray-200 ">
+                <span
+                  className={`font-semibold transition-colors duration-200 ${
+                    isOpen[item.id]
+                      ? "text-gray-500 dark:text-gray-500"
+                      : "text-gray-800 dark:text-gray-200"
+                  }`}
+                >
                   {item.question}
                 </span>
                 {isOpen[item.id] ? (
@@ -102,7 +101,7 @@ export default function FaqPage() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                   >
-                    <p className="pb-4 px-2 text-gray-600 dark:text-gray-300 font-serif">
+                    <p className="pb-4 px-2 text-gray-700 dark:text-gray-300 font-serif text-lg">
                       {item.answer}
                     </p>
                   </motion.div>

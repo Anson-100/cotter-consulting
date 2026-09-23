@@ -1,9 +1,6 @@
 import { CheckIcon } from "@heroicons/react/20/solid"
 import SceneHeader from "@/components/ui/scene-header"
 
-const LOREM =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit aute id magna aliqua ad ad non deserunt sunt."
-
 // SHARED — IDENTICAL ON EVERY CARD
 const cardBase =
   "shadow-md flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl p-8 sm:flex-row-reverse sm:items-end lg:flex-col lg:items-start"
@@ -47,12 +44,35 @@ const stats = [
 ]
 
 const features = [
-  { name: "Service name.", description: LOREM },
-  { name: "Service name.", description: LOREM },
-  { name: "Service name.", description: LOREM },
-  { name: "Service name.", description: LOREM },
-  { name: "Service name.", description: LOREM },
-  { name: "Service name.", description: LOREM },
+  {
+    name: "Medical record review.",
+    description:
+      "Every page read, organized into a dated chronology you can hand to anyone.",
+  },
+  {
+    name: "Merit screening.",
+    description:
+      "An early read on whether the clinical facts support the claim.",
+  },
+  {
+    name: "Standard of care analysis.",
+    description:
+      "Where care deviated from accepted practice, tied directly to the record.",
+  },
+  {
+    name: "Deposition support.",
+    description:
+      "Question outlines and clinical context for depos, IMEs, and cross.",
+  },
+  {
+    name: "Medical bill audit.",
+    description:
+      "Charges checked against treatment to isolate what's actually related.",
+  },
+  {
+    name: "Expert witness sourcing.",
+    description: "Identify and vet the treating specialty your case needs.",
+  },
 ]
 
 export default function AboutSection() {
@@ -84,13 +104,19 @@ export default function AboutSection() {
         </div>
 
         {/* SERVICES — 3x2 CHECKLIST ==================================== */}
-        <dl className="mx-auto mt-24 grid max-w-2xl grid-cols-1 gap-8 font-serif text-lg/8 text-gray-700 sm:mt-28 sm:grid-cols-2 lg:mx-0 lg:mt-32 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:text-gray-300">
+        <div className="mx-auto mt-20 max-w-2xl lg:mx-0 lg:mt-28 lg:max-w-none">
+          <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            Where we come in
+          </h3>
+        </div>
+
+        <dl className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-8 border-t border-gray-900/10 pt-10 font-serif text-lg/8 text-gray-700 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-16 dark:border-white/10 dark:text-gray-300">
           {features.map((feature, i) => (
             <div key={i} className="relative pl-9">
-              <dt className="inline font-sans font-semibold text-gray-900 dark:text-white">
+              <dt className="inline font-sans font-semibold text-gray-800 dark:text-gray-200">
                 <CheckIcon
                   aria-hidden="true"
-                  className="absolute top-2 left-1 size-5 text-indigo-600 dark:text-indigo-500"
+                  className="absolute top-2 left-1 size-5 text-gold"
                 />
                 {feature.name}
               </dt>{" "}
