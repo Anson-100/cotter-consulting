@@ -1,60 +1,46 @@
-const LIGHT_TILE_COLOR = "#44484d"
-const DARK_TILE_COLOR = "#44484d"
+const TILE_COLOR = "#616c64"
 
-// Brightness / intensity knobs: 0 = invisible, 1 = full strength
-const LIGHT_TILE_OPACITY = 0.05
-const DARK_TILE_OPACITY = 0.15
+const TILE = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='20' viewBox='0 0 32 20'%3E%3Crect x='2' y='3' width='24' height='14' rx='4' fill='${encodeURIComponent(TILE_COLOR)}'/%3E%3C/svg%3E")`
 
-const createTile = (color: string) =>
-  `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='20' viewBox='0 0 32 20'%3E%3Crect x='2' y='3' width='24' height='14' rx='4' fill='${encodeURIComponent(color)}'/%3E%3C/svg%3E")`
-
-const LIGHT_TILE = createTile(LIGHT_TILE_COLOR)
-const DARK_TILE = createTile(DARK_TILE_COLOR)
-
-const patches = [
-  "left-[-40px] top-[22%] h-[220px] w-[430px]",
-  "left-[430px] top-[30%] h-[300px] w-[500px]",
-  "right-[-30px] top-[20%] h-[220px] w-[430px]",
-  "left-[44%] top-[42%] h-[260px] w-[430px]",
+// Diagonal bands where tiles show through.
+// angle = band direction, at = band center (% across), width = half-width of the fade
+const BANDS = [
+  { angle: 115, at: 12, width: 10 },
+  { angle: 115, at: 38, width: 8 },
+  { angle: 115, at: 62, width: 12 },
+  { angle: 115, at: 90, width: 9 },
 ]
+
+const BAND_MASK = BANDS.map(
+  ({ angle, at, width }) =>
+    `linear-gradient(${angle}deg, transparent ${at - width}%, black ${at}%, transparent ${at + width}%)`,
+).join(", ")
+
+// Fades the whole grid out toward the bottom
+const VERTICAL_FADE =
+  "linear-gradient(to bottom, black 0%, black 40%, transparent 75%)"
 
 export default function GridBackground() {
   return (
     <div
-      className="pointer-events-none inset-0 -z-10 overflow-hidden bg-[#f7f6f2] dark:bg-zinc-950"
+      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-zinc-100 dark:bg-zinc-950"
       aria-hidden="true"
     >
-      {patches.map((className, index) => (
+      <div
+        className="absolute inset-0"
+        style={{ maskImage: VERTICAL_FADE, WebkitMaskImage: VERTICAL_FADE }}
+      >
         <div
-          key={index}
-          className={`absolute ${className} dark:hidden`}
+          className="absolute inset-0 opacity-[0.12] dark:opacity-[0.15]"
           style={{
-            opacity: LIGHT_TILE_OPACITY,
-            backgroundImage: LIGHT_TILE,
+            backgroundImage: TILE,
             backgroundRepeat: "repeat",
-            maskImage:
-              "radial-gradient(ellipse at center, black 15%, rgba(0,0,0,.7) 45%, transparent 78%)",
-            WebkitMaskImage:
-              "radial-gradient(ellipse at center, black 15%, rgba(0,0,0,.7) 45%, transparent 78%)",
+            backgroundSize: "32px 20px",
+            maskImage: BAND_MASK,
+            WebkitMaskImage: BAND_MASK,
           }}
         />
-      ))}
-
-      {patches.map((className, index) => (
-        <div
-          key={index}
-          className={`absolute hidden ${className} dark:block`}
-          style={{
-            opacity: DARK_TILE_OPACITY,
-            backgroundImage: DARK_TILE,
-            backgroundRepeat: "repeat",
-            maskImage:
-              "radial-gradient(ellipse at center, black 15%, rgba(0,0,0,.7) 45%, transparent 78%)",
-            WebkitMaskImage:
-              "radial-gradient(ellipse at center, black 15%, rgba(0,0,0,.7) 45%, transparent 78%)",
-          }}
-        />
-      ))}
+      </div>
     </div>
   )
 }

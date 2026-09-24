@@ -38,7 +38,7 @@ export default function SceneHeader({
     <div className={`mx-auto lg:mx-0  ${className}`}>
       <div className="mb-2 inline-flex items-center gap-1 text-succulent dark:brightness-150">
         {Icon && <Icon aria-hidden="true" className="size-5 shrink-0 hidden" />}
-        <h1 className="text-lg/7 font-serif">{eyebrow}</h1>
+        <div className="text-lg/7 font-serif">{eyebrow}</div>
       </div>
       <h2 className="text-4xl font-semibold tracking-tight text-pretty text-gray-900 dark:text-gray-100 sm:text-5xl">
         {title}

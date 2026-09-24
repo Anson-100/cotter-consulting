@@ -76,7 +76,10 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative isolate scroll-mt-[70px]">
+    <section
+      id="contact"
+      className="relative isolate scroll-mt-[70px] overflow-hidden"
+    >
       <GridBackground />
 
       <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 lg:grid-cols-2">
