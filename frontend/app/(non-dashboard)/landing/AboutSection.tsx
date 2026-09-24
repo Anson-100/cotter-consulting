@@ -21,7 +21,7 @@ const stats = [
     description: "Every inquiry gets a reply within one business day.",
     card: "bg-gray-50 ring-1 ring-gray-900/5 sm:w-3/4 sm:max-w-md lg:w-72 lg:max-w-none lg:flex-none dark:bg-zinc-800/60 dark:ring-white/10",
     heading: "text-gray-700 dark:text-gray-100",
-    desc: "text-gray-700 dark:text-gray-200",
+    desc: "text-gray-700 dark:text-gray-100",
   },
   {
     metric: "5,000+",
@@ -30,16 +30,16 @@ const stats = [
       "No volume cap. Complex, multi-provider record sets are the norm, not the exception.",
     card: "bg-cyberspace ring-1 ring-white/10 lg:w-full lg:max-w-sm lg:flex-auto lg:gap-y-44",
     heading: "text-gray-100",
-    desc: "text-gray-200",
+    desc: "text-gray-100",
   },
   {
     metric: "12 yrs",
     title: "At the bedside",
     description:
-      "Two decades of ICU and emergency nursing behind every standard-of-care opinion.",
+      "More than a decade of ICU and emergency nursing behind every standard-of-care opinion.",
     card: "bg-indigo-600 sm:w-11/12 sm:max-w-xl lg:w-full lg:max-w-none lg:flex-auto lg:gap-y-28",
     heading: "text-gray-100",
-    desc: "text-gray-200",
+    desc: "text-gray-100",
   },
 ]
 
@@ -116,7 +116,7 @@ export default function AboutSection() {
               <dt className="inline font-sans font-semibold text-gray-800 dark:text-gray-200">
                 <CheckIcon
                   aria-hidden="true"
-                  className="absolute top-2 left-1 size-5 text-gold"
+                  className="absolute top-2 left-1 size-6 text-gold"
                 />
                 {feature.name}
               </dt>{" "}

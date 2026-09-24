@@ -51,9 +51,9 @@ const LinkMobile = ({
     <a
       href={isHome ? `#${scrollTo}` : `/#${scrollTo}`}
       onClick={handleClick}
-      className={`font-semibold py-4 px-4 w-full flex items-center hover:text-indigo-600 dark:hover:text-indigo-500 ${
+      className={`font-semibold py-4 px-4 w-full flex items-center hover:text-succulent dark:hover:brightness-150 ${
         isActive
-          ? "text-indigo-600 dark:text-indigo-500"
+          ? "text-succulent dark:brightness-150"
           : "text-gray-600 dark:text-gray-300"
       }`}
     >

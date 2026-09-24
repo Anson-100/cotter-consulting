@@ -27,7 +27,7 @@ const LogoLinkFooter: React.FC = () => {
         <span className="text-4xl leading-none font-bold tracking-wider text-gold sm:text-5xl">
           COTTER
         </span>
-        <span className="-mt-0.5 -mr-[0.155em] text-[1.42rem] leading-none tracking-[0.155em] text-gold sm:text-[1.78rem]">
+        <span className="-mt-0.5 -mr-[0.155em] text-[1.33rem] leading-none tracking-[0.155em] text-gold sm:text-[1.78rem]">
           CONSULTING
         </span>
       </div>

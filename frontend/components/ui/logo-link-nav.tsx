@@ -56,7 +56,7 @@ const LogoLink: React.FC<LogoLinkProps> = ({ isExpanded = true }) => {
           COTTER
         </span>
 
-        <span className="-mt-0.5 -mr-[0.155em] text-[0.79rem] leading-none tracking-[0.155em] text-gold sm:text-[0.89rem]">
+        <span className="-mt-0.5 -mr-[0.155em] text-[0.74rem] leading-none tracking-[0.155em] text-gold sm:text-[0.89rem]">
           CONSULTING
         </span>
       </div>
