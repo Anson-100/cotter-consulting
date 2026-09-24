@@ -4,14 +4,10 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "aws_account_id" {
-  description = "AWS account ID"
-  type        = string
-}
-
 variable "environment" {
   description = "Environment name (dev, prod)"
   type        = string
+  default     = "prod"
 }
 
 variable "domain_name" {
@@ -20,17 +16,28 @@ variable "domain_name" {
 }
 
 variable "sender_email" {
-  description = "Email address that will send emails"
+  description = "Address the site sends from (must be on domain_name)"
   type        = string
 }
 
-variable "test_recipient_email" {
-  description = "Email address for testing in sandbox mode"
+variable "recipient_email" {
+  description = "Where contact form submissions are delivered"
   type        = string
+}
+
+variable "allowed_origins" {
+  description = "Origins permitted to call the API (CORS)"
+  type        = list(string)
+}
+
+variable "min_submit_ms" {
+  description = "Reject submissions faster than this (bot speed trap)"
+  type        = number
+  default     = 3000
 }
 
 variable "app_name" {
   description = "Application name"
   type        = string
-  default     = "pirate-ship"
+  default     = "cotter-consulting"
 }

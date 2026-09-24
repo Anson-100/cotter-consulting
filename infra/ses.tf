@@ -1,21 +1,25 @@
-# SES Configuration
-# Resources will be added here:
-# - aws_ses_domain_identity (verify domain ownership)
-# - aws_ses_domain_dkim (email authentication)
-# - aws_ses_domain_mail_from (custom MAIL FROM domain)
-# - IAM policy for sending emails
-
-# SES Email Identity - verify your sending email address
-resource "aws_ses_email_identity" "sender" {
-  email = var.sender_email
+# Proves you own cotterlegalnurse.com
+resource "aws_ses_domain_identity" "main" {
+  domain = var.domain_name
 }
 
-# SES Email Identity - verify a test recipient email (for sandbox testing)
-resource "aws_ses_email_identity" "test_recipient" {
-  email = var.test_recipient_email
+# DKIM signing — adds three CNAMEs to your DNS
+resource "aws_ses_domain_dkim" "main" {
+  domain = aws_ses_domain_identity.main.domain
 }
 
-# Configuration Set - tracks email sending metrics
+# Custom MAIL FROM subdomain — better deliverability
+resource "aws_ses_domain_mail_from" "main" {
+  domain           = aws_ses_domain_identity.main.domain
+  mail_from_domain = "mail.${var.domain_name}"
+}
+
+# Rae@ — sandbox requires the recipient to be verified too
+resource "aws_ses_email_identity" "recipient" {
+  email = var.recipient_email
+}
+
+# Tracks sending metrics (bounces, complaints)
 resource "aws_ses_configuration_set" "main" {
-  name = "${var.app_name}-${var.environment}"
+  name = local.name_prefix
 }

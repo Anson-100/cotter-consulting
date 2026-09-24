@@ -6,14 +6,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~> 2.4"
+    }
   }
-
-  # Uncomment for remote state (recommended for CI/CD later)
-  # backend "s3" {
-  #   bucket = "pirate-ship-terraform-state"
-  #   key    = "terraform.tfstate"
-  #   region = "us-east-1"
-  # }
 }
 
 provider "aws" {
@@ -21,9 +18,14 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project     = "pirate-ship"
+      Project     = var.app_name
       Environment = var.environment
       ManagedBy   = "terraform"
     }
   }
+}
+
+locals {
+  name_prefix     = "${var.app_name}-${var.environment}"
+  contact_fn_name = "${var.app_name}-${var.environment}-contact"
 }

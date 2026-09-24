@@ -2,6 +2,7 @@
 "use client"
 import { useEffect, useState, useRef } from "react"
 import { XMarkIcon } from "@heroicons/react/24/outline"
+import { twMerge } from "tailwind-merge"
 import {
   CheckCircleIcon,
   ExclamationTriangleIcon,
@@ -50,6 +51,10 @@ interface ToastProps {
   duration?: number
   /** When true, shows a spinner instead of the icon and holds the toast open */
   loading?: boolean
+  /** Override positioning — e.g. "absolute bottom-full right-0 mb-3" */
+  className?: string
+  /** Which direction it animates in from */
+  from?: "top" | "bottom"
 }
 
 export default function Toast({
@@ -58,6 +63,8 @@ export default function Toast({
   onDismiss,
   duration = 5000,
   loading = false,
+  className = "",
+  from = "top",
 }: ToastProps) {
   const [isVisible, setIsVisible] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -71,7 +78,6 @@ export default function Toast({
 
   // AUTO-DISMISS — only starts countdown when not loading =================
   useEffect(() => {
-    // Clear any existing timer when loading state changes
     if (timerRef.current) {
       clearTimeout(timerRef.current)
       timerRef.current = null
@@ -94,16 +100,19 @@ export default function Toast({
     setTimeout(onDismiss, 300)
   }
 
+  const hiddenOffset = from === "bottom" ? "translate-y-2" : "-translate-y-2"
+
   return (
     <div
-      className={`
-        fixed top-4 right-4 z-9999 max-w-sm w-full
-        border-2 rounded-lg p-3 backdrop-blur-xl shadow-lg
-        flex items-center gap-3
-        transition-all duration-300 ease-in-out
-        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}
-        ${variant.bg} ${variant.text} ${variant.border}
-      `}
+      className={twMerge(
+        `fixed top-4 right-4 z-9999 max-w-sm w-full
+         border-2 rounded-lg p-3 backdrop-blur-xl shadow-lg
+         flex items-center gap-3
+         transition-all duration-300 ease-in-out
+         ${isVisible ? "opacity-100 translate-y-0" : `opacity-0 ${hiddenOffset}`}
+         ${variant.bg} ${variant.text} ${variant.border}`,
+        className,
+      )}
     >
       {loading ? (
         <div

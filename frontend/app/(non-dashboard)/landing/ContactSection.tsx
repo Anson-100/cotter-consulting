@@ -6,6 +6,7 @@ import { PhoneIcon } from "@heroicons/react/24/outline"
 import Button from "@/components/ui/button"
 import FormInput from "@/components/ui/form-input"
 import SceneHeader from "@/components/ui/scene-header"
+import Toast from "@/components/ui/toast"
 
 // TODO: replace with Raeann's real number
 const PHONE = "941-555-0123"
@@ -56,19 +57,13 @@ export default function ContactSection() {
     try {
       setSubmissionStatus(null)
 
-      // TODO: swap LawnHarmony endpoint for Cotter's API Gateway route
-      const res = await fetch(
-        "https://m1ffj58tfe.execute-api.us-east-1.amazonaws.com/LawnHarmonySendEmail",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        },
-      )
+      const res = await fetch(process.env.NEXT_PUBLIC_CONTACT_ENDPOINT!, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
 
-      const resData = await res.json()
-
-      console.log("Form submitted successfully:", resData.message)
+      if (!res.ok) throw new Error(`Request failed: ${res.status}`)
 
       setSubmissionStatus("success")
       reset()
@@ -82,7 +77,7 @@ export default function ContactSection() {
     <section id="contact" className="relative isolate scroll-mt-[70px]">
       <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 lg:grid-cols-2">
         {/* LEFT — header + phone */}
-        <div className="px-6 pt-16 pb-16 lg:px-8 lg:py-24">
+        <div className="px-6 pt-16 pb-16 lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <SceneHeader
               className="text-left"
@@ -123,7 +118,7 @@ export default function ContactSection() {
         <form
           // eslint-disable-next-line react-hooks/refs
           onSubmit={handleSubmit(onSubmit)}
-          className="relative px-6 pt-16 pb-24 lg:px-8 lg:py-24"
+          className="relative px-6 pt-16 pb-24 lg:px-8 lg:py-32"
         >
           {/* Honeypot — offscreen, not display:none (bots skip hidden fields) */}
           <div className="absolute -left-[9999px] top-0" aria-hidden="true">
@@ -266,17 +261,20 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col items-end gap-3">
-              {submissionStatus === "success" && (
-                <p className="text-sm text-emerald-600 font-medium">
-                  Message sent!
-                </p>
-              )}
-
-              {submissionStatus === "error" && (
-                <p className="text-sm text-red-600 font-medium">
-                  Error sending message. Please try again.
-                </p>
+            {/* Toast is absolute here — floats above the button, no layout shift */}
+            <div className="relative mt-8 flex justify-end">
+              {submissionStatus && (
+                <Toast
+                  message={
+                    submissionStatus === "success"
+                      ? "Message sent!"
+                      : "Error sending message. Please try again."
+                  }
+                  type={submissionStatus}
+                  from="bottom"
+                  onDismiss={() => setSubmissionStatus(null)}
+                  className="absolute top-auto bottom-full right-0 mb-3 w-auto max-w-sm"
+                />
               )}
 
               <Button
@@ -285,9 +283,9 @@ export default function ContactSection() {
                 variant="primary"
                 size="md"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed disabled:pointer-events-none"
+                className="w-full sm:w-auto disabled:bg-succulent disabled:text-white disabled:border-sand disabled:brightness-125 disabled:cursor-not-allowed disabled:pointer-events-none"
               >
-                {isSubmitting ? "Submitting..." : "Send message"}
+                {isSubmitting ? "Sending..." : "Send message"}
               </Button>
             </div>
           </div>
