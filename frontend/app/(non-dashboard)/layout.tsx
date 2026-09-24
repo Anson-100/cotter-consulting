@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar"
 import AuthModal from "@/components/AuthModal"
-import GridBackground from "@/components/ui/grid-background"
+// import GridBackground from "@/components/ui/grid-background"
 import { Suspense } from "react"
 
 export default function MarketingLayout({
@@ -10,7 +10,7 @@ export default function MarketingLayout({
 }) {
   return (
     <>
-      <GridBackground />
+      {/* <GridBackground /> */}
       <Navbar />
       {children}
       <Suspense fallback={null}>

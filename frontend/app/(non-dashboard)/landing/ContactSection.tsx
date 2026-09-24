@@ -3,10 +3,12 @@
 import { useForm, Controller } from "react-hook-form"
 import { useState, useRef, useEffect } from "react"
 import { PhoneIcon } from "@heroicons/react/24/outline"
+
 import Button from "@/components/ui/button"
 import FormInput from "@/components/ui/form-input"
 import SceneHeader from "@/components/ui/scene-header"
 import Toast from "@/components/ui/toast"
+import GridBackground from "@/components/ui/grid-background"
 
 // TODO: replace with Raeann's real number
 const PHONE = "941-555-0123"
@@ -75,6 +77,8 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative isolate scroll-mt-[70px]">
+      <GridBackground />
+
       <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 lg:grid-cols-2">
         {/* LEFT — header + phone */}
         <div className="px-6 pt-16 pb-16 lg:px-8 lg:py-48">
@@ -96,11 +100,13 @@ export default function ContactSection() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
+
                   <PhoneIcon
                     aria-hidden="true"
                     className="h-7 w-6 text-zinc-400 dark:text-zinc-500"
                   />
                 </dt>
+
                 <dd>
                   <a
                     href={PHONE_HREF}
@@ -123,6 +129,7 @@ export default function ContactSection() {
           {/* Honeypot — offscreen, not display:none (bots skip hidden fields) */}
           <div className="absolute -left-[9999px] top-0" aria-hidden="true">
             <label htmlFor="company">Company</label>
+
             <input
               id="company"
               type="text"
@@ -187,7 +194,6 @@ export default function ContactSection() {
                 }) => {
                   const formatPhoneNumber = (input: string) => {
                     const digits = input.replace(/\D/g, "").slice(0, 10)
-
                     const a = digits.slice(0, 3)
                     const b = digits.slice(3, 6)
                     const c = digits.slice(6, 10)

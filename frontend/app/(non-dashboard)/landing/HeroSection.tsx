@@ -54,7 +54,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className={`scroll-mt-[70px] pb-2 px-4 pt-20 transition-[height] duration-200 ${
+      className={`scroll-mt-[70px] pb-2 px-2 pt-20 transition-[height] duration-200 ${
         atTop ? "h-dvh" : "h-svh"
       }`}
     >
