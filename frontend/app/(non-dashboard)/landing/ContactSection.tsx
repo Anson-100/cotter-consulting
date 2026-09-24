@@ -86,8 +86,8 @@ export default function ContactSection() {
               title={<>Get in touch</>}
               caption={
                 <>
-                  Send a brief description of the case. You&apos;ll have a
-                  response within one business day.
+                  Send a brief description of the case. You'll have a response
+                  within one business day.
                 </>
               }
             />
