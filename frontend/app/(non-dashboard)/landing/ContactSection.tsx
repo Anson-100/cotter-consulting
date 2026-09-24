@@ -118,7 +118,7 @@ export default function ContactSection() {
         <form
           // eslint-disable-next-line react-hooks/refs
           onSubmit={handleSubmit(onSubmit)}
-          className="relative px-6 pt-16 pb-24 lg:px-8 lg:py-32"
+          className="relative px-6 pt-8 pb-24 lg:px-8 lg:py-32"
         >
           {/* Honeypot — offscreen, not display:none (bots skip hidden fields) */}
           <div className="absolute -left-[9999px] top-0" aria-hidden="true">
@@ -220,7 +220,7 @@ export default function ContactSection() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
-                  className="block font-semibold text-gray-800 dark:text-gray-300"
+                  className="block font-semibold text-gray-600 dark:text-gray-300"
                 >
                   Message
                 </label>
@@ -237,9 +237,9 @@ export default function ContactSection() {
                         block w-full rounded-md
                         bg-white dark:bg-zinc-950
                         px-3.5 py-2 text-base
-                        text-zinc-800 dark:text-gray-200
+                        text-gray-800 dark:text-gray-200
                         outline-1 -outline-offset-1
-                        outline-zinc-200 dark:outline-zinc-700
+                        outline-zinc-300 dark:outline-zinc-700
                         placeholder:text-gray-400 dark:placeholder:text-gray-500
                         focus:outline-1 focus:outline-succulent
                       "

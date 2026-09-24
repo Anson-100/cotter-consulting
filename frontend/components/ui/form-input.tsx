@@ -78,8 +78,8 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             className={`
           block w-full rounded
           bg-white dark:bg-zinc-950
-          px-3.5 py-2.5 text-base text-zinc-800 dark:text-gray-200
-          outline-1 -outline-offset-1 outline-zinc-200 dark:outline-zinc-700
+          px-3.5 py-2.5 text-base text-gray-800 dark:text-gray-200
+          outline-1 -outline-offset-1 outline-zinc-300 dark:outline-zinc-700
           placeholder:text-gray-400 dark:placeholder:text-gray-500
           focus:outline-1 focus:outline-succulent overflow-hidden
           ${className}

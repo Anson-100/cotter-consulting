@@ -38,7 +38,7 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className="scroll-mt-[70px] h-screen pb-2 px-4 pt-20">
+    <section id="home" className="scroll-mt-[70px] h-dvh pb-2 px-4 pt-20">
       <div
         className="relative isolate h-full overflow-hidden rounded-3xl"
         style={{ backgroundColor: CYBERSPACE }}
