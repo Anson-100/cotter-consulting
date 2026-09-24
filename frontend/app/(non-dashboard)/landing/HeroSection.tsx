@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { useState, useEffect } from "react"
 import { motion, useReducedMotion } from "framer-motion"
 import Button from "@/components/ui/button"
 
@@ -26,6 +27,19 @@ const GOLD_WISP = `linear-gradient(to top right, ${GOLD}, #7E6A43)`
 const HeroSection = () => {
   const reduceMotion = useReducedMotion()
 
+  // Full height only at rest — locks to the small viewport once scrolling
+  // starts, so the address bar showing/hiding can't resize the hero mid-scroll
+  const [atTop, setAtTop] = useState(true)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const next = window.scrollY < 10
+      setAtTop((prev) => (prev === next ? prev : next))
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id)
 
@@ -38,7 +52,12 @@ const HeroSection = () => {
   }
 
   return (
-    <section id="home" className="scroll-mt-[70px] h-dvh pb-2 px-4 pt-20">
+    <section
+      id="home"
+      className={`scroll-mt-[70px] pb-2 px-4 pt-20 transition-[height] duration-200 ${
+        atTop ? "h-dvh" : "h-svh"
+      }`}
+    >
       <div
         className="relative isolate h-full overflow-hidden rounded-3xl"
         style={{ backgroundColor: CYBERSPACE }}
