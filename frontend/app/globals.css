@@ -67,19 +67,25 @@ body,
   --color-content-dark: #d1d5db; /* gray-300 */
 }
 
-/* AMBER THEME============= */
-/* @theme {
-  --color-indigo-200: #fde68a;
+/* THEME CROSSFADE ========================
+   Browser snapshots the page, the dark class flips,
+   and the snapshots fade into each other.
+   Triggered by document.startViewTransition() in the toggle.
+   ======================================= */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
 
-  --color-indigo-300: #fcd34d;
-  --color-indigo-400: #fbbf24;
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
 
-  --color-indigo-500: #f59e0b;
-  --color-indigo-600: #d97706;
-  --color-indigo-700: #b45309;
-  --color-indigo-800: #92400e;
-} */
-
+/* Keeps per-element transitions from fighting the crossfade */
 .dark-mode-animate * {
   transition-property: background-color, border-color, color, fill, stroke;
   transition-duration: 0ms;

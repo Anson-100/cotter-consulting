@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import { flushSync } from "react-dom"
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline"
 import {
   SunIcon as SunIconSolid,
@@ -27,8 +28,20 @@ export default function DarkModeToggle({
   }, [initialize])
 
   const handleClick = () => {
-    toggleDarkMode()
-    setJustClicked(true)
+    const apply = () => {
+      // flushSync so the new icon is in the "after" snapshot, not swapped mid-fade
+      flushSync(() => {
+        toggleDarkMode()
+        setJustClicked(true)
+      })
+    }
+
+    if (document.startViewTransition) {
+      document.startViewTransition(apply)
+    } else {
+      apply() // older browsers: instant switch, same as before
+    }
+
     setTimeout(() => setJustClicked(false), 1000)
   }
 
@@ -45,12 +58,12 @@ export default function DarkModeToggle({
         justClicked ? (
           <MoonIconSolid className="size-6 shrink-0 text-sky-300" />
         ) : (
-          <SunIcon className="size-6 shrink-0 text-gray-400" />
+          <SunIcon className="size-6 shrink-0 text-gray-500 dark:text-gray-400" />
         )
       ) : justClicked ? (
         <SunIconSolid className="size-6 shrink-0 text-yellow-500" />
       ) : (
-        <MoonIcon className="size-6 shrink-0 text-gray-400" />
+        <MoonIcon className="size-6 shrink-0 text-gray-500 dark:text-gray-400" />
       )}
       {children && (
         <span

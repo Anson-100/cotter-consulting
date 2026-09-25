@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion, useReducedMotion } from "framer-motion"
 import Button from "@/components/ui/button"
+import { scrollToSection } from "@/lib/scroll-manager"
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1706799191377-96a80beaee24?q=80&w=2577&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -39,17 +40,6 @@ const HeroSection = () => {
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
-
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id)
-
-    if (!section) return
-
-    section.scrollIntoView({
-      behavior: reduceMotion ? "instant" : "smooth",
-      block: "start",
-    })
-  }
 
   return (
     <section
@@ -136,7 +126,7 @@ const HeroSection = () => {
               <Button
                 variant="primary"
                 className="flex w-full items-center justify-center text-lg sm:w-56"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("contact", !!reduceMotion)}
               >
                 Contact us
               </Button>
@@ -144,7 +134,7 @@ const HeroSection = () => {
               <Button
                 variant="secondary"
                 className="flex w-full items-center justify-center text-lg sm:w-56"
-                onClick={() => scrollToSection("features")}
+                onClick={() => scrollToSection("features", !!reduceMotion)}
               >
                 About us
               </Button>
