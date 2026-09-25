@@ -31,7 +31,7 @@ export default function GridBackground() {
         style={{ maskImage: VERTICAL_FADE, WebkitMaskImage: VERTICAL_FADE }}
       >
         <div
-          className="absolute inset-0 opacity-[0.12] dark:opacity-[0.15]"
+          className="absolute inset-0 opacity-[0.05] dark:opacity-[0.15]"
           style={{
             backgroundImage: TILE,
             backgroundRepeat: "repeat",

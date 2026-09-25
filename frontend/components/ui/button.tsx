@@ -52,7 +52,7 @@ export default function Button<T extends ElementType = "button">({
     primary:
       "border hover:cursor-pointer border-sand bg-succulent text-white hover:brightness-90 active:brightness-75 focus-visible:ring-succulent",
     secondary:
-      "border border-stone-300 bg-transparent text-stone-300 hover:brightness-90 active:brightness-75 dark:border-sand dark:bg-transparent dark:text-sand focus-visible:ring-sand",
+      "border border-sand bg-transparent text-white hover:brightness-90 active:brightness-75 dark:border-sand dark:bg-transparent dark:text-sand focus-visible:ring-sand",
     success:
       "border border-emerald-600 text-white bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 dark:text-white dark:border-emerald-500 dark:bg-emerald-600 dark:hover:bg-emerald-500 dark:active:bg-emerald-700 focus-visible:ring-emerald-500",
     ghost:
