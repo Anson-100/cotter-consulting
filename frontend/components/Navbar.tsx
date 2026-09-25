@@ -127,6 +127,7 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
               isAboveMediumScreens ? (
                 // Desktop routed: Home + CTA + DarkMode
                 <div className="flex items-center justify-center gap-4">
+                  {contactButton}{" "}
                   <button
                     type="button"
                     onClick={handleBackOrHome}
@@ -135,9 +136,6 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                     <span className="text-zinc-500 text-lg">&larr;</span>
                     <span>Home</span>
                   </button>
-
-                  {contactButton}
-
                   <DarkModeToggle />
                 </div>
               ) : (
