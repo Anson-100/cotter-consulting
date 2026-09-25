@@ -77,9 +77,9 @@ const features = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="pt-16 pb-32 scroll-mt-[70px]">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="max-w-2xl sm:pb-16">
+    <section id="about" className="pt-16 pb-32 scroll-mt-[70px] ">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
+        <div className="max-w-2xl sm:pb-16 flex">
           <SceneHeader
             icon="briefcase"
             eyebrow="Services"

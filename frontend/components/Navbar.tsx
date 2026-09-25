@@ -42,20 +42,9 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
   const router = useRouter()
   const pathname = usePathname()
 
-  const prevPathRef = useRef<string | null>(null)
-
-  useEffect(() => {
-    return () => {
-      prevPathRef.current = pathname
-    }
-  }, [pathname])
-
+  // Always land on the hero with a clean URL
   const handleBackOrHome = () => {
-    if (prevPathRef.current === "/") {
-      router.back()
-    } else {
-      router.push("/")
-    }
+    router.push("/")
   }
 
   const handleContactClick = () => {

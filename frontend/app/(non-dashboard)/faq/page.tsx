@@ -4,6 +4,7 @@ import { useState } from "react"
 import { PlusIcon, MinusIcon } from "@heroicons/react/24/solid"
 import { motion, AnimatePresence } from "framer-motion"
 import SceneHeader from "@/components/ui/scene-header"
+import { div } from "three/src/nodes/math/OperatorNode.js"
 
 interface FaqItem {
   id: string
@@ -68,15 +69,18 @@ export default function FaqPage() {
           className="text-center"
         />
 
-        <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 mt-8 sm:mt-16  mx-auto" />
+        <div className="w-full h-px bg-zinc-200 dark:bg-zinc-800 mt-8 sm:mt-16  mx-auto max-w-4xl" />
 
         {/* FAQ ITEMS */}
         <div className="w-full flex flex-col text-base md:text-lg mx-auto ">
           {faqItems.map((item) => (
-            <div key={item.id} className="flex flex-col">
+            <div
+              key={item.id}
+              className="flex flex-col w-full  max-w-4xl mx-auto"
+            >
               <button
                 onClick={() => toggleOpen(item.id)}
-                className="flex items-center justify-between w-full text-left py-5 sm:py-6 px-2 cursor-pointer"
+                className="flex items-center justify-between w-full text-left py-5 sm:py-6 px-2 cursor-pointer "
               >
                 <span
                   className={`font-semibold transition-colors duration-200 ${
@@ -101,7 +105,7 @@ export default function FaqPage() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                   >
-                    <p className="pb-4 px-2 text-gray-700 dark:text-gray-300 font-serif text-lg">
+                    <p className="pb-4 px-2 text-gray-700 dark:text-gray-300 font-serif text-xl max-w-xl">
                       {item.answer}
                     </p>
                   </motion.div>

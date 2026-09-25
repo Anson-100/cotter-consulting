@@ -18,18 +18,19 @@ const PANEL_FADE = `linear-gradient(to top, ${HUE} 0%, ${HUE}d9 12%, ${HUE}73 24
 
 export default function FeaturesSection() {
   return (
-    <div
+    <section
       id="features"
       className="overflow-hidden pt-16 pb-32 min-h-screen scroll-mt-[70px]"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SceneHeader
-          icon="informationCircle"
-          eyebrow="About"
-          title={<>Clinical authority</>}
-          caption=""
-        />
-
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
+        <div className="max-w-2xl sm:pb-16 flex">
+          <SceneHeader
+            icon="informationCircle"
+            eyebrow="About"
+            title={<>Clinical authority</>}
+            caption=""
+          />
+        </div>
         <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {/* PROSE + STATS — FIRST ON MOBILE, RIGHT COLUMN ON DESKTOP == */}
           <div className="lg:order-2 lg:pl-4">
@@ -96,6 +97,6 @@ export default function FeaturesSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

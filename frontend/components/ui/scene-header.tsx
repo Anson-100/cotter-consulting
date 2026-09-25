@@ -35,7 +35,9 @@ export default function SceneHeader({
   const Icon = icon ? ICONS[icon] : null
 
   return (
-    <div className={`mx-auto lg:mx-0  ${className}`}>
+    <div
+      className={`mx-auto lg:mx-0 rounded-xl border border-succulent shadow-gold bg-zinc-100 dark:bg-zinc-950 shadow-md p-4  ${className}`}
+    >
       <div className="mb-2 inline-flex items-center gap-1 text-succulent dark:brightness-150">
         {Icon && <Icon aria-hidden="true" className="size-5 shrink-0 hidden" />}
         <div className="text-lg/7 font-serif">{eyebrow}</div>
