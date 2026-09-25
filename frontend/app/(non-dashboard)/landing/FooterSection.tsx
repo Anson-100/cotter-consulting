@@ -4,6 +4,7 @@
 import { usePathname } from "next/navigation"
 import LogoLinkFooter from "@/components/ui/logo-link-footer"
 import Link from "next/link"
+import { scrollToSection } from "@/lib/scroll-manager"
 
 type NavLink = { name: string; href: string }
 type SocialLink = {
@@ -14,10 +15,9 @@ type SocialLink = {
 
 const navigation: { main: NavLink[]; social: SocialLink[] } = {
   main: [
-    { name: "About us", href: "#sectionone" },
-
-    { name: "Contact", href: "#contactus" },
-    { name: "FAQ", href: "/routeOne" },
+    { name: "About us", href: "#features" },
+    { name: "Contact", href: "#contact" },
+    { name: "FAQ", href: "/faq" },
   ],
   social: [
     // {
@@ -69,12 +69,26 @@ const navigation: { main: NavLink[]; social: SocialLink[] } = {
   ],
 }
 
+const footerLinkClass =
+  "text-gray-300 underline-offset-4 transition-colors hover:text-gray-200 hover:underline"
+
 export default function FooterSection() {
   const pathname = usePathname()
   const isLandingPage = pathname === "/"
 
   const handleBackToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  const handleSceneClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    e.preventDefault()
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches
+    scrollToSection(href.slice(1), reduceMotion)
   }
 
   return (
@@ -120,7 +134,8 @@ export default function FooterSection() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="rounded-full px-2.5 py-1.5 text-gray-300 hover:bg-zinc-800 hover:text-indigo-500 dark:hover:bg-zinc-900"
+                  onClick={(e) => handleSceneClick(e, item.href)}
+                  className={footerLinkClass}
                 >
                   {item.name}
                 </a>
@@ -128,7 +143,7 @@ export default function FooterSection() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="rounded-full px-2.5 py-1.5 text-gray-300 hover:bg-zinc-800 hover:text-indigo-500 dark:hover:bg-zinc-900"
+                  className={footerLinkClass}
                 >
                   {item.name}
                 </Link>
