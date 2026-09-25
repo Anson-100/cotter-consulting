@@ -172,9 +172,9 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                     onClick={() => setIsMenuToggled(!isMenuToggled)}
                   >
                     {!isMenuToggled ? (
-                      <Bars2Icon className="w-6 text-zinc-400" />
+                      <Bars2Icon className="w-6 text-gray-500 dark:text-gray-400" />
                     ) : (
-                      <XMarkIcon className="w-6 text-zinc-400" />
+                      <XMarkIcon className="w-6 text-gray-500 dark:text-gray-400" />
                     )}
                   </button>
                 </div>
@@ -238,9 +238,9 @@ const Navbar = ({ isTopOfPage = true }: Props) => {
                   onClick={() => setIsMenuToggled(!isMenuToggled)}
                 >
                   {!isMenuToggled ? (
-                    <Bars2Icon className="w-6 text-zinc-400" />
+                    <Bars2Icon className="w-6 text-gray-500 dark:text-gray-400" />
                   ) : (
-                    <XMarkIcon className="w-6 text-zinc-400" />
+                    <XMarkIcon className="w-6 text-gray-500 dark:text-gray-400" />
                   )}
                 </button>
               </div>
