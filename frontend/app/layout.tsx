@@ -9,19 +9,33 @@ const inter = Inter({
   variable: "--font-sans",
 })
 
+const siteName = "Cotter Consulting"
+const defaultTitle = `${siteName} | Legal Nurse Consulting`
+const description =
+  "Medical record review, chronologies, and standard-of-care analysis for attorneys."
+
 export const metadata: Metadata = {
-  title: "Cotter Consulting",
-  description: "Professional estimates, delivered instantly.",
+  metadataBase: new URL("https://cotterlegalnurse.com"),
+  title: {
+    default: defaultTitle,
+    template: `%s | ${siteName}`,
+  },
+  description,
+  icons: {
+    icon: "/images/cc-logo.png",
+    apple: "/images/cc-logo.png",
+  },
   openGraph: {
-    title: "Legal Nurse Consulting",
-    description: "Clinical clarity, case confidence.",
+    title: defaultTitle,
+    description,
+    siteName,
     type: "website",
-    siteName: "Cotter Consulting",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "You've received an estimate",
-    description: "Tap to view your estimate and respond.",
+    title: defaultTitle,
+    description,
   },
 }
 

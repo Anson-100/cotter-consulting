@@ -32,8 +32,34 @@ export default function FeaturesSection() {
           />
         </div>
         <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          {/* PROSE + STATS — FIRST ON MOBILE, RIGHT COLUMN ON DESKTOP == */}
-          <div className="lg:order-2 lg:pl-4">
+          {/* PORTRAIT PANEL — FIRST ON MOBILE, LEFT COLUMN ON DESKTOP == */}
+          <div className="lg:pr-4">
+            <div
+              style={{ backgroundColor: HUE }}
+              className="relative overflow-hidden -outline-offset-1 outline-black/10 rounded-3xl px-6 pt-72 pb-9 shadow-xl sm:px-12 sm:pt-96 lg:max-w-lg lg:px-8 lg:pt-80 lg:pb-8 xl:px-10 xl:pb-10"
+            >
+              <img
+                alt="RaeAnna Cotter"
+                src="https://unsplash.com/photos/7n2suA0AmjY/download?w=1600"
+                className="absolute inset-0 size-full rounded-3xl object-cover object-top"
+              />
+
+              {/* FADE — SOLID AT BOTTOM, CLEAR BY A THIRD UP =========== */}
+              <div
+                style={{ backgroundImage: PANEL_FADE }}
+                className="absolute inset-0 rounded-3xl"
+              />
+
+              {/* NAME + CREDENTIALS ==================================== */}
+              <figcaption className="relative isolate">
+                <p className="font-semibold text-gray-100">RaeAnna Cotter</p>
+                <p className="mt-1 text-sm/6 text-gray-300">BSN, RN, LNC</p>
+              </figcaption>
+            </div>
+          </div>
+
+          {/* PROSE + STATS — SECOND ON MOBILE, RIGHT COLUMN ON DESKTOP = */}
+          <div className="lg:pl-4">
             <h3 className="text-3xl font-semibold tracking-tight text-pretty text-gray-800 dark:text-gray-200">
               A nurse on your side of the table
             </h3>
@@ -68,32 +94,6 @@ export default function FeaturesSection() {
                 </div>
               ))}
             </dl>
-          </div>
-
-          {/* PORTRAIT PANEL — SECOND ON MOBILE, LEFT COLUMN ON DESKTOP = */}
-          <div className="lg:order-1 lg:pr-4">
-            <div
-              style={{ backgroundColor: HUE }}
-              className="relative overflow-hidden -outline-offset-1 outline-black/10 rounded-3xl px-6 pt-72 pb-9 shadow-xl sm:px-12 sm:pt-96 lg:max-w-lg lg:px-8 lg:pt-80 lg:pb-8 xl:px-10 xl:pb-10"
-            >
-              <img
-                alt="RaeAnna Cotter"
-                src="https://unsplash.com/photos/7n2suA0AmjY/download?w=1600"
-                className="absolute inset-0 size-full rounded-3xl object-cover object-top"
-              />
-
-              {/* FADE — SOLID AT BOTTOM, CLEAR BY A THIRD UP =========== */}
-              <div
-                style={{ backgroundImage: PANEL_FADE }}
-                className="absolute inset-0 rounded-3xl"
-              />
-
-              {/* NAME + CREDENTIALS ==================================== */}
-              <figcaption className="relative isolate">
-                <p className="font-semibold text-gray-100">RaeAnna Cotter</p>
-                <p className="mt-1 text-sm/6 text-gray-300">BSN, RN, LNC</p>
-              </figcaption>
-            </div>
           </div>
         </div>
       </div>
